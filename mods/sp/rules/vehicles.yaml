@@ -789,6 +789,9 @@ BGGY: #Raider Buggy
 		TurnSpeed: 40
 		Speed: 165
 		Locomotor: Vehicle
+		SpeedRelatedWithFacing: true
+		TurnsWhileMoving: true
+		InitSpeedPercentageWithFacing: -50
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250
@@ -1136,6 +1139,9 @@ ATTACKBIKE:
 		TurnSpeed: 56
 		Speed: 165
 		Locomotor: Vehicle
+		SpeedRelatedWithFacing: true
+		TurnsWhileMoving: true
+		InitSpeedPercentageWithFacing: -50
 	Health:
 		HP: 15000
 	Armor:

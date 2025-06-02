@@ -933,6 +933,9 @@ GHUMV: #Humvee
 		TurnSpeed: 32
 		Speed: 150
 		Locomotor: Vehicle
+		SpeedRelatedWithFacing: true
+		TurnsWhileMoving: true
+		InitSpeedPercentageWithFacing: -50
 	Health:
 		HP: 20000
 	Armor:
@@ -1239,6 +1242,9 @@ MUJEEP: #Technical
 		TurnSpeed: 32
 		Speed: 165
 		Locomotor: Vehicle
+		SpeedRelatedWithFacing: true
+		TurnsWhileMoving: true
+		InitSpeedPercentageWithFacing: -50
 	Health:
 		HP: 12500
 	Armor:

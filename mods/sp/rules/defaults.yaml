@@ -2574,6 +2574,10 @@
 	Inherits: ^Vehicle
 	Valued:
 		Cost: 100
+	Mobile:
+		SpeedRelatedWithFacing: true
+		TurnsWhileMoving: true
+		InitSpeedPercentageWithFacing: -50
 	-GrantConditionOnPrerequisite@SUDDENDEATH:
 	-MustBeDestroyed:
 	MapEditorData:

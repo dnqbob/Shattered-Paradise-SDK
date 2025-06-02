@@ -155,6 +155,9 @@ CIVJEEP:
 		TurnSpeed: 32
 		Speed: 165
 		Locomotor: Vehicle
+		SpeedRelatedWithFacing: true
+		TurnsWhileMoving: true
+		InitSpeedPercentageWithFacing: -50
 	Health:
 		HP: 12500
 	Armor:
