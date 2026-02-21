@@ -656,30 +656,36 @@ limped:
 	Inherits: ^EmpOverlay
 	Inherits@3: ^MissileMuzzle
 	Defaults:
-		Filename: limped.shp
+		Filename: cablimped.shp
 	stand:
 		Facings: 1
-		ShadowStart: 10
-	run:
 		Length: 10
-		Facings: 1
 		ShadowStart: 10
+		Tick: 60
+	run:
+		Facings: 1
+		Length: 10
+		ShadowStart: 10
+		Tick: 60
 	idle:
 		Facings: 1
+		Length: 10
 		ShadowStart: 10
+		Tick: 60
 	muzzle:
 		Scale: 0.7
 		AlphaFade: true
 	make:
-		Filename: dlimpmk.shp
+		Filename: cabdlimpmk.shp
 		Length: 41
 		ShadowStart: 42
 		Tick: 20
 		Offset: 0, -12
 	deployed:
-		Filename: dlimpet.shp
+		Filename: cabdlimp_a.shp
 		Facings: 1
-		ShadowStart: 3
+		Length: 10
+		ShadowStart: 10
 		Offset: 0, -12
 	emp-overlay:
 		Filename: emp_fx01.shp

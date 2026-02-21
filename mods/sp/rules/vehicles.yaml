@@ -2950,7 +2950,7 @@ LIMPED:
 	Voiced:
 		VoiceSet: Limpet
 	Selectable:
-		Bounds: 483, 2111, 0, -448
+		Bounds: 783, 2111, 0, -625
 	Hovers:
 		RequiresCondition: undeployed && !empdisable
 	GrantConditionOnDeploy:
