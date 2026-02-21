@@ -705,7 +705,7 @@ smech:
 	Inherits: ^EmpOverlay
 	Inherits@2: ^BuggyMuzzle
 	Defaults:
-		Filename: smech.shp
+		Filename: smech2.shp
 	stand:
 		Start: 96
 		Facings: -8
@@ -714,7 +714,7 @@ smech:
 		Facings: -8
 		Length: 12
 		ShadowStart: 136
-		Tick: 48
+		Tick: 30
 	shoot:
 		Start: 104
 		Length: 4
