@@ -2005,6 +2005,9 @@ MUTQUAD:
 		TurnSpeed: 32
 		Speed: 105
 		Locomotor: Vehicle
+		SpeedRelatedWithFacing: true
+		TurnsWhileMoving: true
+		InitSpeedPercentageWithFacing: -40
 	Health:
 		HP: 25000
 	Selectable:
