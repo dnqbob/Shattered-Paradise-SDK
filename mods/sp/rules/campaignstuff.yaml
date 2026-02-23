@@ -482,16 +482,12 @@ CYC3:
 		Queue: Infantry.Shared, Infantry.CABAL
 		Description: cycd-desc
 		BuildPaletteOrder: 34
-		Prerequisites: ~cabclaw, cabtech, ~techlevel.5, ~campaignunit
+		Prerequisites: ~cabclaw, cabtech, upgrade.regenerative_materials, ~techlevel.5, ~campaignunit
 		BuildLimit: 1
 		BuildDuration: 1250
 		BuildDurationModifier: 100
 	Voiced:
 		VoiceSet: CyborgCommando
-	AnnounceOnSeen:
-		PingRadar: true
-		Notification: CommandoDetected
-		TextNotification: notification-commando
 	Mobile:
 		Speed: 45
 	Health:
@@ -752,6 +748,11 @@ SHADTEAM:
 	-ExternalCondition@CLOAKGENERATOR:
 	ActorStatValues:
 		Damage: 45
+	IssueOrderToBot@AI:
+		OrderName: DeployTransform
+		OrderTrigger: Damage
+		OrderInterval: 550
+		OrderChance: 50
 
 SHADTEAMAIR:
 	Inherits: ^AirInfantry
@@ -824,6 +825,11 @@ SHADTEAMAIR:
 		IconPalette: chrome
 		TooltipActor: shadteam
 		#Damage: 50
+	IssueOrderToBot@AI:
+		OrderName: DeployTransform
+		OrderTrigger: Damage
+		OrderInterval: 550
+		OrderChance: 100
 
 
 PREDATOR: #Predator Tank
@@ -2003,7 +2009,7 @@ REGENTNK: #Regenisis Tank
 		BuildAtProductionType: Tank
 		Description: regentnk-desc
 		BuildPaletteOrder: 41
-		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
+		Prerequisites: ~muweap, muhall, upgrade.tiberium_gas_warheads, ~campaignunit, ~techlevel.5
 		BuildDuration: 1000
 		BuildDurationModifier: 100
 	Valued:
@@ -2057,7 +2063,7 @@ TVDDEVICE: #T.V.D.D
 		BuildAtProductionType: Tank
 		Description: tvddevice-desc
 		BuildPaletteOrder: 51
-		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
+		Prerequisites: ~muweap, muhall, upgrade.tunnel_repairs, ~campaignunit, ~techlevel.5
 		BuildDuration: 2000
 		BuildDurationModifier: 100
 	Valued:
@@ -2150,7 +2156,7 @@ PROMTHTNK: #Prometheus Tank
 		BuildAtProductionType: Tank
 		Description: promthtnk-desc
 		BuildPaletteOrder: 40
-		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
+		Prerequisites: ~muweap, muhall, mutsw1, ~campaignunit, ~techlevel.5
 		BuildDuration: 875
 		BuildDurationModifier: 100
 	Valued:
@@ -2202,7 +2208,7 @@ MZHURONGTNK: #Zhurong Tank
 		BuildAtProductionType: Tank
 		Description: mzhurongtnk-desc
 		BuildPaletteOrder: 40
-		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
+		Prerequisites: ~muweap, muhall,upgrade.tiberium_gas_warheads, ~campaignunit, ~techlevel.5
 		BuildDuration: 875
 		BuildDurationModifier: 100
 	Valued:
@@ -3083,7 +3089,7 @@ KODCRUISER: ## Kodiak Cruiser
 		Queue: Air.Shared, Air.GDI
 		Description: kodcruiser-desc
 		BuildPaletteOrder: 22
-		Prerequisites: ~gahpad, gatech, ~techlevel.5, ~campaignunit
+		Prerequisites: ~gahpad, gtdrop, ~techlevel.5, ~campaignunit
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 	UpdatesPlayerStatistics:

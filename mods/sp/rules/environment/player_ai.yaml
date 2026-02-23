@@ -294,11 +294,11 @@ Player:
 		IgnoredEnemyTargetTypes: Mine, IgnoredByAI, Wall, NoAutoTarget
 		SuggestedGroundLeaderLocomotor: Infantry, HeavyInfantry, TibInmuneInfantry, Vehicle, InfantryCrusherVehicle, VehicleCrusher
 		SuggestedNavyLeaderLocomotor: Naval
-		GuerrillaTypes: cerberus, mutqueen, stormrider, scrglyder1, scrdestroyer, scrcarrier, scrbattleship, wasp, basilisk, jumpjetair, nconf, bhs, mutfiend, pdrone, moth, cyc2, shark, smech, hvr, jug, attackbike, bggy, howtlizer, stnk, mutquad, lynx, wolf, mrls, scrscorpion, deathclaw, scrmbt, scrglyder2, scrmobmine, reapercab, altnode1, crusader, jjcommair, umagon, mujeep, ghumv, slighshot, predator, mujfish
+		GuerrillaTypes: cerberus, mutqueen, stormrider, scrglyder1, scrdestroyer, scrcarrier, scrbattleship, wasp, basilisk, jumpjetair, nconf, bhs, mutfiend, pdrone, moth, cyc2, shark, smech, hvr, jug, attackbike, bggy, howtlizer, stnk, mutquad, lynx, wolf, mrls, scrscorpion, deathclaw, scrmbt, scrglyder2, scrmobmine, reapercab, altnode1, crusader, jjcommair, umagon, mujeep, ghumv, slighshot, predator, mujfish, beastrider, rayrider, cyc3, kodcruiser
 		#Hack: use DozerTypes for unit that needs moving randomly but not get out of the base
 		DozerTypes: lpst, sgen, icbm
 		MaxDozerSendingRadius: 14
-		AirUnitsTypes: jumpjetair, jjcommair, orca, orcab, apache, scrin, cerberus, mutheli, mutqueen, wetp, stormrider, scrglyder1, scrdestroyer, scrcarrier, stormriderspawn, repairwyvern, cabdronejet, repairdrone, scrbattleship, wasp, basilisk, sonicarryall_bot, apcarryall_bot
+		AirUnitsTypes: jumpjetair, jjcommair, orca, orcab, apache, scrin, cerberus, mutheli, mutqueen, wetp, stormrider, scrglyder1, scrdestroyer, scrcarrier, stormriderspawn, repairwyvern, cabdronejet, repairdrone, scrbattleship, wasp, basilisk, sonicarryall_bot, apcarryall_bot, orcai, zomca, rayrider, kodcruiser
 		ProtectionTypes: nodmcv, mutmcv, cabmcv, drache, drache2, mcv, harv, harv.nod, harv.mut, cabharv, scrharv, gacnst, gadept, scrdepot, gasilo, gate_a, mutgate_a, scrgate_a, scrgate_b, gapowr, gapile, gdiref, gaweap, garadr, gahpad, gatech, gtdrop, nodyard, napowr, nahand, nodref, naweap, naradr, naapwr, nahpad, natech, namisl, mutyard, mupowr, murax, muproc, muweap, muradr, muair, muhall, mutsw2, drached, scrpowr, scrrax, scrproc, scrproc2, scrproc3, scrproc4, scrweap, scrradr, scrair, scrtech, scradvpowr, cabyard, cabpowr, cabclaw, cabproc, cabweap, cabradr, cabair, cabtech, cabobelisk, gavulc, garock, gasonc, gacsam, nalasr, naobel, nasam, mubunkr, mucannon, muflak, cabpit, cabblast, cabrail, scrneedler, scrdrone, scrtractor, gafire, gaplug, nastlh, natmpl, muventi, mutsw1, scrextractor, scrsw1, cabeye, cabsw1, blackdefd, weed, bloodderrick, colorpicker, mubunkr, defd, icbm, king
 	UnitBuilderBotModule@AIAll:
 		RequiresCondition: AIEasy || AIBase
@@ -444,7 +444,19 @@ Player:
 			mujfish: 10
 			ghost: 1
 			umagon: 1
+			apucmdo: 1
+			zonedefr: 1
+			zoneraider: 1
+			shadteam: 1
+			orcai: 1
+			zomca: 1
 			mujeep: 1
+			beastrider: 1
+			rayrider: 1
+			mrinotnk: 1
+			mzhurongtnk: 1
+			cyc3: 1
+			kodcruiser: 1
 			ghumv: 1
 			predator: 10
 			slighshot: 1
@@ -482,6 +494,8 @@ Player:
 			scrin: 5
 			orca: 5
 			orcab: 5
+			orcai: 4
+			zomca: 4
 			mutheli: 5
 			wetp: 5
 			apache: 5
@@ -490,7 +504,9 @@ Player:
 			basilisk: 5
 			cerberus: 5
 			scrcarrier: 5
+			kodcruiser: 5
 			mutqueen: 5
+			rayrider: 6
 			minelayer: 2
 			scrscorpion: 2
 			sapc: 2
@@ -865,7 +881,7 @@ Player:
 			sapc: IdleUnit
 			mujeep: IdleUnit
 			scrtrans: IdleUnit
-		PassengerTypes: gdie1, altnode1, jumpjet, crusader, e3, marauder, cyborg, cborg, legio, grenadier, e2, templar, mutfiend, colossi, seer, eagleguard, bhs, psyker, glad, cyc2, bug, nconf, ghost, umagon, mastermind
+		PassengerTypes: gdie1, altnode1, jumpjet, crusader, e3, marauder, cyborg, cborg, legio, grenadier, e2, templar, mutfiend, colossi, seer, eagleguard, bhs, psyker, glad, cyc2, bug, nconf, ghost, umagon, mastermind, apucmdo, zonedefr, zoneraider, cyc3
 		ValidTransportOwner: AlliedBot
 
 	SendUnitToAttackBotModule@Backlines:
@@ -950,7 +966,7 @@ Player:
 	SharedCargoBotModule:
 		RequiresCondition: has-tunnel && (AIBase || AIEasy)
 		Transports: muvent, muventi, mutambushvent
-		Passengers: apc, struck, bggy, apc_bot, riflebggy, rocketbggy, flamebggy, struckfull, struckfull_t3, mmch,smech,attackbike,centurion,scrdronec,corruptor,scrglyder2,hvr,ttnk,lynx,mutquad,wolf,g4tnk,scrmbt,sonic,jug,mrls,deathclaw,spiderarty,paladin,tripod,howtlizer,stnk,scrrecharger,scrmobmine, weasau3, regentnk, promthtnk, slighshot, predator
+		Passengers: apc, struck, bggy, apc_bot, riflebggy, rocketbggy, flamebggy, struckfull, struckfull_t3, mmch,smech,attackbike,centurion,scrdronec,corruptor,scrglyder2,hvr,ttnk,lynx,mutquad,wolf,g4tnk,scrmbt,sonic,jug,mrls,deathclaw,spiderarty,paladin,tripod,howtlizer,stnk,scrrecharger,scrmobmine, weasau3, regentnk, promthtnk, slighshot, predator, mzhurongtnk, mrinotnk, apucmdo, zonedefr, zoneraider, cyc3
 
 	GrantConditionOnPrerequisite@HasMinelayer:
 		Condition: has-minelayer

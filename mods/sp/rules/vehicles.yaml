@@ -856,6 +856,11 @@ BGGY: #Raider Buggy
 			bug: ifv.scrin
 			colossi: ifv.scrin
 			mastermind: ifv.mastermind
+			apucmdo: ifv.railgun
+			zonedefr: ifv.railgun
+			zoneraider: ifv.mortar
+			shadteam: ifv.militant
+			cyc3: ifv.cyc2
 	WithCargoSounds:
 		EnterSounds: genter1a.wav
 		ExitSounds: gexit1a.wav
