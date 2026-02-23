@@ -2828,6 +2828,7 @@ COLOSSI:
 		TeleportWeapon: ColoussTeleToBlue
 		RequiresCondition: vinifera_components
 	RA2PortableChrono:
+		PauseOnCondition: WebDisable
 		TeleportType: ColoussTele
 		Voice: Move
 		ChargeDelay: 1200
@@ -2846,6 +2847,16 @@ COLOSSI:
 	-TakeCover:
 	WithInfantryBody:
 		RequiresCondition:  !WebDisable && !inside-tunnel
+	IssueOrderToBot@AI:
+		RequiresCondition: !WebDisable
+		OrderName: PortableChronoTeleport
+		OrderTrigger: Attack
+		OrderChance: 100
+		OrderInterval: 1215
+		TargetRangeInCell: 8
+		ValidTargets: Infantry, Vehicle
+		ValidRelationships: Enemy
+		TargetDistance: Random
 	ActorStatValues:
 		Damage: 200
 
@@ -2942,6 +2953,7 @@ MASTERMIND: #Mastermind
 		RequiresSelection: true
 		ValidRelationships: Ally, Neutral, Enemy
 	RA2PortableChrono:
+		PauseOnCondition: WebDisable
 		TeleportType: MasterMindTele
 		Voice: Move
 		ChargeDelay: 500
@@ -2961,6 +2973,16 @@ MASTERMIND: #Mastermind
 	-FirepowerMultiplier@ZealousBuff:
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
+	IssueOrderToBot@AI:
+		RequiresCondition: !WebDisable
+		OrderName: PortableChronoTeleport
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 1215
+		TargetRangeInCell: 12
+		ValidTargets: Ground, Air, Water
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 	ActorStatValues:
 		ReloadDelay: 100
 		Stats: Armor, Sight, Speed, MindControl, ReloadDelay, MinRange, None, MaxRange
