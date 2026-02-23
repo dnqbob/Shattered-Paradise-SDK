@@ -1979,7 +1979,7 @@ WEASAU3: #Green Weasaurus
 	SharedPassenger:
 		CustomPipType: red
 	IssueOrderToBot@AI:
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderTrigger: Attack
 		OrderChance: 20
 		OrderInterval: 1006
@@ -2694,7 +2694,7 @@ M_EMP:
 	ExplodesAlsoTransported:
 		Weapon: UnitExplode
 	IssueOrderToBot@AI:
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderTrigger: Attack
 		OrderChance: 100
 		OrderInterval: 1606
@@ -3472,7 +3472,7 @@ COREDEFENDER:
 		DamageMaxRange: 7c140
 		DamageMinRange: 6c724
 	IssueOrderToBot@AI:
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderTrigger: Damage
 		OrderChance: 100
 		OrderInterval: 1811

@@ -994,7 +994,7 @@ NCONF:
 		Interval: 999999
 		RequiresCondition: HologramSpawn
 	IssueOrderToBot@AI:
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderTrigger: Attack
 		OrderChance: 100
 		OrderInterval: 4006
@@ -1575,7 +1575,7 @@ SEER:
 		LocalOffset: 0, 0, 200
 		RequiresCondition: deployed
 	IssueOrderToBot@AI:
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderChance: 50
 		OrderInterval: 2006
 		OrderTrigger: Attack

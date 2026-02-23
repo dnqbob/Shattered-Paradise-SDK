@@ -1274,7 +1274,7 @@
 		TerrainTypes: Tiberium, BlueTiberium
 	IssueOrderToBot@TIBCONVERSION:
 		OrderTrigger: Periodically
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderInterval: 220
 		RequiresCondition: OnTiber && tibconversion
 

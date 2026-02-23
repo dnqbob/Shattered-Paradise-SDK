@@ -1914,7 +1914,7 @@ SCORPION:
 		ConditionDuration: 25
 		PauseOnCondition: empdisable
 	IssueOrderToBot@AI:
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderTrigger: Attack
 		OrderChance: 100
 		OrderInterval: 2256
@@ -2634,7 +2634,7 @@ WEASAU:
 	VoiceAnnouncementOnProductionExit:
 		Voice: Build
 	IssueOrderToBot@AI:
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderTrigger: Attack
 		OrderChance: 100
 		OrderInterval: 1006

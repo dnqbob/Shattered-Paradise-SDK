@@ -993,7 +993,7 @@ GAFIRE:
 		Priority: 2
 	IssueOrderToBot@AI:
 		RequiresCondition: !Building-Buildup && !empdisable && !disabled
-		OrderName: DeployWithCharge
+		OrderName: ActivateCondition
 		OrderChance: 100
 		OrderInterval: 200
 	-RevealOnFire:
