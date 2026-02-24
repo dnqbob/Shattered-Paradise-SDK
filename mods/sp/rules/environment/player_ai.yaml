@@ -123,6 +123,7 @@ Player:
 		ProductionTypes: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mtar, muweap, cabweap, scrweap, gahpad, nahpad, muair, cabair, scrair
 		SiloTypes: gasilo
 		PlaceDefenseTowardsEnemyChance: 65
+		AssignRallyPointsInterval: 2000
 		BuildingLimits:
 			gadept: 1
 			scrdepot: 1
