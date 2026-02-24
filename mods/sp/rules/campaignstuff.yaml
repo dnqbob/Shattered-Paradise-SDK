@@ -99,6 +99,11 @@ STRUCKFULL_T3:
 		Delay: 500
 		RequiresCondition: AImicroManage && !loaded
 		RemoveInstead: true
+	IssueOrderToBot@AI-Nudge:
+		RequiresCondition: !loaded
+		OrderName: Scatter
+		OrderChance: 100
+		OrderInterval: 12000
 
 NUKECARRYALL_BOT:
 	Inherits: trnsport.mut
@@ -971,6 +976,15 @@ GHUMV: #Humvee
 		Weapon: UnitExplodeSmall
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MaxRange, Cargo
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 ORCAI: #Orca Interceptor
 	Inherits: ^CombatPlane
@@ -1305,6 +1319,15 @@ MUJEEP: #Technical
 		OrderName: Unload
 		OrderChance: 100
 		OrderInterval: 45
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 SLIGHSHOT:
 	Inherits: ^HoverTank
@@ -1382,6 +1405,15 @@ SLIGHSHOT:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 		Damage: 80
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 BEASTRIDER: # Beast Rider
 	Inherits: ^TibBeast
@@ -2138,11 +2170,15 @@ TVDDEVICE: #T.V.D.D
 		InitialStanceAI: AttackAnything
 	ExplodesAlsoTransported:
 		Weapon: UnitExplodeBigger
-	IssueOrderToBot@AI:
+	IssueOrderToBot@AI: ## Hack: activate halfway only when there is valid hostile enemy and damaged
+		RequiresCondition: !FullHealth && !activating
 		OrderTrigger: Damage
 		OrderName: Detonate
-		OrderChance: 50
-		OrderInterval: 150
+		OrderChance: 100
+		OrderInterval: 40
+		TargetRangeInCell: 7
+		ValidTargets: Ground
+		ValidRelationships: Enemy
 	ActorStatValues:
 		Damage: 2000
 

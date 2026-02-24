@@ -366,6 +366,15 @@ HVR: #Hover MLRS
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 		Damage: 50
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 JUG:
 	Inherits: ^Walker
@@ -1117,6 +1126,15 @@ BGGY: #Raider Buggy
 		OrderChance: 100
 		OrderTrigger: Periodically
 		OrderInterval: 20
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 ATTACKBIKE:
 	Inherits: ^CombatVehicle
@@ -1714,6 +1732,15 @@ HOWTLIZER:
 		Image: specter
 	ActorStatValues:
 		Damage: 280
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 STNK:
 	Inherits: ^Tank
@@ -1797,7 +1824,6 @@ STNK:
 	AutoTarget:
 		ScanRadius: 10 #PREF: save trait looks up and scan armaments
 		InitialStance: ReturnFire
-		InitialStanceAI: ReturnFire
 	-GrantConditionOnPrerequisite@SUDDENDEATH:
 	-MustBeDestroyed:
 	Voiced:
@@ -1806,6 +1832,15 @@ STNK:
 	ActorStatValues:
 		Damage: 240
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 SCORPION:
 	Inherits: ^CombatVehicle
@@ -2067,6 +2102,15 @@ MUTQUAD:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 		Damage: 80
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 LYNX:
 	Inherits: ^CombatVehicle
@@ -2718,7 +2762,6 @@ WEASAUSMALL:
 		DeathTypes: BulletDeath, ExplosionDeath, CabalDeath, CabalDeathUpg, TiberiumDeath, TimeOutDeath
 	-ActorLostNotification:
 	-UpdatesPlayerStatistics:
-
 	-Passenger:
 	-SharedPassenger:
 	DetectCloaked: ## Remove in_tunnel and as cargo
@@ -2733,6 +2776,15 @@ WEASAUSMALL:
 	ActorStatOverride@Tibinfusion:
 		Health: 50000
 		RequiresCondition: tibinfusion
+	IssueOrderToBot@AI2: ## rush!!
+		OrderName: AssualtMove
+		OrderTrigger: Periodically
+		OrderChance: 100
+		OrderInterval: 200
+		TargetRangeInCell: 10
+		ValidTargets: Ground
+		ValidRelationships: Enemy
+		TargetDistance: Closest
 
 ###########################################################
 # CABAL
@@ -3624,6 +3676,15 @@ SCRMBT:
 		StartDelay: -1
 	ActorStatValues:
 		Damage: 90
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 SCRGLYDER2:
 	Inherits: ^HoverVehicle
@@ -3939,6 +4000,15 @@ SCRMOBMINE:
 		Palette: jascpurplealpha
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, MindControl, ReloadDelay, MaxRange
+	IssueOrderToBot@AI2: ## hit and run
+		OrderName: Move
+		OrderTrigger: Damage
+		OrderChance: 100
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground
+		ValidRelationships: Ally
+		TargetDistance: Furthest
 
 TRIPOD: #Annihilator Tripod
 	Inherits: ^Walker
