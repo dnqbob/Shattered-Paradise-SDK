@@ -70,14 +70,3 @@ AIGlyder2AimingDummyWeapon:
 	ValidTargets: Ground, Water
 	Projectile: InstantExplode
 
-FirestormAIAimingDummyWeapon:
-	ReloadDelay: 100
-	Range: 11c0
-	ValidTargets: Air, Ground, Water
-	Projectile: InstantExplode
-
-MutTunnelAIAimingDummyWeapon:
-	ReloadDelay: 100
-	Range: 10c0
-	ValidTargets: Air, Ground, Water
-	Projectile: InstantExplode

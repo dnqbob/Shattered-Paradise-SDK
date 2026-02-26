@@ -907,7 +907,6 @@ GAFIRE:
 	Inherits@LOWPOWER: ^DisableOnLowPowerOrPowerDown
 	Inherits@SHAPE: ^3x2Shape
 	Inherits@FirestormWall: ^FirestormWallSP
-	Inherits@AIbuilding: ^AImicroManagable
 	Buildable:
 		Queue: Support.Shared, Support.GDI
 		BuildPaletteOrder: 41
@@ -930,6 +929,7 @@ GAFIRE:
 		Width: 2
 	GrantChargedConditionOnToggle@FirestormWall:
 		PauseOnCondition: (empdisable || disabled)  && !FirestormGen
+		ChargedCondition: charged
 	ProximityExternalCondition@FirestormWall:
 		RequiresCondition: FirestormGen && !empdisable && !disabled
 	FirestromSP:
@@ -975,25 +975,19 @@ GAFIRE:
 	#ProvidesPrerequisite@buildingname:
 	RequiresBuildableArea:
 		AreaTypes: building
-	Armament@AIAimOnly:
-		RequiresCondition: AImicroManage && !FirestormGen && !empdisable && !disabled && !Building-Buildup
-		Weapon: FirestormAIAimingDummyWeapon
-	AttackOmni@AIAimOnly:
-		RequiresCondition: AImicroManage && !Building-Buildup && !empdisable && !disabled
-		PauseOnCondition: empdisable
-	AutoTarget@AIonly:
-		RequiresCondition: AImicroManage
-		InitialStanceAI: Defend
-		MinimumScanTimeInterval: 41
-		MaximumScanTimeInterval: 50
-		ScanRadius: 11 #PREF: save trait looks up and scan armaments
-	AutoTargetPriority@AIonly:
-		ValidRelationships: Enemy
-		ValidTargets: Ground, Air, Water
-		Priority: 2
-	IssueOrderToBot@AI:
-		RequiresCondition: !Building-Buildup && !empdisable && !disabled
+	IssueOrderToBot@AI-enemy:
+		RequiresCondition: !empdisable && !disabled && charged
 		OrderName: ActivateCondition
+		OrderTrigger: Periodically
+		OrderChance: 100
+		OrderInterval: 200
+		TargetRangeInCell: 9
+		ValidTargets: Ground, Air, Water
+		ValidRelationships: Enemy
+	IssueOrderToBot@AI-OnDamage:
+		RequiresCondition: !empdisable && !disabled && charged
+		OrderName: ActivateCondition
+		OrderTrigger: Damage
 		OrderChance: 100
 		OrderInterval: 200
 	-RevealOnFire:
@@ -1282,27 +1276,15 @@ NATMPL:
 	-RevealOnFire:
 	ProvidesPrerequisite@HasTunnel: ## For AI Perf.
 		Prerequisite: HasTunnel
-	Armament@AIAimOnly:
-		RequiresCondition: AImicroManage && !Building-Buildup && !StopAndDeploy
-		Weapon: MutTunnelAIAimingDummyWeapon
-		ReloadingCondition: StopAndDeploy ## HACK: SharedCargo can only deploy when not firing
-	AttackOmni@AIAimOnly:
-		RequiresCondition: AImicroManage && !Building-Buildup && !StopAndDeploy
-	AutoTarget@AIonly:
-		RequiresCondition: AImicroManage && !StopAndDeploy
-		InitialStanceAI: Defend
-		MinimumScanTimeInterval: 30
-		MaximumScanTimeInterval: 30
-		ScanRadius: 10 #PREF: save trait looks up and scan armaments
-	AutoTargetPriority@AIonly:
-		ValidRelationships: Enemy
-		ValidTargets: Ground, Air, Water
-		Priority: 2
 	IssueOrderToBot@AI:
+		RequiresCondition: !empdisable && !Building-Buildup
 		OrderName: UnloadShared
-		OrderTrigger: Attack
+		OrderTrigger: Periodically
 		OrderChance: 100
-		OrderInterval: 35
+		OrderInterval: 100
+		TargetRangeInCell: 9
+		ValidTargets: Ground, Air, Water
+		ValidRelationships: Enemy
 	Voiced:
 		VoiceSet: TunnelNetworkVoice
 		Volume: 0.5
