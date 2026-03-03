@@ -11,7 +11,7 @@ World:
 	-SpawnStartingUnits:
 	-MapStartingLocations:
 	MusicPlaylist:
-		BackgroundMusic: maps
+		BackgroundMusic: heroism
 		DisableWorldSounds: true
 	-StartGameNotification:
 	GradientColorsPalette@cloud: ## We can make it greener as viewport is moving
