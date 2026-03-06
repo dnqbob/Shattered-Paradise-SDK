@@ -5,18 +5,23 @@ Player:
 	ModularBot@EasyAI:
 		Name: bot-easy-name
 		Type: EasyAI
+		HighPriorityOrders: PlaceBuilding, Chronoshift
 	ModularBot@NormalAI:
 		Name: bot-normal-name
 		Type: NormalAI
+		HighPriorityOrders: PlaceBuilding, Chronoshift
 	ModularBot@Cheater:
 		Name: bot-cheater-name
 		Type: CheaterAI
+		HighPriorityOrders: PlaceBuilding, Chronoshift
 	ModularBot@ShatteredAI:
 		Name: bot-shattered-name
 		Type: ShatteredAI
+		HighPriorityOrders: PlaceBuilding, Chronoshift
 	ModularBot@ParadiseAI:
 		Name: bot-paradise-name
 		Type: ParadiseAI
+		HighPriorityOrders: PlaceBuilding, Chronoshift
 	#################################
 	## Condition Defination
 	#################################
@@ -573,288 +578,433 @@ Player:
 		UndeployTick: 9000
 		McvFactoryTypes: gaweap, naweap, nahfac, muweap, cabweap, scrair
 		DeployedExpandVehicleTypes: gacnst, mutyard, cabyard, nodyard, drached
-	SupportPowerBotASModule:
+	SupportPowerBotModule:
 		RequiresCondition: AIBase
+		LocmotorsAndHarmfulTerrain:
+			Infantry: Water, Waterfall
+			HeavyInfantry: Water, Waterfall
+			TibInmuneInfantry: Water, Waterfall
+			Vehicle: Water, Waterfall
+			InfantryCrusherVehicle: Water, Waterfall
+			AmphAPCLocomotor: Water, Waterfall
+			VehicleCrusher: Water, Waterfall
+			subterranean: Water, Waterfall
+			Naval: Clear, Ice, Rough, Road, DirtRoad, Ground, Green
 		Decisions:
 			radarscan:
 				OrderName: RadarScan
+				TargetLocationMode: ActorCenter
+				VisibilityCheck: false
 				MinimumAttractiveness: 1
 				Consideration@1:
 					Against: Enemy
-					Types: Building
-					Attractiveness: 1
-					IgnoreVisibility: true
-					TargetMetric: None
-					CheckRadius: 5c0
-			ioncannon2:
-				OrderName: IonCannon2
-				MinimumAttractiveness: 10000
-				Consideration@1:
-					Against: Enemy
-					Types: AIPrefer
-					IgnoreVisibility: true
-					Attractiveness: 1000000
-					TargetMetric: None
-					CheckRadius: 4c0
+					Attractiveness: 800
+					ValidTargetTypes: Air, Ground, Water
+					TargetMetric: Undetected
+					CheckRadius: 8c0
 				Consideration@2:
 					Against: Enemy
-					Types: Ground, Water
-					Attractiveness: 1
-					TargetMetric: Value
-					CheckRadius: 4c0
+					Attractiveness: 5000
+					ValidTargetTypes: Building
+					TargetMetric: Undetected
+					CheckRadius: 8c0
 				Consideration@3:
-					Against: Ally
-					Types: Ground, Water
-					Attractiveness: -10
+					Against: Enemy
+					Attractiveness: 1
+					ValidTargetTypes: Air, Ground, Water
+					InvalidActorTypes: coredefender, hmectest
 					TargetMetric: Value
-					CheckRadius: 5c0
-			apocalypsemissile:
-				OrderName: ApocalypseMissile
-				MinimumAttractiveness: 15000
+					CheckRadius: 8c0
+			ioncannon2:
+				OrderName: IonCannon2
+				TargetLocationMode: ActorCenter
+				MinimumAttractiveness: 3200
 				Consideration@1:
 					Against: Enemy
-					Types: Ground, Water
+					ValidTargetTypes: AIPrefer
+					Attractiveness: 1000000
+					TargetMetric: None
+					CheckRadius: 8c0
+				Consideration@2:
+					Against: Enemy
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: 1
 					TargetMetric: Value
+					CheckRadius: 9c0
+				Consideration@3:
+					Against: Ally
+					ValidTargetTypes: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 9c0
+			apocalypsemissile:
+				OrderName: ApocalypseMissile
+				TargetLocationMode: ActorCenter
+				MinimumAttractiveness: 6500
+				CoarseScanRadius: 24
+				FineScanRadius: 3
+				Consideration@1:
+					Against: Enemy
+					ValidTargetTypes: Ground, Water
+					Attractiveness: 1
+					TargetMetric: Value
+					CheckRadius: 12c0
+				Consideration@2:
+					Against: Ally
+					ValidTargetTypes: Air, Ground, Water
+					Attractiveness: -10
+					TargetMetric: Value
+					CheckRadius: 12c0
+			ionstorm:
+				OrderName: IonStorm
+				MinimumAttractiveness: 5400
+				TargetLocationMode: ActorCenter
+				CoarseScanRadius: 24
+				FineScanRadius: 3
+				Consideration@1:
+					Against: Enemy
+					ValidTargetTypes: AIPrefer
+					Attractiveness: 1000000
+					TargetMetric: None
 					CheckRadius: 8c0
 				Consideration@2:
 					Against: Ally
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: -10
 					TargetMetric: Value
-					CheckRadius: 7c0
-			ionstorm:
-				OrderName: IonStorm
-				MinimumAttractiveness: 12000
-				Consideration@1:
-					Against: Enemy
-					Types: AIPrefer
-					IgnoreVisibility: true
-					Attractiveness: 1000000
-					TargetMetric: None
-					CheckRadius: 4c0
-				Consideration@2:
-					Against: Ally
-					Types: Air, Ground, Water
-					Attractiveness: -10
-					TargetMetric: Value
-					CheckRadius: 7c0
+					CheckRadius: 12c0
 				Consideration@3:
 					Against: Enemy
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 7c0
+					CheckRadius: 12c0
 			ironsavior:
 				OrderName: IronSavior
-				MinimumAttractiveness: 12000
+				MinimumAttractiveness: 3500
+				TargetLocationMode: ActorCenter
 				Consideration@1:
 					Against: Enemy
-					Types: AIPrefer
-					IgnoreVisibility: true
+					ValidTargetTypes: AIPrefer
 					Attractiveness: 1000000
 					TargetMetric: None
-					CheckRadius: 4c0
+					CheckRadius: 8c0
 				Consideration@2:
 					Against: Enemy
-					Types: Ground, Water, Air
+					ValidTargetTypes: Ground, Water, Air
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 5c0
+					CheckRadius: 10c0
 				Consideration@4:
 					Against: Ally
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: -10
 					TargetMetric: Value
-					CheckRadius: 7c0
+					CheckRadius: 10c0
 			meteorspawner:
 				OrderName: MeteorSpawner
-				MinimumAttractiveness: 10000
+				MinimumAttractiveness: 3000
+				TargetLocationMode: ActorCenter
 				Consideration@1:
 					Against: Enemy
-					Types: AIPrefer
-					IgnoreVisibility: true
+					ValidTargetTypes: AIPrefer
 					Attractiveness: 1000000
 					TargetMetric: None
-					CheckRadius: 4c0
+					CheckRadius: 8c0
 				Consideration@2:
 					Against: Enemy
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 6c0
+					CheckRadius: 10c0
 				Consideration@3:
 					Against: Ally
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: -10
 					TargetMetric: Value
-					CheckRadius: 7c0
+					CheckRadius: 10c0
 			toxinMissile:
 				OrderName: ToxinMissile
-				MinimumAttractiveness: 3000
+				MinimumAttractiveness: 2000
+				TargetLocationMode: ActorCenter
 				Consideration@1:
 					Against: Enemy
-					Types: Vehicle, Infantry
+					ValidTargetTypes: Vehicle, Infantry
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 5c0
+					CheckRadius: 10c0
 				Consideration@2:
 					Against: Ally
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: -10
 					TargetMetric: Value
-					CheckRadius: 7c0
+					CheckRadius: 10c0
 			droppod:
 				OrderName: Droppod
 				MinimumAttractiveness: 3000
-				Consideration@1:
+				VisibilityCheck: false
+				TargetLocationMode: ActorCenter
+				Consideration@offensive1:
+					StrategyName: offensive-drop
 					Against: Enemy
-					Types: AIPrefer
-					IgnoreVisibility: true
+					ValidTargetTypes: AIPrefer
 					Attractiveness: 1000000
 					TargetMetric: None
-					CheckRadius: 4c0
-				Consideration@2:
+					CheckRadius: 8c0
+				Consideration@offensive2:
+					StrategyName: offensive-drop
 					Against: Enemy
-					Types: Building
+					ValidTargetTypes: Building
+					InvalidTargetTypes: Defence
 					Attractiveness: 10
 					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@3:
+					CheckRadius: 10c0
+				Consideration@offensive3:
+					StrategyName: offensive-drop
 					Against: Enemy
-					Types: Defence
+					ValidTargetTypes: Defence
+					InvalidActorTypes: gacsam, nasam, muflak, cabrail, scrtractor
 					Attractiveness: -200000
 					TargetMetric: None
-					CheckRadius: 7c0
-				Consideration@4:
-					Against: Enemy
-					Types: Ground
+					CheckRadius: 10c0
+				Consideration@defensive1:
+					StrategyName: defensive-drop
+					Against: Ally
+					ValidTargetTypes: Ground
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 5c0
+					CheckRadius: 10c0
+				Consideration@defensive2:
+					StrategyName: defensive-drop
+					Against: Enemy
+					ValidTargetTypes: Ground
+					InvalidTargetTypes: Summoned
+					Attractiveness: 300
+					TargetMetric: HealthLoss
+					CheckRadius: 10c0
 			exemplars:
 				OrderName: ExemplarsSummon
+				DecisionMode: OnAttacked
+				CoarseScanRadius: 12 ##triggered by OnAttacked
 				MinimumAttractiveness: 700
-				Against: Ally
-				Types: Infantry
+				TargetLocationMode: ActorCenter
 				Consideration@1:
-					Against: Enemy
-					Types: Ground
+					Against: Ally
+					ValidTargetTypes: Infantry
+					InvalidTargetTypes: Summoned
+					InvalidActorTypes: engineer, cutman, swarmling, shapeshifter 
 					Attractiveness: 1
 					TargetMetric: Value
 					CheckRadius: 6c0
 			tunnel:
 				OrderName: SneakAttackPowerInfoOrder
-				MinimumAttractiveness: 3000
-				Consideration@2:
+				MinimumAttractiveness: 1
+				VisibilityCheck: false
+				TargetLocationMode: ActorCenter
+				CoarseScanRadius: 16
+				Consideration@backline-tunnel1:
 					Against: Enemy
-					Types: Building
+					ValidTargetTypes: Building
+					InvalidActorTypes: gacsam, nasam, muflak, cabrail, scrtractor
 					Attractiveness: 10
 					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@3:
+					CheckRadius: 6c0
+				Consideration@backline-tunnel2:
 					Against: Enemy
-					Types: Defence, Veinhole
+					ValidTargetTypes: Defence, Veinhole
+					InvalidActorTypes: gacsam, nasam, muflak, cabrail, scrtractor
 					Attractiveness: -200000
 					TargetMetric: None
 					CheckRadius: 7c0
-				Consideration@4:
+				Consideration@backline-tunnel3:
 					Against: Enemy
-					Types: Ground
-					Attractiveness: 1
-					TargetMetric: None
-					CheckRadius: 5c0
-			nano:
-				OrderName: NanomachineSwarm
-				MinimumAttractiveness: 7000
-				MinimumScanTimeInterval: 83
-				MaximumScanTimeInterval: 100
-				Consideration@1:
-					Against: Ally
-					Types: Vehicle, Infantry
+					ValidActorTypes: harv, cabharv, scrharv, harv.nod, harv.mut, engineer, cutman, swarmling, shapeshifter,mcv, drache, drache2, cabmcv, nodmcv, mutmcv
 					Attractiveness: 2
 					TargetMetric: Value
+					CheckRadius: 9c0
+			tunnel-front:
+				OrderName: SneakAttackPowerInfoOrder
+				MinimumAttractiveness: 300
+				DecisionMode: OnAttacked
+				VisibilityCheck: false
+				TargetLocationMode: ActorCenter
+				CoarseScanRadius: 12 ##triggered by OnAttacked
+				Consideration@1:
+					Against: Ally
+					ValidTargetTypes: Vehicle, Infantry, Building
+					InvalidTargetTypes: Summoned
+					Attractiveness: 200
+					TargetMetric: HealthLoss
+					CheckRadius: 7c0
+				Consideration@4:
+					Against: Enemy
+					ValidTargetTypes: Vehicle, Infantry
+					Attractiveness: 50
+					CheckRadius: 7c0
+			nano:
+				OrderName: NanomachineSwarm
+				MinimumAttractiveness: 500
+				DecisionMode: OnAttacked
+				VisibilityCheck: false
+				TargetLocationMode: ActorCenter
+				CoarseScanRadius: 12 ##triggered by OnAttacked
+				Consideration@1:
+					Against: Ally
+					ValidTargetTypes: Vehicle, Infantry, Air, Building
+					InvalidTargetTypes: Summoned
+					Attractiveness: 200
+					TargetMetric: HealthLoss
+					CheckRadius: 7c0
+				Consideration@4:
+					Against: Enemy
+					ValidTargetTypes: Vehicle, Infantry
+					Attractiveness: 50
 					CheckRadius: 7c0
 			veinhole:
 				OrderName: Veinhole
-				MinimumAttractiveness: 3000
-				IgnoreVisibility: false
+				MinimumAttractiveness: 2000
+				TargetLocationMode: ActorCenter
+				VisibilityCheck: false
 				Consideration@1:
 					Against: Enemy
-					Types: AIPrefer
-					IgnoreVisibility: true
+					ValidTargetTypes: AIPrefer
 					Attractiveness: 1000000
 					TargetMetric: None
-					CheckRadius: 5c0
+					CheckRadius: 8c0
 				Consideration@2:
 					Against: Enemy
-					Types: Building
+					ValidTargetTypes: Building
+					InvalidActorTypes: gacsam, nasam, muflak, cabrail, scrtractor
 					Attractiveness: 10
 					TargetMetric: Value
-					CheckRadius: 5c0
+					CheckRadius: 10c0
 				Consideration@3:
 					Against: Enemy
-					Types: Defence
+					ValidTargetTypes: Defence
+					InvalidActorTypes: gacsam, nasam, muflak, cabrail, scrtractor
 					Attractiveness: -50
 					TargetMetric: Value
-					CheckRadius: 5c0
-			chronoshiftsummon:
-				OrderName: ChronoshiftSummon
-				MinimumAttractiveness: 3000
-				Consideration@1:
+					CheckRadius: 10c0
+			chronoshift: ## chrono
+				OrderName: Chronoshift
+				CheckTargetLocationFirst: false
+				TargetLocationMode: CellCanBeEnteredByTargetedActor
+				ExtraLocationMode: ActorLocation
+				VisibilityCheck: false
+				MinimumAttractiveness: 10000
+				FineScanRadius: 4
+				## put enemy army to death zone
+				Consideration@enemy-death-extraloc1:
+					StrategyName: enemy-death-magic
+					AsExtraLocation: true
 					Against: Enemy
-					Types: Infantry
-					Attractiveness: 3
+					ValidTargetTypes: Infantry, Vehicle
+					InvalidTargetTypes: Summoned, LandedCraft
+					InvalidActorTypes: hmec, scorpion, weasau, bcoredef, coredefender, hmectest, pdrone, moth, nanos, hvr, hvrtruk3, limped, cabapc, scrmbt, scrglyder2, scrmobmine, slighshot, jfish, mujfish 
+					Attractiveness: 200
 					TargetMetric: Value
-					CheckRadius: 5c0
-				Consideration@2:
+					CheckRadius: 2c512
+				Consideration@enemy-death-target1:
+					StrategyName: enemy-death-magic
+					TargetMetric: HarmfulCell
+				## steal enemy army
+				Consideration@enemy-army-extraloc1:
+					StrategyName: enemy-army-magic
+					AsExtraLocation: true
 					Against: Enemy
-					Types: Vehicle
-					Attractiveness: 1
+					ValidTargetTypes: Infantry, Vehicle
+					InvalidTargetTypes: Summoned, LandedCraft
+					InvalidActorTypes: hmec, scorpion, weasau, bcoredef, coredefender, hmectest
+					Attractiveness: 200
 					TargetMetric: Value
-					CheckRadius: 5c0
+					CheckRadius: 2c512
+				Consideration@enemy-army-target1:
+					StrategyName: enemy-army-magic
+					Against: Ally
+					ValidTargetTypes: Infantry, Vehicle, Defence
+					InvalidActorTypes: harv, cabharv, scrharv, harv.nod, harv.mut, engineer, cutman, swarmling, shapeshifter,mcv, drache, drache2, cabmcv, nodmcv, mutmcv, limped, mumine, eggs, cabsentry, tickhologram, flamehologram, stormriderspawn, cabdronejet, weasausmall, repairdrone, repairwyvern, dshp, dshp.high, mkiiidrone-minigun, councilor, scrtrans, trnsport, trnsport.nod, trnsport.mut, trnsport.cab, trnsport.scr, nukecarryall_bot,sonicarryall_bot, apcarryall_bot, tvddcarryall_bot, devourer, bike, subtank, sapc, hvrtruk3, minelayer, king, drillpod, tvddevice 
+					Attractiveness: 50
+					TargetMetric: Value
+					CheckRadius: 4c0
+				## teleport vehicles to attack weak spot (harv)
+				Consideration@ally-assualt-extraloc1:
+					StrategyName: ally-assualt-magic
+					AsExtraLocation: true
+					AgainstOwnActors: true
+					ValidTargetTypes: Infantry, Vehicle
+					InvalidActorTypes: hmec, scorpion, weasau, bcoredef, coredefender, hmectest, harv, cabharv, scrharv, harv.nod, harv.mut, engineer, cutman, swarmling, shapeshifter,mcv, drache, drache2, cabmcv, nodmcv, mutmcv, limped, mumine, eggs, cabsentry, tickhologram, flamehologram, stormriderspawn, cabdronejet, weasausmall, repairdrone, repairwyvern, dshp, dshp.high, mkiiidrone-minigun, councilor, scrtrans, trnsport, trnsport.nod, trnsport.mut, trnsport.cab, trnsport.scr, nukecarryall_bot,sonicarryall_bot, apcarryall_bot, tvddcarryall_bot, devourer, bike, subtank, sapc, hvrtruk3, minelayer, king, drillpod, tvddevice
+					InvalidTargetTypes: Summoned, LandedCraft
+					Attractiveness: 200
+					TargetMetric: Value
+					CheckRadius: 2c512
+				Consideration@ally-assualt-target1:
+					StrategyName: ally-assualt-magic
+					Against: Enemy
+					ValidActorTypes: harv, cabharv, scrharv, harv.nod, harv.mut
+					Attractiveness: 100
+					TargetMetric: Value
+					CheckRadius: 4c0
+				Consideration@ally-assualt-target2:
+					StrategyName: ally-assualt-magic
+					Against: Enemy
+					ValidTargetTypes: Building
+					InvalidActorTypes: gacsam, nasam, muflak, cabrail, scrtractor
+					Attractiveness: 100
+					TargetMetric: Value
+					CheckRadius: 4c0
+				Consideration@ally-assualt-target3:
+					StrategyName: ally-assualt-magic
+					Against: Enemy
+					ValidTargetTypes: Vehicle, Defence, Infantry
+					InvalidActorTypes: harv, cabharv, scrharv, harv.nod, harv.mut, engineer, cutman, swarmling, shapeshifter,mcv, drache, drache2, cabmcv, nodmcv, mutmcv, limped, mumine, eggs, cabsentry, tickhologram, flamehologram, stormriderspawn, cabdronejet, weasausmall, repairdrone, repairwyvern, dshp, dshp.high, mkiiidrone-minigun, councilor, scrtrans, trnsport, trnsport.nod, trnsport.mut, trnsport.cab, trnsport.scr, nukecarryall_bot,sonicarryall_bot, apcarryall_bot, tvddcarryall_bot, devourer, bike, subtank, sapc, hvrtruk3, minelayer, king, drillpod, tvddevice, gacsam, nasam, muflak, cabrail, scrtractor
+					Attractiveness: -800
+					TargetMetric: Value
+					CheckRadius: 8c0
 			coredefsuper:
 				OrderName: CoreDefSuper
 				MinimumAttractiveness: 3000
+				TargetLocationMode: ActorCenter
 				Consideration@1:
 					Against: Enemy
-					Types: Ground, Water, Air
+					ValidTargetTypes: Ground, Water, Air
 					Attractiveness: 3
 					TargetMetric: Value
-					CheckRadius: 4c0
+					CheckRadius: 8c0
 				Consideration@3:
 					Against: Ally
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: -10
 					TargetMetric: Value
-					CheckRadius: 4c0
+					CheckRadius: 8c0
 			mk3super:
 				OrderName: MKIIISuper
-				MinimumAttractiveness: 7000
+				MinimumAttractiveness: 4000
+				TargetLocationMode: ActorCenter
 				Consideration@2:
 					Against: Enemy
-					Types: Ground, Water, Air
+					ValidTargetTypes: Ground, Water, Air
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 6c0
+					CheckRadius: 10c0
 				Consideration@4:
 					Against: Ally
-					Types: Air, Ground, Water
+					ValidTargetTypes: Air, Ground, Water
 					Attractiveness: -10
 					TargetMetric: Value
-					CheckRadius: 7c0
+					CheckRadius: 10c0
 			tearingreality:
 				OrderName: TearingReality
-				MinimumAttractiveness: 7000
+				MinimumAttractiveness: 3000
+				TargetLocationMode: ActorCenter
 				Consideration@2:
 					Against: Enemy
-					Types: Ground, Water
+					ValidTargetTypes: Ground, Water
 					Attractiveness: 1
 					TargetMetric: Value
-					CheckRadius: 5c0
+					CheckRadius: 8c0
 				Consideration@4:
 					Against: Ally
-					Types: Ground, Water
+					ValidTargetTypes: Ground, Water
 					Attractiveness: -10
 					TargetMetric: Value
 					CheckRadius: 7c0

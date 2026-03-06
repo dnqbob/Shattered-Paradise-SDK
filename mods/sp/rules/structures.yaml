@@ -1914,13 +1914,10 @@ SCRTECH:
 
 SCRADVPOWR:
 	Inherits: ^AffectPowerBuilding
-	Inherits@1: ^SuperWeapon
 	Inherits@2: ^ScrinDeathExplo
 	Inherits@3: ^ScrinBuildingFire
 	Inherits@RENDER: ^ScrinRenderBuilding
 	Inherits@SHAPE: ^3x3Shape
-	Inherits@AISupportPower: ^HasSuperSupportPower
-	Inherits@AIbuilding: ^AImicroManagable
 	Tooltip:
 		Name: scradvpowr-name
 	Buildable:
@@ -1942,7 +1939,6 @@ SCRADVPOWR:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	RA2ChronoshiftPower@chronoshift:
-		RequiresCondition: !AImicroManage
 		OrderName: Chronoshift
 		PauseOnCondition: empdisable || disabled
 		AllowMultiple: true
@@ -1984,23 +1980,6 @@ SCRADVPOWR:
 		ImpactWeapon: ScrinChronoTeleportImpact
 		TeleportWeapon: ScrinChronoTeleportImpact
 		EffectPalette: jascbluealpha #scrinenergystuffs
-	NukePower:
-		RequiresCondition: AImicroManage
-		Prerequisites:
-			1: wormhole
-		MissileWeapons:
-			1: ColossiSummonerWeapon
-		Icons:
-			1: wormholeicon
-		IconPalette: playerscrin
-		ChargeInterval: 6000
-		OrderName: ChronoshiftSummon
-		CircleRanges:
-			1: 5c0
-		Names:
-			1: superweapon-wormhole-name
-		Descriptions:
-			1: superweapon-wormhole2-desc
 	WithSupportPowerActivationExplodeWeapon:
 		Weapon: TeleportLazer
 		LocalOffset: 0, 0, 18000
