@@ -658,6 +658,8 @@ deathclaw:
 		Filename: shieldmedium.shp
 		Length: 1
 		Offset: 0,-12
+	bullparticle:
+		Filename: bullparticle2.shp
 	icon:
 		Filename: deathclawicon.shp
 
@@ -1858,6 +1860,8 @@ weasau:
 		Filename: tibody05.shp
 		Frames: 5, 4, 3, 2, 1, 0
 		Offset: 0, -15, 0
+	bullparticle:
+		Filename: bullparticle2.shp
 	icon:
 		Filename: weasausmallicon.shp
 
