@@ -652,7 +652,7 @@ ALTNODE1:
 	Armament:
 		Weapon: MilitantRifle
 		PauseOnCondition: WebDisable
-		LocalOffset: 450,0,800
+		LocalOffset: 450,0,650
 		Name: OnFoot
 	Armament@Garrison:
 		Weapon: GMilitantRifle
