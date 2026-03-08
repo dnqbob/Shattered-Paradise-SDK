@@ -2957,7 +2957,7 @@ LIMPED:
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		Facing: 640
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tiberium, BlueTiberium
+		#AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tiberium, BlueTiberium
 		DeploySounds: clicky1.aud
 		UndeploySounds: clicky1.aud
 		SmartDeploy: true
@@ -3005,7 +3005,7 @@ LIMPED:
 		Width: 2
 		RequiresCondition: deployed
 	Cloak@bury-self:
-		RequiresCondition: deployed && !empdisable
+		RequiresCondition: deployed && !empdisable && !hoverunitonwater
 		InitialDelay: 0
 		CloakDelay: 40
 		MinCloakedAlpha: 0.4
@@ -3044,9 +3044,9 @@ LIMPED:
 		Image: wake
 		Palette: terrain
 		TerrainTypes: Water
-		Sequences: idle2
-		Offsets: 0,500,0
-		TrailWhileStationary: false
+		Sequences: idle1
+		Offsets: 0,0,0
+		TrailWhileStationary: true
 	ExplodesAlsoTransported@DrownedDeath:
 		Weapon: UnitDrownedSmall
 	ActorStatValues:

@@ -1384,7 +1384,7 @@ limped-desc = Small drone armed with explosives. Good vs: Vehicles
 
     Special:
      - Needs to be deployed to be armed
-     - Invisible when deployed
+     - Cloak when deployed on non-water terrain
      - Launches explosives towards a target after small delay
      - Cannot be teleported by wormhole when deployed
 
@@ -2805,7 +2805,7 @@ moth-desc = High tech ambusher drone.
 
     Special:
      - Needs to Deploy to attack
-     - Cloaked when deployed
+     - Cloaked when deployed on non-water terrain
      - Turns enemy units into worker cyborgs
      - Hovers (ignores terrain like Veins, Water and Radiations)
      - No longer hovers when disabled by EMP or Web

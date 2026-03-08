@@ -167,7 +167,7 @@ LurkerHit:
 		ExplosionPalette: playercab
 		Explosions: lurkertentacle
 		ImpactSounds: expdirt1.aud
-		ValidTargets: Ground
+		ValidTargets: Ground, Water, Air
 
 LurkerProjUpg:
 	Inherits: LurkerProj

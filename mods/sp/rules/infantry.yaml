@@ -2131,8 +2131,8 @@ MOTH:
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		Facing: 640
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tiberium, BlueTiberium
-		DeploySounds: place2.aud
+		#AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tiberium, BlueTiberium
+		DeploySounds: clicky1.aud
 		UndeploySounds: clicky1.aud
 		SmartDeploy: true
 		UndeployOnMove: true
@@ -2144,7 +2144,7 @@ MOTH:
 	RejectsMoveToAttack:
 		RequiresCondition: !AImicroManage && deployed
 	Cloak@bury-self:
-		RequiresCondition: deployed
+		RequiresCondition: deployed && !hoverunitonwater && !empdisable && !WebDisable
 		InitialDelay: 40
 		CloakDelay: 40
 		MinCloakedAlpha: 0.4
@@ -2163,6 +2163,9 @@ MOTH:
 		Name: deployed
 		Sequence: deployed
 		RequiresCondition: !undeployed && !inside-tunnel && !WebDisable
+	LeavesTrails:
+		TrailWhileStationary: true
+		Offsets: 0,0,0
 	RA2Chronoshiftable:
 		RequiresCondition: undeployed
 	-WithInfantryBody:
