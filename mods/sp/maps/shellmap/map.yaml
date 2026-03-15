@@ -100,11 +100,6 @@ Actors:
 		Location: 40,1
 		Owner: Neutral
 		Facing: 640
-	Actor82: city19
-		Location: 82,13
-		Owner: Neutral
-		Facing: 640
-		Health: 45
 	Actor84: city20
 		Location: 82,15
 		Owner: Neutral
@@ -3596,8 +3591,9 @@ Actors:
 	Actor1491: g4tnk
 		Location: 77,17
 		Owner: GDI
-		Facing: 636
 		Stance: Defend
+		Facing: 886
+		TurretFacing: 784
 	Actor1555: sonic
 		Location: 77,19
 		Owner: GDI

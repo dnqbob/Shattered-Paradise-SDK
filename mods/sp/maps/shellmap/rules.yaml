@@ -177,6 +177,10 @@ REAPERCAB:
 	AutoTargetPriority@ATTACKANYTHING:
 		ValidTargets: Infantry, Vehicle, Creep, Water, Building, Defence
 
+G4TNK:
+	Turreted:
+		RealignDelay: -1
+
 CERBERUS:
 	TakeOffOnMake:
 
