@@ -2115,6 +2115,17 @@ scrincouncil-desc = An interstellar council that decides wages the fate of all w
 
 councilor-name = Councilor
 
+chemwarrior-name = Tiberium Warrior
+chemwarrior-desc = Melee combat Nod cyborg.
+
+    Good vs: Ground
+
+    Special:
+     - Can shoot over walls
+     - Can crush Infantry 
+     - Cause line aoe
+     - cannot fire when garrisoning
+
 ## Tech Building
 cahosp-name = Civilian Hospital
 cahosp-desc = Provides global healing for infantry.

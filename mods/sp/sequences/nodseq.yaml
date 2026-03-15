@@ -254,6 +254,64 @@ exemplar:
 	icon:
 		Filename: exemplaricon.shp
 
+
+chemwarrior:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: chemwarrior.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 258
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+		ShadowStart: 266
+	idle1:
+		Start: 88
+		Length: 20
+		ShadowStart: 346
+	idle2:
+		Start: 108
+		Length: 20
+		ShadowStart: 366
+	die1:
+		Start: 208
+		Length: 20
+		ShadowStart: 466
+	die2:
+		Start: 228
+		Length: 19
+		ShadowStart: 486
+	die-crushed:
+		Start: 241
+		Length: 6
+		ShadowStart: 499
+		ZOffset: -511
+	shoot:
+		Start: 128
+		Length: 10
+		Facings: 8
+		ShadowStart: 386
+		IgnoreWorldTint: true
+		Tick: 50
+	garrison-muzzle:
+		-Combine:
+		Facings: 8
+		Filename: gensmkexplo-flamebro.shp
+		Length: 17
+		Tick: 40
+		Scale: 1.1
+		ZOffset: 4001
+		IgnoreWorldTint: true
+	webguy:
+		Filename: webguySPbig.shp
+		Length: 6
+		ShadowStart: 6
+	icon:
+		Filename: chemwarrioricon.shp
+
 nconf:
 	Inherits: ^InfantryDeathAnims
 	Defaults:

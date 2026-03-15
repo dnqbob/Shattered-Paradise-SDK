@@ -869,6 +869,56 @@ EXEMPLAR:
 	ActorStatValues:
 		Damage: 80
 
+CHEMWARRIOR:
+	Inherits: ^MutantSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Nod
+		BuildPaletteOrder: 19
+		Description: chemwarrior-desc
+		Prerequisites: ~nahand, naradr, ~techlevel.4
+		BuildDuration: 375
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: chemwarrior-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 30000
+	Voiced:
+		VoiceSet: Templar
+		Volume: 1
+	Mobile:
+		Speed: 75
+	Armament@1:
+		Weapon: ChemWaProj
+		LocalOffset: 650,160,600
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexplogreen
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	WithMuzzleOverlay:
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	BodyOrientation:
+		CameraPitch: 250
+	RenderSprites:
+	WithDeathAnimation@blood1:
+		Delay: 3
+	SpawnSmokeParticleOnDeath@FLAMEGUY:
+		Image: bigflameguy
+	-TakeCover:
+	ActorStatValues:
+		Damage: 100
+
+
 DRILLPOD:
 	Inherits: ^NonBuildingStaticActor
 	Tooltip:

@@ -904,3 +904,39 @@ DrillpodDig:
 		ImpactSounds: subdril1.aud
 		AirThreshold: 8c0
 		Delay: 37 ## ticks = the frame in "unload_close" you think that begin drilling.
+
+ChemWaProj:
+	ReloadDelay: 100
+	Range: 2c256
+	Report: ScrinAcid0000.wav, ScrinAcid0001.wav, ScrinAcid0002.wav, ScrinAcid0003.wav, ScrinAcid0004.wav
+	ValidTargets: Ground, Water, Infantry, Vehicle, Building, Wall
+	TargetActorCenter: true ## Make shockwave more controllable to bulding
+	Projectile: WarheadTrailProjectile
+		Offsets: 0,128,0 #, 64,96,0, -64,96,0
+		FireMode: Line # try putting "Line" or "Spread" here, "Focus"
+		Inaccuracy: 0c0
+		Weapon: ChemWaHit
+		Speed: 0c384
+		ForceAtGroundLevel: true
+		ExplosionInterval: 1
+		ExplodeUnderThisAltitude: -9999
+		Blockable: false
+		KillProjectilesWhenReachedTargetLocation: false #try putting true
+
+ChemWaHit:
+	Inherits: ^FullDamage
+	Inherits@2: ^FlameScorchBlue
+	ReloadDelay: 80
+	Range: 2c0
+	Warhead@1Dam: SpreadDamageWithCondition
+		Versus:
+			Concrete: 100
+		Damage: 5000
+		NoUnintendedFriendlyFire: All
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+		ConditionDuration: 20
+		Condition: Slowdown50pp
+	Warhead@3Eff: CreateEffect
+		Explosions: bluefire1_higher, bluefire2_higher, bluefire3_higher
+		ExplosionPalette: gensmkexplogreen
+		ImpactSounds: flamtnk1.aud
