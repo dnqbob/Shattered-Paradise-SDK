@@ -2757,9 +2757,9 @@ WEASAUSMALL:
 		DeathSequencePalette: orgatemblueplayer
 		CrushedSequencePalette: orgatemblueplayer
 		DeathTypes:
-			TimeOutDeath: 1, 2
+			TimeOutDeath: -timeout
 	DeathSounds@NORMAL:
-		DeathTypes: BulletDeath, ExplosionDeath, CabalDeath, CabalDeathUpg, TiberiumDeath, TimeOutDeath
+		DeathTypes: BulletDeath, ExplosionDeath, CabalDeath, CabalDeathUpg, TiberiumDeath
 	-ActorLostNotification:
 	-UpdatesPlayerStatistics:
 	-Passenger:
