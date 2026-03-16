@@ -940,3 +940,27 @@ ChemWaHit:
 		Explosions: bluefire1_higher, bluefire2_higher, bluefire3_higher
 		ExplosionPalette: gensmkexplogreen
 		ImpactSounds: flamtnk1.aud
+
+EnlightBeamE:
+	Inherits: ^FullDamage
+	ReloadDelay: 30
+	Range: 7c0
+	Report: lastur1.aud
+	Projectile: LaserZap
+		TrackTarget: false
+		Duration: 15
+		Width: 138
+		ZOffset: 4000
+		Color: FF000080
+		SecondaryBeam: true
+		SecondaryBeamWidth: 30
+		SecondaryBeamZOffset: 4000
+		SecondaryBeamColor: FFEECC
+		HitAnim: explosion
+		HitAnimSequence: smalldimlaserflare
+		HitAnimPalette: gensmkexplojFred
+
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c045
+		Damage: 5000
+		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath

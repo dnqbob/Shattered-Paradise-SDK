@@ -312,6 +312,73 @@ chemwarrior:
 	icon:
 		Filename: chemwarrioricon.shp
 
+enlight:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: enlighted.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 349
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+		ShadowStart: 357
+	idle1:
+		Start: 88
+		Length: 20
+		ShadowStart: 437
+	idle2:
+		Start: 108
+		Length: 20
+		ShadowStart: 457
+	shoot:
+		Start: 128
+		Length: 10
+		Facings: 8
+		ShadowStart: 477
+		IgnoreWorldTint: true
+		Tick: 50
+	die1:
+		Start: 208
+		Length: 21
+		ShadowStart: 557
+	shoot2:
+		Start: 250
+		Length: 10
+		Facings: 8
+		ShadowStart: 599
+		IgnoreWorldTint: true
+		Tick: 50
+	die2:
+		Start: 330
+		Length: 18
+		ShadowStart: 679
+	die-crushed:
+		Start: 223
+		Length: 7
+		ShadowStart: 572
+		ZOffset: -511
+	garrison-muzzle:
+		-Combine:
+		Facings: 1
+		Filename: jxgrysml2b.shp
+		Length: *
+		Offset: 0, 0, 12
+		Scale: 0.4
+		Tick: 15
+		ZOffset: 4001
+		IgnoreWorldTint: true
+	webguy:
+		Filename: webguySPmid.shp
+		Length: 6
+		ShadowStart: 6
+	icon:
+		Filename: enlightedicon.shp
+
+
+
 nconf:
 	Inherits: ^InfantryDeathAnims
 	Defaults:
