@@ -919,6 +919,61 @@ CHEMWARRIOR:
 		Damage: 100
 
 
+ENLIGHT:
+	Inherits: ^MutantSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Nod
+		BuildPaletteOrder: 19
+		Description: exemplar-desc
+		Prerequisites: ~nahand, naradr, ~!global-upgrades, ~techlevel.4
+		BuildDuration: 375
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: exemplar-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 45000
+	Voiced:
+		VoiceSet: Cardinal
+		Volume: 1
+	Mobile:
+		Speed: 75
+	Armament@1:
+		Weapon: EnlightBeamE
+		LocalOffset: 450,-180,480
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexplojFred
+		Name: OnFoot
+	#Armament@2:
+	#	Weapon: GExemplarVulcan
+	#	PauseOnCondition: WebDisable
+	#	MuzzleSequence: garrison-muzzle
+	#	MuzzlePalette: gensmkexplojFred
+	WithMuzzleOverlay:
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 8 #PREF: save trait looks up and scan armaments
+	BodyOrientation:
+		CameraPitch: 250
+	RenderSprites:
+	WithDeathAnimation@blood1:
+		Delay: 3
+	SpawnSmokeParticleOnDeath@FLAMEGUY:
+		Image: bigflameguy
+	-TakeCover:
+	ActorStatValues:
+		Damage: 80
+
+
 DRILLPOD:
 	Inherits: ^NonBuildingStaticActor
 	Tooltip:
