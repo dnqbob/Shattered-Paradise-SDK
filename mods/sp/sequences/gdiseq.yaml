@@ -1,7 +1,7 @@
 gdie1:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:
-		Filename: gdie1.shp
+		Filename: ngdie1.shp
 		Tick: 80
 	stand:
 		Facings: 8
@@ -61,70 +61,70 @@ gdie1:
 		Facings: 8
 		ShadowStart: 552
 	stand-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Facings: 8
 		ShadowStart: 292
 	run-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 8
 		Length: 6
 		Facings: 8
 		ShadowStart: 300
 	idle1-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 56
 		Length: 15
 		ShadowStart: 348
 	idle2-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 71
 		Length: 15
 		ShadowStart: 363
 	prone-run-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 86
 		Length: 6
 		Facings: 8
 		ShadowStart: 378
 	prone-stand-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 86
 		Facings: 8
 		Stride: 6
 		ShadowStart: 378
 	die-white1:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 134
 		Length: 15
 		ShadowStart: 426
 	die-white2:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 149
 		Length: 15
 		ShadowStart: 441
 	die-crushed-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 159
 		Length: 5
 		ShadowStart: 451
 		Tick: 800
 		ZOffset: -511
 	shoot-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 164
 		Length: 6
 		Facings: 8
 		ShadowStart: 456
 		IgnoreWorldTint: true
 	prone-shoot-white:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 212
 		Length: 6
 		Facings: 8
 		ShadowStart: 504
 		IgnoreWorldTint: true
 	standup-white-0:
-		Filename: gdie1w.shp
+		Filename: nwgdie1.shp
 		Start: 260
 		Length: 2
 		Facings: 8

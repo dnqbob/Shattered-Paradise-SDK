@@ -187,7 +187,7 @@ scrciv1:
 		ShadowStart: 38
 		Tick: 4000
 	idle4:
-		Filename: gdie1.shp
+		Filename: e1.shp
 		Facings: 8
 		ShadowStart: 292
 		Tick: 4000
