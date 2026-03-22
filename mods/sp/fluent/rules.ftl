@@ -2501,7 +2501,7 @@ templar-desc = Warrior resurrected regenesis prototype armed with a flamethrower
     Upgrades:
      - Purifying Flame
 
-nconf-name = Black Hand Trooper
+nconf-name = Black Hand Elite
 nconf-desc = Nod's Special Forces armed with firefly laser rifles and a personal cloaking device.
 
     Good vs: Ground targets
