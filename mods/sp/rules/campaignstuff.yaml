@@ -23,49 +23,6 @@ APC_BOT:
 		IconPalette: chrome
 		TooltipActor: apc
 
-RIFLEBGGY:
-	Inherits: BGGY
-	Selectable:
-		Class: bggy
-	EditorOnlyTooltip:
-		Name: buggy-e1-name
-	RenderSprites:
-		Image: bggy
-	-Buildable:
-	Cargo:
-		InitialUnits: altnode1
-	ActorStatValues:
-		Icon: icon
-		IconPalette: chrome
-		TooltipActor: bggy
-
-ROCKETBGGY:
-	Inherits: RIFLEBGGY
-	EditorOnlyTooltip:
-		Name: buggy-rocket-name
-	Cargo:
-		InitialUnits: crusader
-	ActorStatValues:
-		TooltipActor: bggy
-
-FLAMEBGGY:
-	Inherits: RIFLEBGGY
-	Cargo:
-		InitialUnits: templar
-	EditorOnlyTooltip:
-		Name: buggy-flame-name
-	ActorStatValues:
-		TooltipActor: bggy
-
-LAZORBGGY:
-	Inherits: RIFLEBGGY
-	Cargo:
-		InitialUnits: nconf
-	EditorOnlyTooltip:
-		Name: buggy-laser-name
-	ActorStatValues:
-		TooltipActor: bggy
-
 STRUCKFULL:
 	Inherits: STRUCK
 	Selectable:

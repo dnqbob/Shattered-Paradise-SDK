@@ -169,6 +169,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Scrin explosion effects
    > Nuke explosion effect
    > All his cumulative efforts with his blender template.
+   > GDI light Infantry
  Denmon:
    > Concept Fona
  Demo:
@@ -176,10 +177,10 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
  DuisPlay:
   > Titan and Mammoth wreck
  ErastusMercy:
-   > Mammoth Tank
+   > old Mammoth Tank
    > Disruptor
-   > Attack Buggy
-   > Spectre
+   > Attack Buggy (topic-40633/scrapper-pack)
+   > old Spectre
    > Repair Vehicle
  EoralMilk:
    > TD Buildings

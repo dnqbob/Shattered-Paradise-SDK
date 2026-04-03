@@ -1,0 +1,127 @@
+
+bggy:
+	Inherits@1: ^SpriteVehicleWithShadow
+	Inherits@2: ^BuggyMuzzle
+	Defaults:
+		Filename: bggy.shp
+	dieevaporate:
+		Filename: infgas.shp
+		Length: *
+		Offset: 0,-6, 32
+		Tick: 30
+	turret-none:
+		Filename: buggyturret.shp
+		Start: 128
+		Facings: -32
+	turret-minigun:
+		Filename: buggyturret.shp
+		Facings: -32
+	turret-rocket:
+		Filename: buggyturret.shp
+		Start: 32
+		Facings: -32
+		Scale: 0.8
+		Offset: 0,-1, 1
+	turret-flame:
+		Filename: buggyturret.shp
+		Start: 64
+		Facings: -32
+		Offset: 0,-1, 1
+	turret-laser:
+		Filename: lasertursprite.shp
+		Start: 0
+		Facings: 32
+		Offset: 0,-5, 5
+	turret-abductor:
+		Filename: buggyturret.shp
+		Start: 160
+		Facings: -32
+	turret-cyc2:
+		Filename: buggyturret.shp
+		Start: 192
+		Facings: -32
+		Offset: 0,-2, 2
+	turret-engineer:
+		Filename: buggyrepairtur.shp
+		Facings: 32
+	turret-eagleguard:
+		Filename: buggyturret2.shp
+		Facings: -32
+		Offset: 0,-2, 2
+	turret-mortar:
+		Filename: buggyturret2.shp
+		Start: 32
+		Facings: -32
+		Offset: 0,-1, 1
+	turret-tesla:
+		Filename: buggyturret2.shp
+		Start: 64
+		Facings: -32
+		Offset: 0,-1, 1
+	turret-bug:
+		Filename: buggyturret2.shp
+		Start: 96
+		Facings: -32
+		Offset: 0,-1, 1
+	turret-colossi:
+		Filename: buggyturret2.shp
+		Start: 128
+		Facings: -32
+	turret-glad:
+		Filename: buggyturret2.shp
+		Start: 160
+		Facings: -32
+		Offset: 0,-1, 1
+	turret-float:
+		Filename: buggyturret2.shp
+		Start: 192
+		Facings: -32
+	turret-chainsaw:
+		Filename: buggyturret3.shp
+		Facings: -32
+	turret-medic:
+		Filename: buggyturret3.shp
+		Start: 32
+		Facings: -32
+	turret-sniper:
+		Filename: buggyturret4.shp
+		Facings: -32
+	muzzle-repair:
+		Filename: repairsparks.shp
+		Offset: 0, 0
+		Length: *
+		Scale: 0.75
+	muzzle-flame:
+		Filename: jsbrnl20b.shp
+		Length: *
+		Offset: 0, 0, 12
+		Scale: 0.3
+		Tick: 15
+		ZOffset: 4001
+		IgnoreWorldTint: true
+	muzzle-cannon:
+		Filename: jucflash.shp
+		Length: *
+		IgnoreWorldTint: true
+	muzzle-missile:
+		Filename: japmuzzleb.shp
+		Scale: 0.5
+		Length: *
+		IgnoreWorldTint: true
+	muzzle-tesla:
+		Length: 7
+		Start: 7
+		Filename: floatermuzzle.shp
+		IgnoreWorldTint: true
+	muzzle-laser:
+		Facings: 1
+		Filename: lazerflare.shp
+		Length: *
+		Offset: 0, 0, 0
+		ZOffset: 6000
+		Tick: 50
+		IgnoreWorldTint: true
+	emp-overlay:
+		Filename: emp_fx01.shp
+	icon:
+		Filename: buggyicon.shp

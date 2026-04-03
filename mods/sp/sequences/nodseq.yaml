@@ -633,6 +633,26 @@ subtank:
 	icon:
 		Filename: subticon.shp
 
+bggy:
+	Inherits@1: ^SpriteVehicleWithShadow
+	Inherits@2: ^BuggyMuzzle
+	Defaults:
+		Filename: buggy.shp
+	dieevaporate:
+		Filename: infgas.shp
+		Length: *
+		Offset: 0,-6, 32
+		Tick: 30
+	turret:
+		Filename: buggytur.shp
+		Start: 0
+		Facings: -32
+	emp-overlay:
+		Filename: emp_fx01.shp
+	icon:
+		Filename: buggyicon.shp
+
+
 stnk:
 	Inherits: ^EmpOverlay
 	Inherits@2: ^MissileMuzzle

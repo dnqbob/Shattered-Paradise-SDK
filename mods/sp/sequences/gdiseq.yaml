@@ -851,7 +851,7 @@ mmch:
 		Start: 0
 		Facings: -32
 	barrel2:
-		Filename: buggyturret2.shp
+		Filename: titan-Rbarrel.shp
 		Start: 0
 		Facings: -32
 		Offset: 0,-9, 9

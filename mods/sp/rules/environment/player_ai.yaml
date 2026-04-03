@@ -1022,7 +1022,6 @@ Player:
 			apc: IdleUnit
 			struck: IdleUnit
 			mubunkr: IdleUnit
-			bggy: All
 			apc_bot: IdleUnit
 			riflebggy: All
 			rocketbggy: All

@@ -773,12 +773,9 @@ NODMCV:
 BGGY: #Raider Buggy
 	Inherits: ^CombatVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@BLUEFLAME: ^AffectedByPurifyingFlame
 	Inherits@DETECTION: ^BasicStealthDetection
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@PIPS: ^CargoPips
-	Inherits@RAIDERE1: ^AffectedByRaiderPassenger
-	-FirepowerMultiplier@BLUEFLAME:
+	#Inherits@RAIDERE1: ^AffectedByRaiderPassenger
 	Valued:
 		Cost: 300
 	UpdatesPlayerStatistics:
@@ -805,77 +802,13 @@ BGGY: #Raider Buggy
 		QuantizedFacings: 32
 		CameraPitch: 250
 	Turreted:
-		Offset: -250,0,400
+		Offset: -200,0,690
 		TurnSpeed: 32
 	Health:
 		HP: 15000
 	Armor:
 		Type: Light
 	WithMuzzleOverlay:
-	############################################
-	# Conditions
-	############################################
-	Cargo:
-		Types: Infantry
-		MaxWeight: 1
-		AfterLoadDelay: 0
-		BeforeUnloadDelay: 0
-		AfterUnloadDelay: 0
-		LoadedCondition: loaded
-		OwnerChangedAffectsPassengers: false
-		PassengerConditions:
-			altnode1: ifv.militant
-			gdie1: ifv.militant
-			marauder: ifv.militant
-			exemplar: ifv.militant
-			cyborg: ifv.militant
-			cyborg15-hum: ifv.militant
-			cyborg15-beast: ifv.militant
-			cyborg15-scr: ifv.militant
-			worker: ifv.militant
-			cybdog: ifv.militant
-			crusader: ifv.rocket
-			grenadier: ifv.rocket
-			mutfiend: ifv.rocket
-			cborg: ifv.rocket
-			legio: ifv.rocket
-			engineer: ifv.engineer
-			cutman: ifv.engineer
-			swarmling: ifv.engineer
-			shapeshifter: ifv.engineer
-			templar: ifv.flame
-			nconf: ifv.nconf
-			bhs: ifv.sniper
-			umagon: ifv.sniper
-			medic: ifv.medic
-			float: ifv.medic
-			jjcomm: ifv.railgun
-			eagleguard: ifv.railgun
-			e3: ifv.mortar
-			e2: ifv.glad
-			jumpjet: ifv.mortar
-			seer: ifv.tesla
-			ghost: ifv.railgun
-			psyker: ifv.tesla
-			glad: ifv.glad
-			cyc2: ifv.cyc2
-			moth: ifv.mortar
-			pdrone: ifv.saw
-			shark: ifv.saw
-			bug: ifv.scrin
-			colossi: ifv.scrin
-			mastermind: ifv.mastermind
-			apucmdo: ifv.railgun
-			zonedefr: ifv.railgun
-			zoneraider: ifv.mortar
-			shadteam: ifv.militant
-			cyc3: ifv.cyc2
-	WithCargoSounds:
-		EnterSounds: genter1a.wav
-		ExitSounds: gexit1a.wav
-	############################################
-	# Armaments
-	############################################
 	Armament:
 		Weapon: BuggyCannon
 		Damage: 30
@@ -885,247 +818,23 @@ BGGY: #Raider Buggy
 		CasingSpawnLocalOffset: 140,0,125
 		CasingTargetOffset: 150,0,125
 		CasingHitGroundLevel: false
-		RequiresCondition: !loaded
-	Armament@militant1:
-		Weapon: BuggyCannonLoaded
-		Damage: 40
-		LocalOffset: 250,0,125
-		CasingWeapon: BuggyBullet2Spawner
-		CasingSpawnLocalOffset: 140,0,125
-		CasingTargetOffset: 150,0,125
-		CasingHitGroundLevel: false
-		MuzzleSequence: muzzle
-		RequiresCondition: ifv.militant
-	Armament@crusa:
-		Weapon: BuggyCrusaderBazooka
-		Damage: 50
-		LocalOffset: 250,0,125
-		MuzzleSequence: muzzle-missile
-		MuzzlePalette: gensmkexploj
-		ReloadingCondition: reload-ground-crusader
-		PauseOnCondition: reload-air-crusader
-		RequiresCondition: ifv.rocket
-	Armament@crusaaa:
-		Weapon: BuggyCrusaderBazookaAA
-		LocalOffset: 250,0,125
-		MuzzleSequence: muzzle-missile
-		MuzzlePalette: gensmkexploj
-		ReloadingCondition: reload-air-crusader
-		PauseOnCondition: reload-ground-crusader
-		RequiresCondition: ifv.rocket
-	Armament@templar:
-		Weapon: TemplarFlame
-		Damage: 80
-		LocalOffset: 400,0,75
-		RequiresCondition: ifv.flame && !blueflame
-		MuzzleSequence: muzzle-flame
-		MuzzlePalette: gensmkexploj
-	Armament@templar-elite:
-		Weapon: BuggyTemplarFlameE
-		Damage: 120
-		LocalOffset: 400,0,75
-		RequiresCondition: ifv.flame && blueflame
-		MuzzleSequence: muzzle-flame
-		MuzzlePalette: gensmkexplojFblue
-	Armament@nconf:
-		Weapon: BlackHandLasorBuggy
-		Damage: 125
-		LocalOffset: 500,0,350
-		RequiresCondition: ifv.nconf
-		MuzzleSequence: muzzle-laser
-		MuzzlePalette: apred
-	Armament@bhs:
-		Weapon: ToxinCommandoRifle
-		Damage: 75
-		LocalOffset: 250,0,125
-		MuzzleSequence: muzzle
-		RequiresCondition: ifv.sniper
-	ProximityExternalCondition@hospitalheal:
-		Condition: hospitalheal
-		Range: 4c0
-		RequiresCondition: ifv.medic
-	WithRangeCircle@heal:
-		Range: 4c0
-		Type: hospitalheal
-		Color: FF0000CC
-		BorderWidth: 0
-		Width: 2
-		RequiresCondition: ifv.medic
-	Armament@engineer:
-		Weapon: BuggyRepair
-		Damage: -40
-		LocalOffset: 250,0,125
-		RequiresCondition: ifv.engineer
-		Cursor: repair
-		OutsideRangeCursor: repair
-		TargetRelationships: Ally
-		ForceTargetRelationships: Ally
-		MuzzleSequence: muzzle-repair
-		MuzzlePalette: player
-	Armament@eagleguard:
-		Weapon: TitanRailgun
-		Damage: 60
-		LocalOffset: 500,0,150
-		RequiresCondition: ifv.railgun
-	Armament@Mortar:
-		Weapon: BuggyMortar
-		Damage: 60
-		LocalOffset: 500,0,800
-		RequiresCondition: ifv.mortar && !blueflame
-	Armament@MortarE:
-		Weapon: BuggyMortarE
-		Damage: 90
-		LocalOffset: 500,0,800
-		RequiresCondition: ifv.mortar && blueflame
-	Armament@Tesla:
-		Weapon: BuggyTesla
-		Damage: 70
-		LocalOffset: 250,0,600
-		RequiresCondition: ifv.tesla
-		MuzzleSequence: muzzle-tesla
-		MuzzlePalette: apblue
-	Armament@Saw:
-		Weapon: BuggySaw
-		Damage: 60
-		LocalOffset: 250,0,125
-		RequiresCondition: ifv.saw
-	Armament@Scrin:
-		Weapon: BuggyGlaive
-		Damage: 20
-		LocalOffset: 250,0,125
-		RequiresCondition: ifv.scrin
-	Armament@MasterMind:
-		Weapon: BuggyMindRage
-		Damage: 0
-		LocalOffset: 250,0,125
-		MuzzleSequence: muzzle-tesla
-		MuzzlePalette: apred
-		RequiresCondition: ifv.mastermind
-	Armament@glad:
-		Weapon: buggyGLAD
-		Damage: 100
-		LocalOffset: 400,-200,125, 400,200,125
-		RequiresCondition: ifv.glad
-		MuzzleSequence: muzzle-cannon
-		MuzzlePalette: gensmkexploj
-	Armament@cyc2:
-		Weapon: CyCannon
-		Damage: 300
-		LocalOffset: 250,0,125
-		RequiresCondition: ifv.cyc2
 	AttackTurreted:
 		TargetFrozenActors: true
 		PauseOnCondition: empdisable
 	AutoTarget:
-		ScanRadius: 11 #PREF: save trait looks up and scan armaments
-	AutoTargetPriority@DEFAULT:
-		RequiresCondition: !stance-attackanything && !assault-move && !ifv.engineer && !ifv.medic
-	AutoTargetPriority@ATTACKANYTHING:
-		RequiresCondition: (stance-attackanything || assault-move) && !ifv.engineer && !ifv.medic
-	AutoTargetPriority@HEAL:
-		RequiresCondition: ifv.engineer || ifv.medic
-		ValidTargets: Vehicle, Infantry
-		InvalidTargets: FullHealth, Summoned
-		ValidRelationships: Ally
-		Priority: 2
-	GuardsSelection@REPAIR:
-		ValidTargetsToGuard: Vehicle
-		InvalidTargetsToGuard: Air, Water, LandedCraft, Summoned
-		RequiresCondition: ifv.engineer
-		TargetRelationships: Enemy
-		ForceTargetRelationships: Enemy, Neutral
-		GuardsSelectionLevel: 2
-	GuardsSelection@MEDIC:
-		ValidTargetsToGuard: Infantry, OrganicVehicle
-		InvalidTargetsToGuard: Air, Water, Summoned
-		RequiresCondition: ifv.medic
-		TargetRelationships: Enemy
-		ForceTargetRelationships: Enemy, Neutral
-		GuardsSelectionLevel: 2
-	GuardsSelection@SNIPER:
-		ValidTargetsToGuard: Infantry, Vehicle
-		InvalidTargetsToGuard: Air, Water, LandedCraft, Summoned
-		OverrideOrders: AttackGuards
-		RequiresCondition: ifv.sniper || ifv.mastermind
-	###################################
-	# Turret Graphics
-	###################################
-	WithSpriteTurret@asd:
-		Sequence: turret-none
-		RequiresCondition: !inside-tunnel && (!loaded || ifv.mastermind)
-	WithSpriteTurret@militant:
-		Sequence: turret-minigun
-		RequiresCondition: !inside-tunnel && ifv.militant
-	WithSpriteTurret@rocket:
-		Sequence: turret-rocket
-		RequiresCondition: !inside-tunnel && ifv.rocket
-	WithSpriteTurret@flame:
-		Sequence: turret-flame
-		RequiresCondition: !inside-tunnel && ifv.flame
-	WithSpriteTurret@laser:
-		Sequence: turret-laser
-		IsPlayerPalette: true
-		RequiresCondition: !inside-tunnel && ifv.nconf
-	WithSpriteTurret@turret-sniper:
-		Sequence: turret-sniper
-		Palette: playerunittemgreen
-		IsPlayerPalette: true
-		RequiresCondition: !inside-tunnel && ifv.sniper
-	WithSpriteTurret@chainsaw:
-		Sequence: turret-chainsaw
-		RequiresCondition: !inside-tunnel && ifv.saw
-	WithSpriteTurret@medic:
-		Sequence: turret-medic
-		RequiresCondition: !inside-tunnel && ifv.medic
-	WithSpriteTurret@eagleguard:
-		Sequence: turret-eagleguard
-		RequiresCondition: !inside-tunnel && ifv.railgun
-	WithSpriteTurret@glad:
-		Sequence: turret-glad
-		RequiresCondition: !inside-tunnel && ifv.glad
-	WithSpriteTurret@engineer:
-		Sequence: turret-engineer
-		RequiresCondition: !inside-tunnel && ifv.engineer
-	WithSpriteTurret@cyc2:
-		Sequence: turret-cyc2
-		RequiresCondition: !inside-tunnel && ifv.cyc2
-	WithSpriteTurret@mortar:
-		Sequence: turret-mortar
-		RequiresCondition: !inside-tunnel && ifv.mortar
-	WithSpriteTurret@tesla:
-		Sequence: turret-tesla
-		RequiresCondition: !inside-tunnel && ifv.tesla
-	WithSpriteTurret@bug:
-		Sequence: turret-float
-		RequiresCondition: !inside-tunnel && ifv.scrin
-	WithSpriteTurret@mastermind:
-		Sequence: turret-colossi
-		RequiresCondition: !inside-tunnel && ifv.mastermind
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+	WithSpriteTurret:
+		Sequence: turret
 	############################################
 	# Names
 	############################################
 	Tooltip:
 		Name: bggy-name
-	WithCargoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
 	ActorStatValues:
-		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MaxRange, Cargo
-		Upgrades: upgrade.raider_passenger
-	ActorStatOverride@AA:
-		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, Cargo, MaxRange
-		RequiresCondition: ifv.rocket || ifv.tesla
-	ActorStatOverride@Flame:
-		RequiresCondition: ifv.flame || ifv.mortar
-		Upgrades: upgrade.raider_passenger, upgrade.purifying_flame
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MaxRange
+		#Upgrades: upgrade.raider_passenger
 	ExplodesAlsoTransported:
 		Weapon: UnitExplodeSmall
-	IssueOrderToBot@AI:
-		RequiresCondition: loaded && HeavyDamaged
-		OrderName: Unload
-		OrderChance: 100
-		OrderTrigger: Periodically
-		OrderInterval: 20
 	IssueOrderToBot@AI2: ## hit and run
 		OrderName: Move
 		OrderTrigger: Damage

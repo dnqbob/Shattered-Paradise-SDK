@@ -1,0 +1,127 @@
+
+BuggyCannonLoaded:
+	Inherits: BuggyCannon
+	Range: 6c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 4000
+
+BuggyCrusaderBazooka:
+	Inherits: CrusaderBazooka
+	Burst: 2
+	Warhead@1Dam: SpreadDamage
+		Damage: 2500
+
+BuggyCrusaderBazookaAA:
+	Inherits: CrusaderBazookaAA
+	Burst: 2
+	Warhead@1Dam: SpreadDamage
+		Damage: 2500
+
+BuggyRepair:
+	Inherits: RepairVehicleLasor
+	ReloadDelay: 70
+	Range: 3c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 80
+		Damage: -4000
+		ValidTargets: Vehicle
+		InvalidTargets: FullHealth, NoRepair
+
+BuggyTemplarFlameE:
+	Inherits: TemplarFlameE
+	Warhead@1Dam: SpreadDamage
+		Damage: 1200
+
+BlackHandLasorBuggy:
+	Inherits: BlackHandLasor
+	Burst: 5
+	BurstDelays: 3
+
+BuggySaw:
+	Inherits: ^RifleWeapon
+	ValidTargets: Ground, Water
+	ReloadDelay: 20
+	Range: 1c512
+	Report: piston1.wav, piston2.wav
+	Warhead@1Dam: SpreadDamage
+		Damage: 6000
+		Versus:
+			Infantry: 100
+			Building: 75
+		Spread: 0c030
+		NoUnintendedFriendlyFire: All
+		DamageTypes: Prone70Percent, BulletDeath, TriggerProne
+
+BuggyGLAD:
+	Inherits: GLAD120mm
+	Burst: 2
+	Report: vdesattb.wav
+	BurstDelays: 12
+	ReloadDelay: 70
+
+BuggyMortar:
+	Inherits: SkirmisherMortar
+	Burst: 3
+	BurstDelays: 4
+	ReloadDelay: 100
+	Projectile: BulletAS
+		ContrailLength: 5
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+
+BuggyMortarE:
+	Inherits: BuggyMortar
+	Inherits: ^FlameScorchBlue
+	Projectile: BulletAS
+		ContrailStartColor: 6633FF
+		ContrailEndColor: 0022FF
+		Sequences: bluefire3_higher
+	Warhead@2Eff: CreateEffect
+		ExplosionPalette: gensmkexplojFblue
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
+
+BuggyGlaive:
+	Inherits: FloatGlaive
+	ReloadDelay: 40
+	Range: 6c0
+	Projectile: MissileTA
+		Palette: apred
+		ContrailStartColor: ff20203E
+		ContrailEndColor: ff2020cc
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: ExplosionDeath
+		NoUnintendedFriendlyFire: Actor
+	Warhead@op: FireShrapnel
+		Weapon: BuggyGlaive2
+	Warhead@2Eff: CreateEffect
+		ExplosionPalette: apred
+
+BuggyGlaive2:
+	Inherits: BuggyGlaive
+	-Report:
+	-Warhead@op:
+
+BuggyMindRage:
+	ReloadDelay: 100
+	Range: 9c0
+	TargetActorCenter: true
+	ValidTargets: Infantry, Vehicle
+	Projectile: TeslaZap
+		Image: scrlitning
+		Palette: apred
+		Duration: 5
+		ZOffset: 4000
+	Warhead@debuff1: GrantExternalCondition
+		Range: 0c100
+		Duration: 110
+		Condition: chaos
+		ValidTargets: Infantry, Vehicle, Ground, Water, Defence, Air
+		ValidRelationships: Neutral, Enemy
+
+BuggyTesla:
+	Inherits: SeerTesla
+	ValidTargets: Air, Ground, Water
+	Range: 8c0
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air, Ground, Water
