@@ -705,22 +705,17 @@ smech:
 	Inherits: ^EmpOverlay
 	Inherits@2: ^BuggyMuzzle
 	Defaults:
-		Filename: smech2.shp
+		Filename: smech3.shp
 	stand:
-		Start: 96
+		Start: 0
 		Facings: -8
-		ShadowStart: 232
+		ShadowStart: 72
 	run:
+		Start: 8
 		Facings: -8
-		Length: 12
-		ShadowStart: 136
-		Tick: 30
-	shoot:
-		Start: 104
-		Length: 4
-		Facings: -8
-		ShadowStart: 240
-		Tick: 80
+		Length: 8
+		ShadowStart: 80
+		Tick: 50
 	emp-overlay:
 		Filename: emp_fx01.shp
 	icon:
