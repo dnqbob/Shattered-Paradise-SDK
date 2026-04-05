@@ -1580,10 +1580,6 @@ RAYRIDER:
 	ActorStatOverride@Tibinfusion:
 		Health: 11250
 		RequiresCondition: tibinfusion
-	-Sellable:
-	-ProximityExternalCondition@Docked:
-	-ExternalCondition@Sellable:
-	-IssueOrderToBot@AISell:
 
 
 MINELAYER:
@@ -3332,7 +3328,6 @@ COREDEFENDER:
 	-WithMindControlArc:
 	-MindControllable:
 	-Targetable@MC:
-	-IssueOrderToBot@AISell:
 	-WithDecoration@mindcontrolled:
 	AutoTarget:
 		ScanRadius: 9
@@ -3761,7 +3756,6 @@ HMECTEST:
 	-MindControllable:
 	-Targetable@MC:
 	-WithDecoration@mindcontrolled:
-	-IssueOrderToBot@AISell:
 	Turreted@1:
 		Offset: -500,0,0
 		TurnSpeed: 16
@@ -3914,7 +3908,6 @@ SCRINCOUNCIL:
 	-MindControllable:
 	-Targetable@MC:
 	-WithDecoration@mindcontrolled:
-	-IssueOrderToBot@AISell:
 	AnnounceOnSeen:
 		PingRadar: true
 		Notification: BattleCruiserDetected

@@ -275,7 +275,6 @@ DSHP.HIGH:
 	-Targetable@MC:
 	-GrantConditionOnDamageState@FullHealth:
 	-Targetable@FullHealth:
-	-IssueOrderToBot@AISell:
 	-RevealsShroud@Landed:
 	-RevealOnDeath@Landed:
 	-RevealsShroud@Airborne:
@@ -861,10 +860,6 @@ MUTQUEEN:
 	ActorStatOverride@Tibinfusion:
 		Health: 18750
 		RequiresCondition: tibinfusion
-	-Sellable:
-	-ProximityExternalCondition@Docked:
-	-ExternalCondition@Sellable:
-	-IssueOrderToBot@AISell:
 
 WETP:
 	Inherits: ^CombatPlane
@@ -1549,7 +1544,6 @@ SCRBATTLESHIP:
 	Targetable@Essence:
 		TargetTypes: ScrinUnit
 	-Targetable@MC:
-	-IssueOrderToBot@AISell:
 	AnnounceOnSeen:
 		PingRadar: true
 		Notification: BattleCruiserDetected

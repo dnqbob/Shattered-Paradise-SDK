@@ -3485,10 +3485,8 @@ TDREPD:
 	-WithIdleOverlay@CIRCUITS-BRIGHT:
 	-WithRepairOverlay@CRANE-BRIGHT:
 	-WithDeathAnimation@BIB:
+
 	-Sellable:
-	-ProximityExternalCondition@Sellable:
-	-ExternalCondition@Docked:
-	-IssueOrderToBot@AISell:
 	-SpawnActorsOnSell@gdi:
 	-SpawnActorsOnSell@nod:
 	-SpawnActorsOnSell@cab:

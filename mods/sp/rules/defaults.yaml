@@ -560,10 +560,11 @@
 		OrderChance: 100
 		OrderInterval: 45
 
-^AISellOnMindControlWhenDock:
-	Inherits: ^AISellOnMindControl
-	IssueOrderToBot@AISell:
-		RequiresCondition: mindcontrolled && unit.sellable
+### give this function to subfaction?
+#^AISellOnMindControlWhenDock:
+#	Inherits: ^AISellOnMindControl
+#	IssueOrderToBot@AISell:
+#		RequiresCondition: mindcontrolled && unit.sellable
 
 ^Berserkable:
 	Berserkable@CHAOS:
@@ -2337,18 +2338,6 @@
 	SharedPassenger:
 		CargoType: Vehicle
 		CustomPipType: blue
-	Sellable:
-		SellSounds: cashturn.aud
-		Cursor: sell2
-		SellDirectly: true
-		Notification: UnitSold
-		TextNotification: notification-unit-sold
-		RequiresCondition: unit.sellable
-	ProximityExternalCondition@Docked:
-		Condition: unit.docked
-		Range: 1c0
-	ExternalCondition@Sellable:
-		Condition: unit.sellable
 	HiddenUnderFog:
 	Guard:
 		Voice: Move
@@ -2389,7 +2378,6 @@
 	Inherits@0: ^BasicVehicle
 	Inherits@2: ^VehicleEffects
 	Inherits@3: ^ExistsInWorld
-	Inherits@AISell: ^AISellOnMindControlWhenDock
 	Carryable:
 		LockedCondition: carrylock
 	Mobile:
@@ -2617,7 +2605,6 @@
 	Inherits@5: ^10CellVisionAir
 	Inherits@HANDICAPS: ^PlayerHandicaps
 	Inherits@SELECTION_MODE: ^FlatSelectionMode
-	Inherits@AISell: ^AISellOnMindControlWhenDock
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	AppearsOnRadar:
@@ -2649,18 +2636,6 @@
 	-SpawnCorpseOnDeath@nanomachinereanimate:
 	Passenger:
 		CargoType: Aircraft
-	Sellable:
-		SellSounds: cashturn.aud
-		Cursor: sell2
-		SellDirectly: true
-		Notification: UnitSold
-		TextNotification: notification-unit-sold
-		RequiresCondition: unit.sellable
-	ProximityExternalCondition@Docked:
-		Condition: unit.docked
-		Range: 1c0
-	ExternalCondition@Sellable:
-		Condition: unit.sellable
 	Repairable:
 		RepairActors: gadept, scrdepot, tdrepd, civheli
 		Voice: Move
@@ -2771,10 +2746,6 @@
 	-ExplodesAlsoTransported@Shrapnel:
 	Cloak@CLOAKGENERATOR:
 		-CloakedCondition:
-	-Sellable:
-	-ProximityExternalCondition@Docked:
-	-ExternalCondition@Sellable:
-	-IssueOrderToBot@AISell:
 
 ^Plane:
 	Inherits: ^Aircraft
@@ -2836,11 +2807,6 @@
 	-FloatingSpriteEmitter@spawnsmoke:
 	-ExplodesAlsoTransported@EssenceDeath:
 	-MapEditorData:
-
-	-Sellable:
-	-ProximityExternalCondition@Docked:
-	-ExternalCondition@Sellable:
-	-IssueOrderToBot@AISell:
 
 	-ChangesHealth@nanomachinerecovery:
 	-WithIdleOverlay@nanomachinerecovery:
