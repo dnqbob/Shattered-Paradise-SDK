@@ -401,26 +401,17 @@ moth:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Filename: moth.shp
-	stand:
-		Facings: -32
-		ShadowStart: 55
 	idle:
-		Facings: -32
-		ShadowStart: 55
-	run:
-		Facings: -32
-		ShadowStart: 55
+		Facings: -8
+		ShadowStart: 18
 	make:
 		Filename: mothmake.shp
 		Length: 15
 		ShadowStart: 15
 	deployed:
-		Start: 45
+		Start: 8
 		Length: 10
 		Tick: 75
-	dot:
-		Filename: dot.shp
-		ZOffset: -999
 	muzzle:
 		Filename: gunfire.shp
 		Length: *
