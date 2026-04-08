@@ -774,7 +774,7 @@ WorldLoaded = function()
 			end
 
 			-- give reinforement that help player to protect the MCV
-			PlayerReinforementSpawn({"cabharv","cabharv", "repairvehicle", "repairvehicle"}, CaptureMCVReinforcePathWater, WayPoint1399.CenterPosition, "cabapc")
+			PlayerReinforementSpawn({"cabharv","cabharv", "repairvehicle"}, CaptureMCVReinforcePathWater, WayPoint1399.CenterPosition, "cabapc")
 			Trigger.AfterDelay(100, function()
 				PlayerReinforementSpawn({"limped","limped", "limped", "limped", "limped", "basilisk", "basilisk", "basilisk", "wasp", "wasp", "wasp", "wasp"}, CaptureMCVReinforcePathWater, nil, nil)
 			end)

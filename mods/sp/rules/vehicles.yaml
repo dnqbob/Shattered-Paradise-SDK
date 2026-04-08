@@ -219,7 +219,7 @@ APC: #Amphibious APC
 		RequiresCondition: inwater && !inside-tunnel && attack-air
 	Cargo:
 		Types: Infantry
-		MaxWeight: 5
+		MaxWeight: 4
 		AfterLoadDelay: 0
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
@@ -1577,7 +1577,7 @@ SAPC:
 		HP: 20000
 	Cargo:
 		Types: Infantry
-		MaxWeight: 5
+		MaxWeight: 3
 		AfterLoadDelay: 0
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
@@ -2200,7 +2200,7 @@ STRUCK:
 	Inherits@PIPS: ^CargoPips
 	Inherits@RENDER: ^MutRenderGreen
 	Valued:
-		Cost: 900
+		Cost: 750
 	Tooltip:
 		Name: struck-name
 	UpdatesPlayerStatistics:
@@ -2211,7 +2211,7 @@ STRUCK:
 		Description: struck-desc
 		BuildPaletteOrder: 24
 		Prerequisites: ~muweap, murax, ~techlevel.2
-		BuildDuration: 625
+		BuildDuration: 535
 		BuildDurationModifier: 100
 	ProductionCostMultiplier@AI: ## AI cannot use it well
 		Multiplier: 10
@@ -2221,7 +2221,7 @@ STRUCK:
 		Speed: 90
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 40000
+		HP: 35000
 	Voiced:
 		VoiceSet: BattleBusVoice
 	BodyOrientation:
@@ -2230,7 +2230,7 @@ STRUCK:
 	WithFacingSpriteBody:
 	Cargo:
 		Types: Infantry
-		MaxWeight: 5
+		MaxWeight: 4
 		LoadedCondition: loaded
 		AfterLoadDelay: 0
 		BeforeUnloadDelay: 0
@@ -2245,7 +2245,8 @@ STRUCK:
 	Passenger:
 		CargoType: Apc
 	AttackGarrisonedSP:
-		PortOffsets: 384,0,768, 224,-341,768, -224,-341,768, -384,0,768, -224,341,768, 224,341,768
+		PortOffsets: 179,-273,614, -179,-273,614, -179,273,614, 179,273,614
+		#PortOffsets: 384,0,768, 224,-341,768, -224,-341,768, -384,0,768, -224,341,768, 224,341,768
 		#PortYaws: 0, 176, 341, 512, 682, 853
 		#PortCones: 1086, 86, 86, 86, 86, 86
 		TargetFrozenActors: true

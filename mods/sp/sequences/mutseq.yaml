@@ -692,7 +692,7 @@ mujeep:
 	idle:
 		Facings: -32
 		ShadowStart: 32
-		Filename: mutechnical.shp
+		Filename: mutechnical-smaller.shp
 	turret:
 		Facings: 8
 		Filename: mwmn1.shp

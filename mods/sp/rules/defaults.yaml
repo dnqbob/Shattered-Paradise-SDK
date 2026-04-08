@@ -1967,7 +1967,7 @@
 	Passenger:
 		CargoType: Vehicle
 		Voice: Move
-		Weight: 3
+		Weight: 4
 	-TimedConditionBar@WebDisable:
 	-SpeedMultiplier@InstantStop:
 	WithInfantryBody:

@@ -231,7 +231,7 @@ TRUCKB:
 
 CIVJEEP:
 	FreePassenger:
-		Actors: altnode1, altnode1, crusader
+		Actors: altnode1, crusader
 	WithSpriteTurret:
 		Sequence: nod-turret
 	WithTurretAttackAnimation:

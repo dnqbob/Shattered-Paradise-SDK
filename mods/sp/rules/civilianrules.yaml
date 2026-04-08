@@ -171,7 +171,7 @@ CIVJEEP:
 		ScanRadius: 7 #PREF: save trait looks up and scan armaments
 	Cargo:
 		Types: Infantry
-		MaxWeight: 3
+		MaxWeight: 2
 		AfterLoadDelay: 0
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0

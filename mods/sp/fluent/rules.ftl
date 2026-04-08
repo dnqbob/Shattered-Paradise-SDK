@@ -1025,7 +1025,7 @@ apc-desc = Armored anti-infantry transport.
     Good vs: Infantry
 
     Special:
-     - Can transport 5 infantry units
+     - Can transport 4 infantry units
      - Can travel over water
      - Can attack while moving
      - Can attack air
@@ -1105,10 +1105,9 @@ bggy-name = Raider Buggy
 bggy-desc = Fast vehicle armed with a machine gun and
     has room for one passenger that modifies the weapon of the vehicle.
 
-    Good vs: Changes depending on the passenger
+    Good vs: Infantry, Aircraft when Upgraded
 
     Special:
-     - The weapon of the vehicle changes with the passenger
      - Provides stealth detection
      - Can attack while moving
 
@@ -1155,7 +1154,7 @@ sapc-desc = Troop transport that can move underground.
 
     Special:
      - Can move underground
-     - Can transport up to 5 infantry units
+     - Can transport up to 3 infantry units
      - Can crush infantry
      - Cannot move or burrow back for 3 seconds after resurfacing
 
@@ -1247,7 +1246,7 @@ struck-desc = Combat transport.
     Good vs: Depending on occupants
 
     Special:
-     - Cargo for 5 soldiers
+     - Cargo for 4 soldiers
      - Passengers can fire out of its windows
      - Basic infantry inside has increased weapon range
      - Can crush infantry
@@ -1380,7 +1379,9 @@ reapercab-desc = Fast raiding walker armed with missiles and Web launchers.
      - Regenerative Materials
 
 limped-name = Limpet Drone
-limped-desc = Small drone armed with explosives. Good vs: Vehicles
+limped-desc = Small drone armed with explosives. 
+
+   Good vs: Vehicles, Aircraft when Upgraded
 
     Special:
      - Needs to be deployed to be armed
@@ -1403,7 +1404,7 @@ cabapc-name = Hover Transport
 cabapc-desc = Light Armored transport.
 
     Special:
-     - Can transport up to 12 infantry or 4 vehicles
+     - Can transport up to 12 infantry or 3 vehicles
      - Hovers (ignores terrain like Veins, Water and Radiations)
      - No longer hovers when disabled by EMP
      - Cannot enter Tunnel Networks or transport, can be carried by carryall
@@ -1657,7 +1658,7 @@ scrtrans-name = Scrin Transport
 scrtrans-desc = Scrin transport.
 
     Special:
-     - Can carry up to 3 vehicles or ten soldiers (no epics or nuke truck)
+     - Can carry up to 2 vehicles or 10 soldiers (no epics or nuke truck)
 
     Upgrades:
      - Hyper-Flight Engines
@@ -1866,7 +1867,7 @@ mujeep-desc = Infantry transport with a mounted LMG.
     Good vs: Infantry.
 
     Special:
-     - Can transport 5 infantry units
+     - Can transport 2 infantry units
      - Can attack while moving
 
 ghumv-name = Humvee

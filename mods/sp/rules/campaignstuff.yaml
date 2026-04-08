@@ -15,7 +15,7 @@ APC_BOT:
 		Image: apc
 	-Buildable:
 	Cargo:
-		InitialUnits: gdie1, gdie1, medic, gdie1, grenadier
+		InitialUnits: gdie1, medic, gdie1, grenadier
 	AutoTarget:
 		ScanRadius: 7
 	ActorStatValues:
@@ -1157,8 +1157,8 @@ ZOMCA: ## Orca Fighter
 	Voiced:
 		VoiceSet: Orca
 		Volume: 2
-	Selectable:
-		Bounds: 903,1447
+	#Selectable: ##bigger jeep
+	#	Bounds: 903,1447
 	Aircraft:
 		TurnSpeed: 28
 		Speed: 210
@@ -1271,14 +1271,15 @@ MUJEEP: #Technical
 		Type: Light
 	Turreted:
 		TurnSpeed: 1023
-		Offset: -420,0,560
+		#Offset: -420,0,560 #this is for bigger
+		Offset: -380,0,360
 	AttackTurreted:
 		Armaments: primary
 	AutoTarget:
 		ScanRadius: 7 #PREF: save trait looks up and scan armaments
 	Cargo:
 		Types: Infantry
-		MaxWeight: 5
+		MaxWeight: 2
 		AfterLoadDelay: 0
 		BeforeUnloadDelay: 0
 		AfterUnloadDelay: 0
