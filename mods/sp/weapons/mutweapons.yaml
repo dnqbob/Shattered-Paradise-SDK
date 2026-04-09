@@ -411,7 +411,7 @@ QuadFire:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Water, Vehicle, Building, Infantry
 		InvalidTargets: Air
-		Damage: 2000
+		Damage: 2150
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 QuadFireAA:
@@ -423,7 +423,7 @@ QuadFireAA:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Damage: 1500
+		Damage: 1615
 		InvalidTargets: Ground, Water, Vehicle, Building, Infantry
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 		NoUnintendedFriendlyFire: All
