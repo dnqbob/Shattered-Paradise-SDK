@@ -74,79 +74,93 @@ marauder:
 	icon:
 		Filename: maraudericon.shp
 
-e3:
+emortar:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:
-		Filename: e3.shp
+		Filename: mortarman.shp
 		Tick: 80
 	stand:
+		Start: 126
+		Length: 1
+		Stride: 2
 		Facings: 8
-		ShadowStart: 292
+		ShadowStart: 268
 	run:
-		Start: 8
+		Start: 0
 		Length: 6
 		Facings: 8
-		ShadowStart: 300
+		ShadowStart: 142
 	idle1:
-		Start: 56
-		Length: 15
-		ShadowStart: 348
+		Start: 127
+		Length: 1
+		Stride: 2
+		Facings: 8
+		ShadowStart: 269
+		Tick: 500
 	idle2:
-		Start: 71
-		Length: 15
-		ShadowStart: 363
+		Start: 126
+		Length: 1
+		Stride: 2
+		Facings: 8
+		ShadowStart: 268
+		Tick: 500
 	prone-run:
-		Start: 86
+		Start: 48
 		Length: 6
 		Facings: 8
-		ShadowStart: 378
+		ShadowStart: 190
 	prone-stand:
-		Start: 86
+		Start: 127
+		Length: 1
+		Stride: 2
 		Facings: 8
-		Stride: 6
-		ShadowStart: 378
+		ShadowStart: 269
 	die1:
-		Start: 134
+		Start: 96
 		Length: 15
-		ShadowStart: 426
+		ShadowStart: 238
 	die2:
-		Start: 149
+		Start: 111
 		Length: 15
-		ShadowStart: 441
+		ShadowStart: 253
 	die-crushed:
-		Start: 159
-		Length: 5
-		ShadowStart: 451
-		Tick: 800
+		Start: 122
+		Length: 4
+		ShadowStart: 264
+		Tick: 1000
 		ZOffset: -511
 	shoot:
-		Start: 165
-		Length: 5
-		Stride: 6
+		Start: 127
+		Length: 1
+		Stride: 2
 		Facings: 8
-		ShadowStart: 456
+		ShadowStart: 269
+		Tick: 300
 		IgnoreWorldTint: true
 	prone-shoot:
-		Start: 213
-		Length: 5
-		Stride: 6
+		Start: 127
+		Length: 1
+		Stride: 2
 		Facings: 8
-		ShadowStart: 504
+		ShadowStart: 269
+		Tick: 300
 		IgnoreWorldTint: true
 	standup-0:
-		Start: 260
-		Length: 2
+		Start: 126
+		Length: 1
+		Stride: 2
 		Facings: 8
-		ShadowStart: 552
+		ShadowStart: 268
 	garrison-muzzle:
-		Filename: gunfire.shp
+		Filename: smokey2.shp
 		-Combine:
 		Length: *
 		Facings: 1
 		IgnoreWorldTint: True
+		AlphaFade: true
 		Tick: 40
 	icon:
-		Filename: skirmishericon.shp
+		Filename: mortarmanicon.shp
 
 cutman:
 	Inherits@1: ^InfantryDeathAnims

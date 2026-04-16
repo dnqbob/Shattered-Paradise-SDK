@@ -2581,8 +2581,8 @@ cutman-desc =  Support infantry.
      - Crush class: crushable
      - Heals on Tiberium fields
 
-e3-name = Skirmisher
-e3-desc =  Siege militia armed with molotov mortars.
+emortar-name = Skirmisher
+emortar-desc =  Siege militia armed with molotov mortars.
 
     Good vs: Infantry, Buildings
 

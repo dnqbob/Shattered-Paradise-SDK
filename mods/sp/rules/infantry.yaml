@@ -1441,7 +1441,7 @@ CUTMAN:
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
 
-E3:
+EMORTAR:
 	Inherits: ^MutantSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1449,14 +1449,14 @@ E3:
 	Buildable:
 		Queue: Infantry.Shared, Infantry.Mutant
 		BuildPaletteOrder: 20
-		Description: e3-desc
+		Description: emortar-desc
 		Prerequisites: ~murax, muradr, ~techlevel.4
 		BuildDuration: 175
 		BuildDurationModifier: 100
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: e3-name
+		Name: emortar-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Voiced:
@@ -1468,14 +1468,18 @@ E3:
 		Speed: 60
 	Armament@1:
 		Weapon: SkirmisherMortar
-		LocalOffset: 128,0,640
+		LocalOffset: 526,0,526
 		Name: OnFoot
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: effect
 		PauseOnCondition: WebDisable
 		RequiresCondition: !tibgaswh
 	Armament@1Upg:
 		Weapon: SkirmisherMortarGas
-		LocalOffset: 128,0,640
+		LocalOffset: 526,0,526
 		Name: OnFoot
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: effect
 		PauseOnCondition: WebDisable
 		RequiresCondition: tibgaswh
 	Armament@Garrison:
@@ -1486,11 +1490,14 @@ E3:
 		Weapon: GSkirmisherMortarGas
 		RequiresCondition: tibgaswh
 		MuzzleSequence: garrison-muzzle
+	WithMuzzleOverlay:
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
 		TargetFrozenActors: true
 		FacingTolerance: 2
+	TakeCover:
+		ProneOffset: 0, 0, 0
 	AutoTarget:
 		ScanRadius: 11 #PREF: save trait looks up and scan armaments
 	ActorStatValues:
