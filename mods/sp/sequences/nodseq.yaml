@@ -62,6 +62,62 @@ altnode1:
 	icon:
 		Filename: sidebar-nod|e1icon.shp
 
+bhe1:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: bhe1.shp
+		Tick: 80
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+	idle1:
+		Start: 56
+		Length: 15
+	idle2:
+		Start: 71
+		Length: 15
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+	die1:
+		Start: 134
+		Length: 15
+	die2:
+		Start: 149
+		Length: 15
+		Tick: 80
+	die-crushed:
+		Start: 159
+		Length: 5
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		Tick: 60
+		IgnoreWorldTint: true
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		Tick: 60
+		IgnoreWorldTint: true
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+	icon:
+		Filename: sidebar-nod|e1icon.shp
+
 crusader:
 	Inherits: ^InfantryDeathAnims
 	Defaults:
@@ -114,6 +170,71 @@ crusader:
 		Facings: -8
 	icon:
 		Filename: crusadericon.shp
+
+bhe3:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: bhe3.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+		IgnoreWorldTint: true
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+		IgnoreWorldTint: true
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	icon:
+		Filename: e4icon.shp
 
 templar:
 	Inherits: ^InfantryDeathAnims

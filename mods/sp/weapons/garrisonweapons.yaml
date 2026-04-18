@@ -56,6 +56,14 @@ GCrusaderBazookaAA:
 	Inherits: CrusaderBazookaAA
 	Inherits@1: ^GarrisonWeaponAA
 
+GBHE3BazookaTib:
+	Inherits: BHE3BazookaTib
+	Inherits@1: ^GarrisonWeapon
+
+GBHE3BazookaAATib:
+	Inherits: BHE3BazookaAATib
+	Inherits@1: ^GarrisonWeaponAA
+
 GTemplarFlame:
 	Inherits: TemplarFlame
 	Inherits@1: ^GarrisonWeapon
