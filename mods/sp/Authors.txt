@@ -99,6 +99,8 @@ Maps are credited in the game lobby itself. Check there to see which map is made
 # Game Assets:
 Assets come from three sources, Public, Vanilla and made by Nolt, if an asset isn't listed here and it doesn't belong to the vanilla Tiberian Sun or any other CnC game, then its made by Nolt.
 
+ Atomic_Noodles:
+  > mortar guy's cannon
  Alex06:
    > Old dev Blog image
  Alvin:
@@ -130,6 +132,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > GDI Hamvee
    > Nod Harvester
    > Nod Stealth Tank
+Arselona:
+   > Nod BackHand e3
  ansimuz.itch.io
    > spitspark: https://ansimuz.itch.io/gothicvania-magic-pack-9
  ASVNiX
@@ -158,6 +162,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Radio Tower
  CyborgCommandoKerem:
    > Black Hand Trooper
+   > Blackhand e1
  chilly_durango:
    > Cilivian Light Tank: https://chilly-durango.itch.io/2dieselpunktanks
  craftpix.net
@@ -363,6 +368,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > cannonsmokecircle
    > gravitywave
    > cabal chip overlay
+   > mortar guy
  NYKNCK:
    > Claw effect for melee creatures: https://kvsr.itch.io/clawsct
  Fallenblood:

@@ -2479,7 +2479,7 @@ jjcomm-desc = GDI's commando unit equipped with a jetpack.
      - Build limit: 1
      - Crush class: crushable
 
-altnode1-name = Militant
+altnode1-name = Fanatic
 altnode1-desc = Nod's light infantry variant.
 
     Good vs: Infantry
@@ -2487,6 +2487,30 @@ altnode1-desc = Nod's light infantry variant.
     Special:
      - Does not go prone after taking fire
      - Crush class: crushable
+
+bhe1-name = Militant
+bhe1-desc = Black Hand's light infantry variant.
+
+    Good vs: Infantry
+
+    Special:
+     - Prone after taking fire
+     - Crush class: crushable
+
+bhe3-name = Disciple
+bhe3-desc = Black Hand's Anti-Armor infantry.
+
+    Good vs: Vehicles, Aircraft
+
+    Special:
+     - Can attack Air
+     - Can shoot while moving
+     - Prone after taking fire
+     - Can shoot over walls
+     - Crush class: crushable
+
+    Upgrades:
+     - Tiberium Core Missiles
 
 crusader-name = Crusader
 crusader-desc = Anti-Armor infantry.

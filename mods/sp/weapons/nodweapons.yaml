@@ -41,6 +41,30 @@ CrusaderBazookaAA:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		NoUnintendedFriendlyFire: All
 
+BHE3BazookaTib:
+	Inherits: CrusaderBazooka
+	Projectile: MissileTA
+		Speed: 600
+		TrailImage: explosion
+		TrailSequences: jgcmuzzlemini
+		TrailPalette: gensmkexplogreen
+		TrailInterval: 0
+	Warhead@2Eff: CreateEffect
+		ExplosionPalette: gensmkexploFgreen
+
+
+BHE3BazookaAATib:
+	Inherits: CrusaderBazookaAA
+	Projectile: MissileTA
+		Speed: 600
+		TrailImage: explosion
+		TrailSequences: jgcmuzzlemini
+		TrailPalette: gensmkexplogreen
+		TrailInterval: 0
+	Warhead@2Eff: CreateEffect
+		ExplosionPalette: gensmkexploFgreen
+
+
 TemplarFlame:
 	Inherits: ^FlameDamage
 	Inherits@2: ^FlameScorch

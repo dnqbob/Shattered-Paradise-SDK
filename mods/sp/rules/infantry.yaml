@@ -668,6 +668,51 @@ ALTNODE1:
 	ActorStatValues:
 		Damage: 16
 
+BHE1:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Nod
+		BuildPaletteOrder: 3
+		Description: bhe1-desc
+		Prerequisites: ~nahand, ~techlevel.1
+		BuildDuration: 100
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 100
+	ProductionCostMultiplier@AI: ## AI cannot use it well
+		Multiplier: 50
+		Prerequisites: AIOnly
+	Tooltip:
+		Name: bhe1-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Voiced:
+		VoiceSet: Militant
+	Mobile:
+		Speed: 75
+	Armament:
+		Weapon: MilitantRifle
+		PauseOnCondition: WebDisable
+		LocalOffset: 450,0,650
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: GMilitantRifle
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 5 #PREF: save trait looks up and scan armaments
+	RenderSprites:
+	ActorStatValues:
+		Damage: 16
+
 CRUSADER:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
@@ -726,6 +771,96 @@ CRUSADER:
 	SharedPassenger:
 		Voice: Garrison
 	RenderSprites:
+	ActorStatValues:
+		Damage: 30
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+
+
+E3:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@TIBCORE: ^AffectedByTibCoreMissiles
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Nod
+		BuildPaletteOrder: 4
+		Description: bhe3-desc
+		Prerequisites: ~nahand, ~techlevel.1
+		BuildDuration: 250
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: bhe3-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 10000
+	Mobile:
+		Speed: 75
+	Armament@1:
+		Weapon: CrusaderBazooka
+		LocalOffset: 356,0,967
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || reload-air
+		RequiresCondition: !tibcore
+		Name: OnFoot
+	Armament@2:
+		Weapon: CrusaderBazookaAA
+		LocalOffset: 356,0,967
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || reload-ground
+		RequiresCondition: !tibcore
+		Name: OnFoot
+	Armament@Garrison1:
+		Weapon: GCrusaderBazooka
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || reload-air
+		RequiresCondition: !tibcore
+	Armament@Garrison2:
+		Weapon: GCrusaderBazookaAA
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || reload-ground
+		RequiresCondition: !tibcore
+	Armament@1T:
+		Weapon: BHE3BazookaTib
+		LocalOffset: 356,0,967
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || reload-air
+		RequiresCondition: tibcore
+		Name: OnFoot
+	Armament@2T:
+		Weapon: BHE3BazookaAATib
+		LocalOffset: 356,0,967
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || reload-ground
+		RequiresCondition: tibcore
+		Name: OnFoot
+	Armament@Garrison1T:
+		Weapon: GBHE3BazookaTib
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || reload-air
+		RequiresCondition: tibcore
+	Armament@Garrison2T:
+		Weapon: GBHE3BazookaAATib
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || reload-ground
+		RequiresCondition: tibcore
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	Voiced:
+		VoiceSet: CMCrusaders
+	Passenger:
+		CustomPipType: blue
+		Voice: Garrison
+	SharedPassenger:
+		Voice: Garrison
+	RenderSprites:
+		Image: bhe3
 	ActorStatValues:
 		Damage: 30
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
