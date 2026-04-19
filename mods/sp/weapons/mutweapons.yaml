@@ -294,7 +294,7 @@ SeerTyranyBuff:
 		Damage: 0
 		DamageTypes: EnergyDeath
 		ConditionDuration: 375
-		Condition: TyrannyBuff
+		Condition: SeerBuff
 		ValidRelationships: Ally
 		AirThreshold: 8c0
 

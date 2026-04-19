@@ -424,28 +424,25 @@
 		RequiresCondition: rank-heroic
 		Modifier: 130
 
-^TyrannyBuff:
-	SpeedMultiplier@TyrannyBuff:
-		RequiresCondition: TyrannyBuff
-		Modifier: 150
-	ReloadDelayMultiplier@TyrannyBuff:
-		RequiresCondition: TyrannyBuff
-		Modifier: 50
-	ReloadAmmoDelayMultiplier@TyrannyBuff:
-		RequiresCondition: TyrannyBuff
-		Modifier: 50
-	DamageMultiplier@TyrannyBuff:
-		RequiresCondition: TyrannyBuff
-		Modifier: 151
-	WithDecoration@TyrannyBuff:
+^SeerBuff:
+	SpeedMultiplier@SeerBuff:
+		RequiresCondition: SeerBuff
+		Modifier: 120
+	ReloadDelayMultiplier@SeerBuff:
+		RequiresCondition: SeerBuff
+		Modifier: 80
+	ReloadAmmoDelayMultiplier@SeerBuff:
+		RequiresCondition: SeerBuff
+		Modifier: 80
+	WithDecoration@SeerBuff:
 		Image: zapicon
 		Sequence: idle
 		Position: BottomLeft
 		Palette: apgreen
 		ValidRelationships: Enemy, Neutral, Ally
-		RequiresCondition: TyrannyBuff
-	ExternalCondition@TyrannyBuff:
-		Condition: TyrannyBuff
+		RequiresCondition: SeerBuff
+	ExternalCondition@SeerBuff:
+		Condition: SeerBuff
 
 ^NodZealousBuff:
 	FirepowerMultiplier@ZealousBuff:
@@ -1537,7 +1534,7 @@
 
 ^InfantryEffects:
 	Inherits: ^GenericEffects
-	Inherits@1: ^TyrannyBuff
+	Inherits@1: ^SeerBuff
 	Inherits@2: ^InfantryStealthDetection
 	Inherits@3: ^HopspitalHeal
 	Inherits@4: ^ToxinTrooperDebuff
@@ -1566,7 +1563,7 @@
 
 ^VehicleEffects:
 	Inherits: ^GenericEffects
-	Inherits@1: ^TyrannyBuff
+	Inherits@1: ^SeerBuff
 	Inherits@2: ^DisplayWrench
 	Inherits@3: ^MachineShopHeal
 	Inherits@4: ^BugPoison

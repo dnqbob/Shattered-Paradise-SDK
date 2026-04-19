@@ -292,7 +292,7 @@ BUFFCRATE:
 		TextNotification: notification-crate-shield
 	GrantExternalConditionCrateAction@speed:
 		SelectionShares: 33
-		Condition: TyrannyBuff
+		Condition: SeerBuff
 		Sound: voltautofire.wav
 		Notification: UnitSpeedUpgraded
 		TextNotification: notification-crate-speedup
@@ -390,7 +390,7 @@ CRATE:
 		TextNotification: notification-crate-shield
 	GrantExternalConditionCrateAction@speed:
 		SelectionShares: 33
-		Condition: TyrannyBuff
+		Condition: SeerBuff
 		Sound: voltautofire.wav
 		Notification: UnitSpeedUpgraded
 		TextNotification: notification-crate-speedup

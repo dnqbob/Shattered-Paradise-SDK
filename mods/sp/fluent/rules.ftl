@@ -2596,7 +2596,7 @@ e3-desc =  Siege militia armed with molotov mortars.
     Upgrades:
      - Tiberium Gas Warhead
 
-seer-name = Tyrant
+seer-name = Seer
 seer-desc = Mutant infantry capable of channeling psychic energy waves and
     increasing the efficiency of nearby friendly units.
 
@@ -2604,9 +2604,8 @@ seer-desc = Mutant infantry capable of channeling psychic energy waves and
 
     Special:
      - Heals on Tiberium fields
-     - Can persuade friendly units to fight harder when deployed
-     - Affected units will gain 50% extra attack and movement speed
-     - Receive 50% more damage in return
+     - Can empower friendly units to fight harder when deployed
+     - Affected units will gain 20% extra attack and movement speed
      - Effect lasts 15 seconds
      - Can attack air
      - Can shoot over walls
