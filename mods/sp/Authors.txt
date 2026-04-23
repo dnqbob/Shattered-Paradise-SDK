@@ -308,6 +308,7 @@ Arselona:
    > Rage flash
  Quiet:
    > Stingray
+   > Cabal Rapid Artillery Mech
  Kothvir
    > Clouds, Flags and Billboard textures
  SMIFFGIG:
