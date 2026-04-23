@@ -834,3 +834,40 @@ BlackCDefArtilleryShrepnel:
 		Inaccuracy: 2c512
 		LaunchAngle: 196
 		-ContrailLength:
+
+CabArtyMechCannon:
+	Inherits: ^ArtilleryDamage
+	Inherits@2: ^Small_Clsn
+	ReloadDelay: 35
+	Range: 15c0
+	MinRange: 3c0
+	Report: specfire0000.wav, specfire0001.wav, specfire0002.wav
+	Projectile: BulletAS
+		Speed: 400
+		Image: 120mm
+		Palette: pips
+		LaunchAngle: 165
+		Shadow: true
+		Blockable: false
+		ContrailLength: 15
+		ContrailZOffset: 650
+		ContrailStartColor: FFFF0088
+		ContrailStartColorAlpha: 136
+		ContrailStartWidth: 0c66
+		ContrailEndColor: AA0000
+		ContrailEndColorAlpha: 0
+		ContrailEndWidth: 0
+		ContrailDelay: 0
+		TrailImage: cannonsmokecircle
+		TrailPalette: gensmkexplojFred
+		TrailSequences: idle2
+		TrailDelay: 0
+		TrailInterval: 2
+	Warhead@1Dam: SpreadDamage
+		Spread: 400
+		Damage: 6000
+		Versus:
+			Infantry: 150
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: dustexplode, dustexplode2

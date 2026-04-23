@@ -3075,6 +3075,68 @@ PALADIN:
 	ActorStatValues:
 		Damage: 200
 
+CABARTYMECH:
+	Inherits: ^Walker
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@RENDER: ^CabRender
+	Inherits@SELFHEAL: ^CABALSelfHeal
+	Inherits@VOICE: ^CabalVehicleVoice
+	Inherits@GATLING: ^AffectedByGatlingCannons
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: cabalartymech-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Vehicle.Shared, Vehicle.CABAL
+		BuildAtProductionType: Tank
+		BuildPaletteOrder: 44
+		Description: cabalartymech-desc
+		Prerequisites: ~cabweap, cabtech, ~techlevel.5
+		BuildDuration: 1125
+		BuildDurationModifier: 100
+	Mobile:
+		TurnSpeed: 48
+		Speed: 75
+		Locomotor: InfantryCrusherVehicle
+	Health:
+		HP: 60000
+	BodyOrientation:
+		QuantizedFacings: 8
+		CameraPitch: 250
+	AttackFrontal:
+		Voice: Attack
+		PauseOnCondition: empdisable
+		FacingTolerance: 3
+	AutoTarget:
+		ScanRadius: 15 #PREF: save trait looks up and scan armaments
+	RenderSprites:
+	Armament@1:
+		Weapon: CabArtyMechCannon
+		LocalOffset: 555,0,2875, 555,0,2875
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		CasingWeapon: ShellCasingDebris
+		CasingSpawnLocalOffset: 500,0,2675, 500,0,2675
+		CasingTargetOffset: 100, 768, 0, 100, -768, 0
+		PauseOnCondition: empdisable
+	GatlingReloadDelayMultiplier:
+		CoolDownDelay: 31
+	WithMuzzleOverlay:
+	Selectable:
+		Bounds: 1106, 3119, 0, -1406
+	Carryable:
+		LocalOffset: 0,0,1200
+	FloatingSpriteEmitter@spawnsmoke:
+		Offset: 0,0,1000
+	ExplodesAlsoTransported:
+		Weapon: UnitExplodeBigger
+		Offset: 0, 0, 768
+	ActorStatValues:
+		#Damage: 200
+
 BCOREDEF:
 	Inherits: ^Walker
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

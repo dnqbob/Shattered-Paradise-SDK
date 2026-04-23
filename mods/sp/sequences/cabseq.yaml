@@ -797,6 +797,48 @@ paladin:
 	icon:
 		Filename: paladinicon.shp
 
+cabartymech:
+	Inherits: ^EmpOverlay
+	Inherits@2: ^CannonMuzzle
+	Defaults:
+		Filename: cabartymech.shp
+	stand:
+		Facings: -8
+		Start: 176
+		ShadowStart: 360
+	idle:
+		Facings: -8
+		Start: 176
+		ShadowStart: 360
+	dead:
+		Facings: -8
+		Start: 176
+		ShadowStart: 360
+		Tick: 60
+	run:
+		Tick: 125
+		Start: 0
+		Length: 10
+		Facings: -8
+		ShadowStart: 184
+	shoot:
+		Start: 80
+		Length: 12
+		Facings: 8
+		ShadowStart: 264
+	shield:
+		Filename: shieldlarge.shp
+		Length: *
+		Offset: 0,-20
+	emp-overlay:
+		Offset: 0, -13, 50
+	cloud:
+		Offset: 0,-25, 25
+	bullparticle:
+		Offset: 0, -29, 29
+	icon:
+		Filename: cabartymechicon.shp
+
 wasp:
 	Inherits: ^EmpOverlay
 	Defaults:

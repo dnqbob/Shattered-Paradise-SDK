@@ -1426,6 +1426,20 @@ spiderarty-desc = Heavy artillery that deploys drones at the targeted area.
     Upgrades:
      - Reclaim and Recycle
 
+cabalartymech-name = Buzzsaw
+cabalartymech-desc = Heavy artillery mech with rapid fire
+
+    Good vs: Infantry, Defences, Buildings
+
+    Special:
+     - Minimum attack distance
+     - Can shoot over walls
+     - Can crush infantry
+     - Selfrepairs
+
+    Upgrades:
+     - Gatling Cannons
+
 paladin-name = Minotaur
 paladin-desc = Advanced walker armed with a twin laser cannon.
 
