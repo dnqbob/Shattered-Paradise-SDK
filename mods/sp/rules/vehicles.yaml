@@ -2611,13 +2611,13 @@ REAPERCAB:
 		BuildDuration: 625
 		BuildDurationModifier: 100
 	Selectable:
-		Bounds: 906,2212,0,-803
+		Bounds: 1208, 2533, 0, -603
 	Mobile:
 		TurnSpeed: 56
 		Speed: 105
 		Locomotor: Vehicle
 	Health:
-		HP: 25000
+		HP: 27500
 	Armor:
 		Type: Light
 	Voiced:
@@ -2642,14 +2642,7 @@ REAPERCAB:
 		Name: secondary
 		Weapon: ReaperWeb
 		LocalOffset: 0,0,1800
-		ForceTargetRelationships: Enemy, Neutral
-		RequiresCondition: !improvednets
-	Armament@secondary2:
-		Name: secondary
-		Weapon: ImprovedReaperWeb
-		LocalOffset: 0,0,1800
-		ForceTargetRelationships: Enemy, Neutral
-		RequiresCondition: improvednets
+		PauseOnCondition: !improvednets || empdisable
 	WithMuzzleOverlay:
 	ReloadArmamentsBar:
 		Armaments: secondary

@@ -600,24 +600,26 @@ reapercab:
 		Filename: reapercab.shp
 		Tick: 80
 	stand:
-		Facings: -8
-		ShadowStart: 117
+		Facings: 8
+		ShadowStart: 178
 	run:
 		Start: 8
-		Tick: 60
-		Length: 12
-		Facings: -8
-		ShadowStart: 125
+		Tick: 25
+		Length: 20
+		Facings: 8
+		ShadowStart: 186
 	die-1frame:
-		Start: 104
+		Start: 168
 		Length: 1
-		ShadowStart: 221
+		ShadowStart: 346
 		Tick: 40
+		Offset: 0, -10, 10
 	die1:
-		Start: 104
-		Length: 13
-		ShadowStart: 221
-		Tick: 108
+		Start: 168
+		Length: 10
+		ShadowStart: 346
+		Tick: 140
+		Offset: 0, -10, 10
 	muzzle:
 		AlphaFade: true
 	dieblood1:

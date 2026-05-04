@@ -2930,8 +2930,8 @@ cybernetic_leg_enhancements-desc = Increases the speed of following units by 30:
     - Cyborg Commando
     Note: Speed increase does not apply when the units are on critical health.
 
-improved_reaper_nets-name = Paralyzing Reaper Nets
-improved_reaper_nets-desc = Cyborg Reaper's net lasts 50% longer and will also track its target.
+improved_reaper_nets-name = Paralyzing Nets
+improved_reaper_nets-desc = Allow some units to use net to disable infantry.
 
 limpet_aa_targeting-name = Limpet AA Missile
 limpet_aa_targeting-desc = Enables Limpet Drones to target air units.

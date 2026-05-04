@@ -330,47 +330,11 @@ ReaperWeb:
 	Report: fireweb1.aud
 	ValidTargets: Infantry
 	Projectile: BulletAS
-		Speed: 300
+		Speed: 400
 		Image: web2
 		Shadow: true
 		LaunchAngle: 130
 		Palette: jascgrey
-	Warhead@1Con: SpreadDamageWithCondition
-		Falloff: 100, 100
-		Spread: 1c0
-		Damage: 0
-		DamageTypes: BulletDeath
-		ValidTargets: Infantry
-		Condition: WebDisable
-		ConditionDuration: 200
-		NoUnintendedFriendlyFire: All
-	Warhead@2Eff: CreateEffect
-		Explosions: spiderweb
-		ExplosionPalette: jascgrey
-
-ImprovedReaperWeb:
-	Inherits: ReaperWeb
-	Projectile: MissileTA
-		TerrainHeightAware: true
-		CruiseAltitude: 3100
-		MinimumLaunchAngle: 255
-		MaximumLaunchAngle: 255
-		Speed: 310
-		Acceleration: 0 ##Avoid missile stuck on the cliff and ramp
-		Shadow: false
-		Inaccuracy: 0c181
-		Image: web3
-		Sequences: idle
-		HorizontalRateOfTurn: 128
-		HorizontalRateOfTurnAcceleration: 13
-		HorizontalRateOfTurnStart: 13
-		VerticalRateOfTurn: 128
-		RangeLimit: 15c0
-		ExplodeWhenEmpty: true
-		AllowSnapping: true
-		CloseEnough: 200
-		Blockable: false
-		Jammable: false ## help to save a little bit performance
 		ContrailLength: 3
 		ContrailStartColor: AAAAAA
 		ContrailEndColor: AAAAAA
@@ -379,10 +343,18 @@ ImprovedReaperWeb:
 		ContrailEndColorAlpha: 255
 		ContrailStartWidth: 30
 		ContrailZOffset: 3000
+	Warhead@1Con: SpreadDamageWithCondition
+		Falloff: 100, 100
+		Spread: 1c0
+		Damage: 0
+		DamageTypes: BulletDeath
+		ValidTargets: Infantry
+		Condition: WebDisable
+		ConditionDuration: 250
+		NoUnintendedFriendlyFire: All
 	Warhead@2Eff: CreateEffect
 		Explosions: spiderweb2
-	Warhead@1Con: SpreadDamageWithCondition
-		ConditionDuration: 300
+		ExplosionPalette: jascgrey
 
 ReaperScythe:
 	Inherits: ^RocketWeapon

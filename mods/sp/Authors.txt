@@ -150,6 +150,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Remapped Civilian Armory
  Blubb:
    > Nod sniper
+ Carnivean:
+   > Remastered Cyborg Reaper
  Chronojam:
    > Nod Banshee
  CptNaughty:
