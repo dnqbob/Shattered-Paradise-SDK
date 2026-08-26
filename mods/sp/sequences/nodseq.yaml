@@ -338,6 +338,70 @@ nconf:
 	icon:
 		Filename: nconficon.shp
 
+
+
+shadteam:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: shadteam-redcap-noprone.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 164
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 172
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 220
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 235
+	die1:
+		Start: 86
+		Length: 15
+		ShadowStart: 250
+	die2:
+		Start:  101
+		Length: 15
+		ShadowStart: 265
+	die-crushed:
+		Start: 111
+		Length: 5
+		ShadowStart: 275
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 116
+		Length: 6
+		Facings: 8
+		ShadowStart: 280
+		IgnoreWorldTint: true
+	icon:
+		Filename: shadteamicon.shp
+		Offset: 0, 0
+
+shadteamair:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: shadteamair.shp
+	idle:
+		Facings: 16
+	die-onground:
+		Filename: shadteam-redcap-noprone.shp
+		Start: 96
+		Length: 5
+		ShadowStart: 260
+		Tick: 100
+		ZOffset: -511
+	icon:
+		Filename: shadteamicon.shp
+		Offset: 0, 0
+
 bhs:
 	Inherits: ^InfantryDeathAnims
 	Defaults:
