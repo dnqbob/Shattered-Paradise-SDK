@@ -198,7 +198,11 @@ namespace OpenRA.Mods.SP.Projectiles
 			// Explodes
 			if (dat.Length <= 0)
 			{
-				pos -= new WVec(0, 0, dat.Length);
+				// if the projectile hits the horizontal ground (not cliff), we will fix it to the surface
+				// we use "dat.Length > velocity.Z" for a simple test on hits the horizontal ground or cliff
+				if (dat.Length > velocity.Z)
+					pos -= new WVec(0, 0, dat.Length);
+
 				world.AddFrameEndTask(w => w.Remove(this));
 
 				var warheadArgs = new WarheadArgs(args)
