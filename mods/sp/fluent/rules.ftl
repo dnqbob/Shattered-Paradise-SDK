@@ -1368,7 +1368,7 @@ reapercab-desc = Fast raiding walker armed with missiles and Web launchers.
     Good vs: Vehicles, Aircraft
 
     Special:
-     - Can attack enemies ahead while moving
+     - Can attack while moving
      - Can target air
      - Can ensnare infantry with Webs
          - For example: Infantry, smaller Beast and Cyborgs.
