@@ -2653,11 +2653,13 @@ REAPERCAB:
 	#	Voice: Attack
 	#	PauseOnCondition: empdisable
 	#	FacingTolerance: 2
-	AttackFollowFrontal:
-		Voice: Attack
+	Turreted:
+		TurnSpeed: 64
+	AttackTurreted:
 		PauseOnCondition: empdisable
-		FacingTolerance: 64
-		MustFaceTarget: true
+	WithSpriteTurret:
+		Recoils: false
+		RequiresCondition: !inside-tunnel
 	AutoTarget:
 		ScanRadius: 9 #PREF: save trait looks up and scan armaments
 	WithInfantryBody:

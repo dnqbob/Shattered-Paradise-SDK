@@ -276,6 +276,8 @@ Arselona:
    > Queen death explosion
  Nooze:
    > Pub
+ [TiberianPast]:
+   > Cyborg Reaper legs
  The_Dementor:
    > Skirmisher Cameo
    > EM Pulse Cameo

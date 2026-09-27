@@ -597,27 +597,32 @@ reapercab:
 	Inherits@2: ^BleedWhenDeath
 	Inherits@3: ^MissileMuzzle
 	Defaults:
-		Filename: reapercab.shp
-		Tick: 80
-	stand:
-		Facings: 8
-		ShadowStart: 178
+		Filename: reapercab-leg.shp
 	run:
-		Start: 8
-		Tick: 25
-		Length: 20
+		Start: 0
+		Tick: 80
+		Length: 8
+		Facings: -8
+		ShadowStart: 72
+	stand:
+		Start: 64
+		Facings: -8
+		ShadowStart: 136
+	turret:
+		Filename: reapercab-body.shp
 		Facings: 8
-		ShadowStart: 186
 	die-1frame:
-		Start: 168
+		Filename: reapercab-death.shp
+		Start: 0
 		Length: 1
-		ShadowStart: 346
+		ShadowStart: 10
 		Tick: 40
 		Offset: 0, -10, 10
 	die1:
-		Start: 168
+		Filename: reapercab-death.shp
+		Start: 0
 		Length: 10
-		ShadowStart: 346
+		ShadowStart: 10
 		Tick: 140
 		Offset: 0, -10, 10
 	muzzle:
