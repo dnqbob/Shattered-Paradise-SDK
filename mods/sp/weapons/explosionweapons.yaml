@@ -1237,6 +1237,14 @@ banshee.husk:
 		Spin: 20
 		SpinWhenVelocityXIsLowerThan: 50
 
+vertigo.husk:
+	Inherits@explo: SmallPlaneExplode
+	Inherits: ^plane.husk
+	Projectile: ProjetcileHusk
+		Image: wetp
+		SpinChance: 0
+		SpinWhenVelocityXIsLowerThan: 50
+
 cerberus.husk:
 	Inherits@explo: BigAircraftExplode
 	Inherits: ^plane.husk

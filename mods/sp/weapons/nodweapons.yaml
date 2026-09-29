@@ -988,3 +988,38 @@ EnlightBeamE:
 		Spread: 0c045
 		Damage: 5000
 		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
+
+VertigoBombRight:
+	Inherits: ^FullDamage
+	Inherits@2: ^Large_Explosion
+	ReloadDelay: 20
+	FirstBurstTargetOffset: 0,170,0
+	Range: 3c0
+	MinRange: 0c100
+	Projectile: BulletAS
+		Speed: 256
+		Inaccuracy: 0
+		Blockable: false
+		Image: vertigobomb
+		Sequences: rotation1
+		FacingIgnoreAltitude: true
+		Palette: player
+		IsPlayerPalette: True
+		Shadow: True
+	Warhead@1Dam: SpreadDamage
+		Falloff: 100, 65, 45, 25, 5
+		Spread: 0c512
+		Damage: 25000
+		Versus:
+			Defense: 125
+			Concrete: 70
+			Infantry: 30
+		ValidTargets: Ground, Water, Building, Infantry, Vehicle
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+
+VertigoBombLeft:
+    Inherits: VertigoBombRight
+	Report: a10whistle1.wav
+	FirstBurstTargetOffset: 0,-170,0
+	Projectile: BulletAS
+		Sequences: rotation2

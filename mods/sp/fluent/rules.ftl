@@ -1575,6 +1575,14 @@ banshee-desc = Advanced fighter-bomber craft armed with twin plasma cannons.
      - Can attack air
      - Can attack enemies ahead while moving
 
+vertigo-name = Vertigo Bomber
+vertigo-desc = Advanced bomber craft armed with cloaking device.
+
+    Good vs: Ground
+
+    Special:
+     - Can attack enemies ahead while moving
+
 cerberus-name = Paladin Cruiser
 cerberus-desc = High tech frigate armed with a mobile stealth generator.
 

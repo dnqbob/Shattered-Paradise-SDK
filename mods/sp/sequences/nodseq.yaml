@@ -2510,6 +2510,25 @@ scrin:
 		Filename: proicon.shp
 		Offset: 0, 0, 0
 
+vertigo:
+	Inherits@1: ^SpriteVehicle
+	Defaults:
+		Filename: vertigo.shp
+		Offset: 0, -2, 2
+	stand:
+		Facings: -64
+	idle:
+		Facings: -64
+	muzzle:
+		Filename: lightmuzzle.shp
+		Offset: 0, 0
+		Start: 3
+		Length: *
+		ZOffset: 202
+	icon:
+		Filename: vertigoicon.shp
+		Offset: 0, 0, 0
+
 cerberus:
 	Inherits: ^EmpOverlay
 	Defaults:

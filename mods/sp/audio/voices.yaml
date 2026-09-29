@@ -749,7 +749,7 @@ Scorpion:
 		Action: sting_s11, sting_s12, sting_s13, sting_a4, sting_a9, sting_a17,
 		Die: guardian0022
 
-PaladinCruiser:
+Vertigo:
 	DefaultVariant: .wav
 	Voices:
 		Select: vpalseb, vpalsec, vpalsed, vpalsee, vpalsef
