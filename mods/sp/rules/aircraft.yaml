@@ -541,6 +541,96 @@ SCRIN:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 		Damage: 50
 
+VERTIGO:
+	Inherits: ^CombatPlane
+	Inherits@AMMO: ^UsesAmmunition
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@SHADOW: ^AircraftShadow
+	Inherits@VISION: ^12CellVisionAir
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: vertigo-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Air.Shared, Air.Nod
+		Description: vertigo-desc
+		BuildPaletteOrder: 23
+		Prerequisites: ~nahpad, natech, ~techlevel.5
+		BuildDuration: 875
+		BuildDurationModifier: 100
+	Selectable:
+		Bounds: 903,1447, 0, -300
+	Voiced:
+		VoiceSet: Vertigo
+	Aircraft:
+		MaximumPitch: 120
+		AltitudeVelocity: 200
+		TurnSpeed: 20
+		Speed: 180
+		IdleTurnSpeed: 10
+		IdleSpeed: 72
+		AirborneCondition: airborne
+		MoveIntoShroud: true
+		VTOL: true
+		CanSlide: false
+		CanHover: false
+		TakeoffSounds: dropup1.aud
+		LandingSounds: dropdwn1.aud
+		TakeOffOnResupply: false #To fix a bug in non VTOL aircraft that still go to former target location after resupply
+	Health:
+		HP: 20000
+	Armament@1:
+		Weapon: VertigoBomb
+		MuzzleSequence: muzzle
+		LocalOffset: 450,0,0
+		MuzzlePalette: apgreen
+		PauseOnCondition: !ammo
+	AttackAircraft:
+		Voice: Attack
+		FacingTolerance: 40
+	AmmoPool:
+		Ammo: 1
+		ReloadCount: 1
+		ReloadDelay: 400
+		AmmoCondition: ammo
+	Cloak@CLOAKGENERATOR:
+		InitialDelay: 170
+		CloakDelay: 170
+		UncloakOn: Attack, Unload, Demolish, Damage
+		RequiresCondition: cloakgenerator || ( !CriticalDamaged && !empdisable )
+	AutoTarget:
+		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+		InitialStance: ReturnFire
+		InitialStanceAI: AttackAnything
+	DeathSounds:
+		VolumeMultiplier: 25
+	SpawnHuskEffectOnDeath:
+		Weapon: vertigo.husk
+		RequiresCondition: airborne
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 1
+		FullSequence: pip-bomb
+		EmptySequence: pip-bombempty
+		Palette: pips
+	Contrail@FlameTrail:
+		RequiresCondition: airborne
+		Offset: -580, 0, 424
+		StartColor: EEFF00
+		StartColorAlpha: 128
+		StartColorUsePlayerColor: false
+		EndColor: FF0000
+		StartWidth: 128
+		TrailLength: 6
+		EndWidth: 0
+	ActorStatValues:
+		Damage: 100
+
+
 CERBERUS:
 	Inherits: ^CombatAirCruiser
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
@@ -560,7 +650,7 @@ CERBERUS:
 		BuildDuration: 1250
 		BuildDurationModifier: 100
 	Voiced:
-		VoiceSet: PaladinCruiser
+		VoiceSet: Scrin
 	DeathSounds:
 	Selectable:
 		Bounds: 2109,2200
