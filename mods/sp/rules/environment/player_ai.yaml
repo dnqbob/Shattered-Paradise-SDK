@@ -304,7 +304,7 @@ Player:
 		#Hack: use DozerTypes for unit that needs moving randomly but not get out of the base
 		DozerTypes: lpst, sgen, icbm
 		MaxDozerSendingRadius: 14
-		AirUnitsTypes: jumpjetair, jjcommair, orca, orcab, apache, scrin, cerberus, mutheli, mutqueen, wetp, stormrider, scrglyder1, scrdestroyer, scrcarrier, stormriderspawn, repairwyvern, cabdronejet, repairdrone, scrbattleship, wasp, basilisk, sonicarryall_bot, apcarryall_bot, orcai, zomca, rayrider, kodcruiser
+		AirUnitsTypes: jumpjetair, jjcommair, orca, orcab, apache, scrin, cerberus, mutheli, mutqueen, wetp, stormrider, scrglyder1, scrdestroyer, scrcarrier, stormriderspawn, repairwyvern, cabdronejet, repairdrone, scrbattleship, wasp, basilisk, sonicarryall_bot, apcarryall_bot, orcai, zomca, rayrider, kodcruiser, vertigo
 		ProtectionTypes: nodmcv, mutmcv, cabmcv, drache, drache2, mcv, harv, harv.nod, harv.mut, cabharv, scrharv, gacnst, gadept, scrdepot, gasilo, gate_a, mutgate_a, scrgate_a, scrgate_b, gapowr, gapile, gdiref, gaweap, garadr, gahpad, gatech, gtdrop, nodyard, napowr, nahand, nodref, naweap, naradr, naapwr, nahpad, natech, namisl, mutyard, mupowr, murax, muproc, muweap, muradr, muair, muhall, mutsw2, drached, scrpowr, scrrax, scrproc, scrproc2, scrproc3, scrproc4, scrweap, scrradr, scrair, scrtech, scradvpowr, cabyard, cabpowr, cabclaw, cabproc, cabweap, cabradr, cabair, cabtech, cabobelisk, gavulc, garock, gasonc, gacsam, nalasr, naobel, nasam, mubunkr, mucannon, muflak, cabpit, cabblast, cabrail, scrneedler, scrdrone, scrtractor, gafire, gaplug, nastlh, natmpl, muventi, mutsw1, scrextractor, scrsw1, cabeye, cabsw1, blackdefd, weed, bloodderrick, colorpicker, mubunkr, defd, icbm, king
 	UnitBuilderBotModule@AIAll:
 		RequiresCondition: AIEasy || AIBase
@@ -374,6 +374,7 @@ Player:
 			devourer: 1
 			cerberus: 1
 			scrin: 50
+			vertigo: 50
 			orca: 40
 			orcab: 30
 			mutheli: 40
@@ -499,6 +500,7 @@ Player:
 			shapeshifter: 2
 			scrdestroyer: 5
 			scrin: 5
+			vertigo: 5
 			orca: 5
 			orcab: 5
 			orcai: 4
