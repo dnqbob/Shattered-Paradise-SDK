@@ -988,3 +988,44 @@ EnlightBeamE:
 		Spread: 0c045
 		Damage: 5000
 		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
+
+VertigoBomb:
+	Inherits: ^FullDamage
+	Inherits@2: ^Large_Explosion
+	Inherits@3: ^SpawnsIrradiation
+	ReloadDelay: 20
+	Range: 3c0
+	MinRange: 0c100
+	Report: a10whistle1.wav
+	Projectile: BulletAS
+		Speed: 256
+		Inaccuracy: 0
+		Blockable: false
+		Image: vertigobomb
+		Sequences: rotation
+		FacingIgnoreAltitude: true
+		Palette: player
+		IsPlayerPalette: True
+		Shadow: True
+	Warhead@2Eff: CreateEffect
+		Explosions: jmininuke, jmininukeb
+		ValidTargets: Ground, Air, Water
+		-InvalidTargets:
+		AirThreshold: 8c0
+		ImpactActors: false
+	Warhead@3Radio: CreateTintedCells
+		Level: 1000
+		Delay: 2
+		LayerName: OrangeRadiation
+		AirThreshold: 8c0
+	Warhead@1Dam: SpreadDamage
+		Falloff: 100, 65, 45, 25, 5
+		Spread: 0c512
+		Damage: 40000
+		Versus:
+			Defense: 125
+			Concrete: 70
+			Infantry: 30
+		ValidTargets: Ground, Water, Building, Infantry, Vehicle
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+		Delay: 1
