@@ -1176,6 +1176,84 @@ TICKHOLOGRAM:
 	-GrantConditionOnPrerequisite@MachineShopHeal:
 	-WithDecoration@MachineShopHeal:
 
+N1TNK:
+	Inherits: ^Tank
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@PIPS: ^CargoPips
+	Tooltip:
+		Name: n1tnk-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Vehicle.Shared, Vehicle.Nod, Vehicle.NodTallMech
+		BuildAtProductionType: Tank
+		BuildPaletteOrder: 12
+		Description: n1tnk-desc
+		Prerequisites: ~naweap, ~techlevel.2
+		BuildDuration: 500
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 700
+	Mobile:
+		TurnSpeed: 24
+		Speed: 90
+		Locomotor: InfantryCrusherVehicle
+	Health:
+		HP: 30000
+	Cargo:
+		Types: Infantry
+		MaxWeight: 3
+		AfterLoadDelay: 0
+		BeforeUnloadDelay: 0
+		AfterUnloadDelay: 0
+		UnloadVoice: Move
+		OwnerChangedAffectsPassengers: false
+		LoadedCondition: loaded
+	WithCargoSounds:
+		EnterSounds: genter1a.wav
+		ExitSounds: gexit1a.wav
+	Passenger:
+		CargoType: Apc
+	Turreted:
+		TurnSpeed: 24
+		Offset: -80,0,700
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+	WithSpriteTurret:
+		RequiresCondition: !inside-tunnel
+	WithMuzzleOverlay:
+	AttackTurreted:
+		Voice: Attack
+		Turrets: primary
+		PauseOnCondition: empdisable
+	Armament:
+		Weapon: N1tnkCannon
+		Damage: 50
+		LocalOffset: 600,0,100, 600,0,100
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		Recoil: 0c128
+		PauseOnCondition: empdisable
+		CasingWeapon: ShellCasingDebris
+		CasingSpawnLocalOffset: 200,0,100, 200,0,100
+		CasingTargetOffset: 0, 512, 0, 0, -512, 0
+	BodyOrientation:
+		QuantizedFacings: 32
+		CameraPitch: 250
+	WithMuzzleOverlay:
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, Cargo, MaxRange
+	IssueOrderToBot@AI:
+		RequiresCondition: loaded
+		OrderName: Unload
+		OrderChance: 100
+		OrderInterval: 45
+
+
 BIKE:
 	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
