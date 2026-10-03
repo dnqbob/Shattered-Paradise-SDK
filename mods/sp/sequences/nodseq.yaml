@@ -903,6 +903,25 @@ ttnk:
 	icon:
 		Filename: ticktankcameo.shp
 
+n1tnk:
+	Inherits: ^EmpOverlay
+	Inherits@2: ^CannonMuzzle
+	idle:
+		Facings: -32
+		ShadowStart: 32
+		Filename: n1tnk.shp
+	turret:
+		Start: 0
+		Facings: -32
+		Filename: n1tnk_tur.shp
+	muzzle2:
+		Filename: japmuzzleb.shp
+		Scale: 0.5
+		Length: *
+		IgnoreWorldTint: true
+	icon:
+		Filename: n1tnkicon.shp
+
 sapc:
 	Inherits@1: ^SpriteVehicleWithShadow
 	Defaults:
