@@ -1141,6 +1141,17 @@ ttnk-desc = Nod's main battle tank armed with an anti-tank cannon.
 
 tickhologram-name = Tick Tank Hologram
 
+n1tnk-name = Light Tank
+n1tnk-desc = Old Nod's battle tank, modified to support transport.
+
+    Good vs: Vehicles
+
+    Special:
+     - Can deploy to gain extra protection
+     - Can crush infantry
+     - Can attack while moving
+     - Can transport 3 infantry units
+
 bike-name = Demo Bike
 bike-desc = Fast moving suicide vehicle.
 

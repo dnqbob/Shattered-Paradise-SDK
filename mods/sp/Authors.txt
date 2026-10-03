@@ -141,6 +141,7 @@ Arselona:
  B.A.Znd:
    > Nod subterranean apc
    > Lynx tank turret
+   > Nod TD light tank turret
    > Mutant mrls body
    > hover mrls body
  BaRaKa:
@@ -267,6 +268,8 @@ Arselona:
    > Mutant/CABAL announcer voiceline edits
  Machine:
    > Zone Defender
+ Mingyue:
+   > Nod light tank body
  Nah:
    > Weasaurus Lord Cameo
    > Shapeshifter Cameo
