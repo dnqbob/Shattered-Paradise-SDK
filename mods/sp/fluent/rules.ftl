@@ -1169,6 +1169,20 @@ sapc-desc = Troop transport that can move underground.
      - Can crush infantry
      - Cannot move or burrow back for 3 seconds after resurfacing
 
+tdfltnk-name = Flame Tank
+tdfltnk-desc = Old flame tank with heavy armor.
+
+    Good vs: Infantry, Buildings
+
+    Special:
+     - Can crush infantry
+     - Can attack enemies ahead while moving
+     - Explode and damage nearby on death
+
+    Upgrades:
+     - Purifying Flame
+
+
 subtnk-name = Devil's Tongue
 subtnk-desc = Subterranean flame tank able to move underground.
 
