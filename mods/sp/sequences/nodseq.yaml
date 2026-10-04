@@ -962,6 +962,25 @@ subtank:
 	icon:
 		Filename: subticon.shp
 
+
+tdfltnk:
+	Inherits@1: ^SpriteVehicleWithShadow
+	Defaults:
+		Filename: tdfltnk.shp
+	idle:
+		Facings: -32
+		ShadowStart: 32
+	muzzle:
+		Filename: jsbrnl20b.shp
+		Length: *
+		Offset: 0, 0, 12
+		Scale: 0.3
+		Tick: 15
+		ZOffset: 4001
+		IgnoreWorldTint: true
+	icon:
+		Filename: tdfltnkicon.shp
+
 bggy:
 	Inherits@1: ^SpriteVehicleWithShadow
 	Inherits@2: ^BuggyMuzzle

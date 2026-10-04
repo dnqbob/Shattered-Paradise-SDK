@@ -1392,6 +1392,71 @@ SAPC:
 		Damage: 112
 	-RevealOnFire:
 
+
+TDFLTNK:
+	Inherits: ^CombatVehicle
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@BLUEFLAME: ^AffectedByPurifyingFlame
+	Inherits@EXPERIENCE: ^GainsExperience
+	Tooltip:
+		Name: tdfltnk-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Vehicle.Shared, Vehicle.Nod, Vehicle.NodTallMech
+		BuildAtProductionType: Tank
+		BuildPaletteOrder: 12
+		Description: tdfltnk-desc
+		Prerequisites: ~naweap, naradr, ~techlevel.4
+		BuildDuration: 500
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 800
+	Armor:
+		Type:  Heavy
+	Voiced:
+		VoiceSet: Devil
+		Volume: 2
+	Mobile:
+		TurnSpeed: 32
+		Speed: 90
+		Locomotor: InfantryCrusherVehicle
+	Health:
+		HP: 30000
+	Armament:
+		Weapon: DevilsFlame
+		LocalOffset: 700,180,300, 700,-180,300
+		PauseOnCondition: empdisable
+		RequiresCondition: !blueflame
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+	Armament@Elite:
+		Weapon: DevilsFlameE
+		LocalOffset: 700,180,300, 700,-180,300
+		PauseOnCondition: empdisable
+		RequiresCondition: blueflame
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexplojFblue
+	BodyOrientation:
+		QuantizedFacings: 32
+		CameraPitch: 250
+	WithMuzzleOverlay:
+	#AttackFrontal:
+	#	PauseOnCondition: empdisable
+	#	FacingTolerance: 2
+	AttackFollowFrontal:
+		PauseOnCondition: empdisable
+		FacingTolerance: 64
+		MustFaceTarget: true
+	AutoTarget:
+		ScanRadius: 5 #PREF: save trait looks up and scan armaments
+	ExplodesAlsoTransported:
+		Weapon: UnitExplode
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MaxRange
+		Damage: 224
+
+
 SUBTANK:
 	Inherits: ^SubterraneanVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

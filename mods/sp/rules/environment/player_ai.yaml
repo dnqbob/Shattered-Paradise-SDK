@@ -300,7 +300,7 @@ Player:
 		IgnoredEnemyTargetTypes: Mine, IgnoredByAI, Wall, NoAutoTarget
 		SuggestedGroundLeaderLocomotor: Infantry, HeavyInfantry, TibInmuneInfantry, Vehicle, InfantryCrusherVehicle, VehicleCrusher
 		SuggestedNavyLeaderLocomotor: Naval
-		GuerrillaTypes: cerberus, mutqueen, stormrider, scrglyder1, scrdestroyer, scrcarrier, scrbattleship, wasp, basilisk, jumpjetair, nconf, bhs, mutfiend, pdrone, moth, cyc2, shark, smech, hvr, jug, attackbike, bggy, howtlizer, stnk, mutquad, lynx, wolf, mrls, scrscorpion, deathclaw, scrmbt, scrglyder2, scrmobmine, reapercab, altnode1, crusader, jjcommair, umagon, mujeep, ghumv, slighshot, predator, mujfish, beastrider, rayrider, cyc3, kodcruiser, n1tnk
+		GuerrillaTypes: cerberus, mutqueen, stormrider, scrglyder1, scrdestroyer, scrcarrier, scrbattleship, wasp, basilisk, jumpjetair, nconf, bhs, mutfiend, pdrone, moth, cyc2, shark, smech, hvr, jug, attackbike, bggy, howtlizer, stnk, mutquad, lynx, wolf, mrls, scrscorpion, deathclaw, scrmbt, scrglyder2, scrmobmine, reapercab, altnode1, crusader, jjcommair, umagon, mujeep, ghumv, slighshot, predator, mujfish, beastrider, rayrider, cyc3, kodcruiser, n1tnk, tdfltnk
 		#Hack: use DozerTypes for unit that needs moving randomly but not get out of the base
 		DozerTypes: lpst, sgen, icbm
 		MaxDozerSendingRadius: 14
@@ -355,6 +355,7 @@ Player:
 			hvr: 5
 			ttnk: 20
 			n1tnk: 1
+			tdfltnk: 10
 			subtank: 5
 			sapc: 1
 			lynx: 40
