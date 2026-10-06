@@ -1021,28 +1021,26 @@ stnk:
 	icon:
 		Filename: stnkicon2.shp
 
-scorpion:
+redeemer:
 	Inherits: ^EmpOverlay
 	Defaults:
-		Filename: scorpion.shp
+		Filename: redmsmal.shp
+		Tick: 80
 	stand:
-		Start: 160
-		ShadowStart: 688
-		Facings: -8
-		Offset: 0, -10, 0
-	run:
 		Start: 0
-		Length: 20
+		ShadowStart: 224
 		Facings: -8
-		ShadowStart: 528
-		Offset: 0, -10, 0
+	run:
+		Start: 8
+		Length: 10
+		Facings: -8
+		ShadowStart: 232
 	shoot:
-		Start: 168
-		ShadowStart: 696
-		Length: 40
+		Start: 88
+		ShadowStart: 312
+		Length: 17
 		Facings: -8
-		Offset: 0, -10, 0
-		Tick: 28
+		Tick: 80
 	muzzle:
 		Filename: jxgrysml2b.shp
 		Length: *
@@ -1060,7 +1058,7 @@ scorpion:
 		ZOffset: 4001
 		IgnoreWorldTint: true
 	icon:
-		Filename: scorpion_icon.shp
+		Filename: redeemericon.shp
 
 specter:
 	Inherits@1: ^SpriteVehicleWithShadow

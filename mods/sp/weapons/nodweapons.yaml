@@ -797,7 +797,7 @@ ObeliskLaserFire:
 		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
 		NoUnintendedFriendlyFire: All
 	Warhead@2Eff: CreateEffect
-		Explosions: dimlaserflare
+		Explosions: bigdimlaserflare
 		ExplosionPalette: gensmkexplojFred
 	Warhead@2Smu: LeaveSmudgeSP
 		SmudgeType: Scorch
@@ -809,17 +809,21 @@ ObeliskLaserFire:
 		ValidTargets: Ground, Air
 		ImpactActors: false
 
-ScorpionLaserCharge:
+RedeemerLaserCharge:
 	ReloadDelay: 30
 	Range: 8c0
 	ValidTargets: Ground, Water, Vehicle, Building, Infantry, Wall
 	Projectile: InstantExplode
 
-ScorpionLaser:
+RedeemerLaser:
 	Inherits: ^FullDamage
-	ReloadDelay: 60
+	ReloadDelay: 90
 	Range: 8c0
 	Report: obelray1.aud
+	FirstBurstTargetOffset: 0,135,0
+	FollowingBurstTargetOffset: 0,-270,0
+	Burst: 2
+	BurstDelays: 0
 	Projectile: LaserZap
 		TrackTarget: false
 		Width: 210
@@ -834,7 +838,7 @@ ScorpionLaser:
 		HitAnimSequence: lazerflare
 		HitAnimPalette: apred
 	Warhead@1Dam: SpreadDamage
-		Damage: 20000
+		Damage: 15000
 		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
 		NoUnintendedFriendlyFire: All
 	Warhead@2Eff: CreateEffect
@@ -849,14 +853,14 @@ ScorpionLaser:
 		InvalidTargets: Water, Infantry, Vehicle, Building
 		ValidTargets: Ground
 		ImpactActors: false
-	Warhead@2Shr: FireShrapnel
-		Weapon: ScorpionLaserShrapnel
-		Amount: 3
-		AimChance: 100
-		AimTargetStances: Enemy, Neutral
-		ValidTargets: Infantry, Vehicle, Building, Air
+	#Warhead@2Shr: FireShrapnel
+	#	Weapon: RedeemerLaserShrapnel
+	#	Amount: 3
+	#	AimChance: 100
+	#	AimTargetStances: Enemy, Neutral
+	#	ValidTargets: Infantry, Vehicle, Building, Air
 
-ScorpionLaserShrapnel:
+RedeemerLaserShrapnel:
 	Inherits: ^FullDamage
 	ReloadDelay: 40
 	Range: 3c0
@@ -899,7 +903,7 @@ RageEmitter:
 		ValidTargets: Infantry, Vehicle, Ground, Water, Defence
 		ValidRelationships: Neutral, Enemy
 
-LightbringerFlame:
+RedeemerFlame:
 	Inherits: ^FlameDamage
 	Inherits@2: ^FlameScorch
 	ReloadDelay: 50
@@ -922,8 +926,8 @@ LightbringerFlame:
 		Damage: 800
 		DamageTypes: Prone70Percent, TriggerProne, FireDeath
 
-LightbringerFlameE:
-	Inherits: LightbringerFlame
+RedeemerFlameE:
+	Inherits: RedeemerFlame
 	Inherits@2: ^FlameScorchBlue
 	Projectile: BulletAS
 		Image: FLAMEALLBLUE

@@ -400,7 +400,7 @@ Player:
 			cutman: 2
 			swarmling: 2
 			shapeshifter: 2
-			scorpion: 1
+			redeemer: 1
 			weasau: 100
 			scrscorpion: 1
 			jjcomm: 1
@@ -495,7 +495,7 @@ Player:
 			colossi: 3
 			exemplar: 1
 			repairvehicle: 2
-			scorpion: 1
+			redeemer: 1
 			engineer: 2
 			cutman: 2
 			swarmling: 2
@@ -547,7 +547,7 @@ Player:
 			medic: 4000
 			sapc: 10000
 			scrglyder2: 10000
-			scorpion: 20000
+			redeemer: 20000
 		QueueLimits:
 			Air.GDI: 2
 			Air.Nod: 2
@@ -905,7 +905,7 @@ Player:
 					Against: Enemy
 					ValidTargetTypes: Infantry, Vehicle
 					InvalidTargetTypes: Summoned, LandedCraft
-					InvalidActorTypes: hmec, scorpion, weasau, bcoredef, coredefender, hmectest, pdrone, moth, nanos, hvr, hvrtruk3, limped, cabapc, scrmbt, scrglyder2, scrmobmine, slighshot, jfish, mujfish 
+					InvalidActorTypes: hmec, redeemer, weasau, bcoredef, coredefender, hmectest, pdrone, moth, nanos, hvr, hvrtruk3, limped, cabapc, scrmbt, scrglyder2, scrmobmine, slighshot, jfish, mujfish 
 					Attractiveness: 200
 					TargetMetric: Value
 					CheckRadius: 2c512
@@ -919,7 +919,7 @@ Player:
 					Against: Enemy
 					ValidTargetTypes: Infantry, Vehicle
 					InvalidTargetTypes: Summoned, LandedCraft
-					InvalidActorTypes: hmec, scorpion, weasau, bcoredef, coredefender, hmectest
+					InvalidActorTypes: hmec, redeemer, weasau, bcoredef, coredefender, hmectest
 					Attractiveness: 200
 					TargetMetric: Value
 					CheckRadius: 2c512
@@ -937,7 +937,7 @@ Player:
 					AsExtraLocation: true
 					AgainstOwnActors: true
 					ValidTargetTypes: Infantry, Vehicle
-					InvalidActorTypes: hmec, scorpion, weasau, bcoredef, coredefender, hmectest, harv, cabharv, scrharv, harv.nod, harv.mut, engineer, cutman, swarmling, shapeshifter,mcv, drache, drache2, cabmcv, nodmcv, mutmcv, limped, mumine, eggs, cabsentry, tickhologram, flamehologram, stormriderspawn, cabdronejet, weasausmall, repairdrone, repairwyvern, dshp, dshp.high, mkiiidrone-minigun, councilor, scrtrans, trnsport, trnsport.nod, trnsport.mut, trnsport.cab, trnsport.scr, nukecarryall_bot,sonicarryall_bot, apcarryall_bot, tvddcarryall_bot, devourer, bike, subtank, sapc, hvrtruk3, minelayer, king, drillpod, tvddevice
+					InvalidActorTypes: hmec, redeemer, weasau, bcoredef, coredefender, hmectest, harv, cabharv, scrharv, harv.nod, harv.mut, engineer, cutman, swarmling, shapeshifter,mcv, drache, drache2, cabmcv, nodmcv, mutmcv, limped, mumine, eggs, cabsentry, tickhologram, flamehologram, stormriderspawn, cabdronejet, weasausmall, repairdrone, repairwyvern, dshp, dshp.high, mkiiidrone-minigun, councilor, scrtrans, trnsport, trnsport.nod, trnsport.mut, trnsport.cab, trnsport.scr, nukecarryall_bot,sonicarryall_bot, apcarryall_bot, tvddcarryall_bot, devourer, bike, subtank, sapc, hvrtruk3, minelayer, king, drillpod, tvddevice
 					InvalidTargetTypes: Summoned, LandedCraft
 					Attractiveness: 200
 					TargetMetric: Value
