@@ -1693,7 +1693,7 @@ STNK:
 		ValidRelationships: Ally
 		TargetDistance: Furthest
 
-SCORPION:
+REDEEMER:
 	Inherits: ^CombatVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@BLUEFLAME: ^AffectedByPurifyingFlame
@@ -1705,15 +1705,15 @@ SCORPION:
 	Valued:
 		Cost: 5000
 	Tooltip:
-		Name: scorpion-name
+		Name: redeemer-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
-		Queue: Vehicle.Shared, Vehicle.Nod, Vehicle.NodTallMech
-		BuildAtProductionType: Tank
+		Queue: Vehicle.Shared, Vehicle.NodTallMech
+		BuildAtProductionType: NodTallMech
 		BuildPaletteOrder: 51
-		Prerequisites: ~naweap, namisl, ~techlevel.6
-		Description: scorpion-desc
+		Prerequisites: ~showremeeder, nahfac, ~techlevel.6
+		Description: redeemer-desc
 		BuildLimit: 1
 		BuildDuration: 2500
 		BuildDurationModifier: 100
@@ -1727,7 +1727,7 @@ SCORPION:
 		Multiplier: 50
 		Prerequisites: prerequisite.four_factory, !global-multiqueue
 	Voiced:
-		VoiceSet: Scorpion
+		VoiceSet: Redeemer
 		Volume: 2
 	Mobile:
 		TurnSpeed: 24
@@ -1757,7 +1757,7 @@ SCORPION:
 		QuantizedFacings: 8
 		CameraPitch: 250
 	AmbientSound@WalkAnim:
-		SoundFiles: spiddie1.aud
+		SoundFiles:  mamothwalk0000.wav, mamothwalk0001.wav, mamothwalk0002.wav, mamothwalk0003.wav
 		Delay: 1
 		Interval: 10
 		Volume: 0.6
@@ -1768,41 +1768,43 @@ SCORPION:
 		RequiresCondition: !inside-tunnel
 		AttackSequences:
 			laserCharger: shoot
+	RenderSprites:
+		Image: redeemer
 	Armament@laserCharger:
 		Name: laserCharger
-		Weapon: ScorpionLaserCharge
+		Weapon: RedeemerLaserCharge
 		ReloadingCondition: chargingLaser
 		PauseOnCondition: empdisable || laserready || firingLaser
 	Armament@laser:
 		Name: laserFire
-		Weapon: ScorpionLaser
+		Weapon: RedeemerLaser
 		Damage: 200
-		LocalOffset: 450,0,2400
+		LocalOffset: 1440,810,2520, 1440,540,2520
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexplojFred
 		ReloadingCondition: firingLaser
 		PauseOnCondition: empdisable || !laserready
 	Armament@FLAMES:
 		Name: fireArmament
-		Weapon: LightbringerFlame
+		Weapon: RedeemerFlame
 		Damage: 112
-		LocalOffset: 1300,500,700, 1300,-500,700
+		LocalOffset: 180,360,3600, 180,-360,3600
 		MuzzleSequence: muzzle2
 		MuzzlePalette: gensmkexploj
 		PauseOnCondition: empdisable
 		RequiresCondition: !blueflame
 	Armament@EFLAMES:
 		Name: fireArmament
-		Weapon: LightbringerFlameE
+		Weapon: RedeemerFlameE
 		Damage: 168
-		LocalOffset: 1300,500,700, 1300,-500,700
+		LocalOffset: 180,360,3600, 180,-360,3600
 		PauseOnCondition: empdisable
 		RequiresCondition: blueflame
 		MuzzleSequence: muzzle2
 		MuzzlePalette: gensmkexplojFblue
 	GrantConditionAfterDelay@laserready:
 		Condition: laserready
-		Delay: 10
+		Delay: 7
 		ShowSelectionBar: false
 		RequiresCondition: chargingLaser
 	GrantChargedConditionOnToggle:
@@ -1820,12 +1822,17 @@ SCORPION:
 		Amount: 1
 		Interval: 999999
 		RequiresCondition: rage
+		LocalOffset: 0,0,3600
 	-Targetable@MC:
 	Carryable:
-		LocalOffset: 0, 0, 20
+		LocalOffset: 0,0,2600
 	WithMuzzleOverlay:
 	Selectable:
-		Bounds: 2200, 4041, 0, -1708
+		Bounds: 1809, 4600, 0, -1980
+	FloatingSpriteEmitter@spawnsmoke:
+		Offset: 0,0,2300
+	SpawnSparks:
+		LocalOffset: 0,0,2700
 	ExplodesAlsoTransported:
 		Weapon: EpicExplosion
 	FireProjectilesOnDeath:

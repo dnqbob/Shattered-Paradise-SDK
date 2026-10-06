@@ -740,7 +740,7 @@ Avatar:
 		Action: avatar_a1, avatar_a2, avatar_a3, avatar_a4, avatar_a5, avatar_a6, avatar_a7, avatar_a8, avatar_a9, avatar_a10, avatar_a11, avatar_a12, avatar_a13, avatar_a14
 		Die: guardian0022
 
-Scorpion:
+Redeemer:
 	Voices:
 		Build: sting_s7
 		Select: sting_s1, sting_s2, sting_s3, sting_s9, sting_s10, sting_s14, sting_m6

@@ -535,3 +535,45 @@ stalker:
 		ZOffset: -511
 	icon:
 		Filename: stalkericon.shp
+
+
+scorpion:
+	Inherits: ^EmpOverlay
+	Defaults:
+		Filename: scorpion.shp
+	stand:
+		Start: 160
+		ShadowStart: 688
+		Facings: -8
+		Offset: 0, -10, 0
+	run:
+		Start: 0
+		Length: 20
+		Facings: -8
+		ShadowStart: 528
+		Offset: 0, -10, 0
+	shoot:
+		Start: 168
+		ShadowStart: 696
+		Length: 40
+		Facings: -8
+		Offset: 0, -10, 0
+		Tick: 28
+	muzzle:
+		Filename: jxgrysml2b.shp
+		Length: *
+		Offset: 0, 0, 12
+		Scale: 0.7
+		Tick: 15
+		ZOffset: 4001
+		IgnoreWorldTint: true
+	muzzle2:
+		Filename: jsbrnl20b.shp
+		Length: *
+		Offset: 0, 0, 12
+		Scale: 0.5
+		Tick: 15
+		ZOffset: 4001
+		IgnoreWorldTint: true
+	icon:
+		Filename: scorpion_icon.shp

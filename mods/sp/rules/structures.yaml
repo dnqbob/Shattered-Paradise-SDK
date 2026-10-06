@@ -1051,6 +1051,82 @@ NAMISL:
 		VoiceSet: ClusterMissileSiloVoice
 		Volume: 0.5
 
+NAHFAC:
+	Inherits: ^Factory
+	Tooltip:
+		Name: nahfac-name
+	Valued:
+		Cost: 2500
+	Buildable:
+		Queue: Building.Shared, Building.Nod
+		BuildPaletteOrder: 47
+		Description: nahfac-desc
+		Prerequisites: ~nodyard, natech, !enoughnahfac, ~techlevel.5
+		BuildLimit: 1
+		BuildDuration: 1125
+		BuildDurationModifier: 100
+	Health:
+		HP: 200000
+	Exit@Shared:
+		ProductionTypes: Vehicle.Shared, Tank, NodTallMech
+	Production@Shared:
+		Produces: Vehicle.Shared, Tank, NodTallMech
+	Production:
+		Produces: Vehicle.NodTallMech
+	ProductionQueue@Vehicle:
+		Type: Vehicle.NodTallMech
+		DisplayOrder: 16
+	ProductionBar@Vehicle:
+		ProductionType: Vehicle.NodTallMech
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+		RequiresCondition: !Building-Buildup
+	WithIdleOverlay@FAN:
+		Sequence: idle-fan
+		RequiresCondition: !Building-Buildup
+	WithProductionDoorOverlaySP@DOOR:
+		RequiresCondition: !Building-Buildup
+	WithProductionOverlay@LIGHTS:
+		RequiresCondition: !Building-Buildup
+		Sequence: production-lights
+	WithProductionOverlay@LIGHTS2:
+		RequiresCondition: !Building-Buildup
+		Sequence: production-lights2
+	WithIdleOverlay@BIB:
+		Sequence: bib
+		RequiresCondition: !Building-Buildup
+	ProvidesPrerequisite@swlimit:
+		Prerequisite: enoughnahfac
+	ProvidesPrerequisite@showremeeder:
+		Prerequisite: showremeeder
+	Power:
+		Amount: -200
+	Voiced:
+		VoiceSet: AdvancedMechFactoryVoice
+	ProduceActorPower@avatar:
+		PauseOnCondition: empdisable || disabled
+		AllowMultiple: true
+		Prerequisites:
+			1: nahfac
+		Names:
+			1: superweapon-produceavatar-name
+		Descriptions:
+			1: superweapon-produceavatar-description
+		Icons:
+			1: avatarmechicon
+		Actors: avatar
+		Type: Vehicle.NodTallMech
+		ChargeInterval: 2250
+		EndChargeTextNotification: notification-avatar-ready
+		ReadyAudio: SuperWeaponReady
+		ReadyTextNotification: notification-avatar-have-arrived
+		BlockedAudio: OnHold
+		BlockedTextNotification: notification-no-room-for-new-unit
+		OrderName: ProduceActorPower.avatar
+		SupportPowerPaletteOrder: 20
+	IsometricSelectable:
+		DecorationHeight: 96
+
 MUTYARD:
 	Inherits: GACNST
 	Inherits@RENDER: ^MutRenderBuilding

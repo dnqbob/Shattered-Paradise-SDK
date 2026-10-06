@@ -863,6 +863,8 @@ icon:
 		Filename: councilicon.shp
 	musnekicon:
 		Filename: musnekicon.shp
+	avatarmechicon:
+		Filename: avataricon.shp
 
 radarscananim:
 	idle:

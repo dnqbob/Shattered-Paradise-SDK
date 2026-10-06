@@ -232,6 +232,10 @@ notification-superweapon-ready = Our superweapon is online.
 notification-superweapon-launched = Warning: A superweapon has been launched.
 notification-sneaktunnel-ready = Our Sneak Attack is ready.
 
+notification-avatar-ready = Our Avatar mech is ready to produce
+notification-avatar-have-arrived = Our Avatar mech is deployed
+notification-no-room-for-new-unit = There is no room for newly produced. 
+
 support-radarscan-name = Spy Satellite
 support-radarscan-desc = Reveals shroud and cloaked units on a radius of 8 cells.
 
@@ -351,6 +355,9 @@ superweapon-tearreal-desc = Tearing the time and space on target location.
 
     Special:
      - Teleport troops after dealing damage.
+
+superweapon-produceavatar-name = Awaken Avatar
+superweapon-produceavatar-description = Immediately deploy one avatar mech for free.
 
 #### Unit name and desc
 
@@ -1223,8 +1230,8 @@ stnk-desc = Hit-and-run tank armed with twin dragon TOW missiles and a cloaking 
     Upgrades:
      - Tiberium Core Missiles
 
-scorpion-name = Lightbringer
-scorpion-desc = Nod's super-heavy walker. One vision one purpose.
+redeemer-name = Redeemer
+redeemer-desc = Nod's super-heavy walker. One vision one purpose.
 
     Good vs: Ground
 
