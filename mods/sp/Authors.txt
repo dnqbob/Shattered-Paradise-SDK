@@ -263,6 +263,7 @@ Arselona:
    > Hexapod(meme_horror)
    > Zone Raider
    > Man on beast ridder
+   > Redeemer
  MustaphaTR:
    > Upgrade cameos
    > Mutant/CABAL announcer voiceline edits
