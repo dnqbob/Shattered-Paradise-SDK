@@ -328,6 +328,7 @@ Player:
 			cborg: 15
 			legio: 20
 			grenadier: 20
+			pitbull: 20
 			medic: 50
 			e2: 2
 			templar: 10

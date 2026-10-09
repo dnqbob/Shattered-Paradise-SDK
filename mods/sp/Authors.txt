@@ -290,6 +290,7 @@ Arselona:
    > New Harpy
  TksSdo:
    > Vertigo Bomber
+   > PitBull
  HG_SCIPCIÓN:
    > Weasauruses
    > Scrin Generator model
