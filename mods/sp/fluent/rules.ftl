@@ -2478,6 +2478,18 @@ grenadier-desc = Basic anti armor infantry.
     Upgrades:
      - Nanofiber Vests
 
+pitbull-name = Pitbull Drone
+pitbull-desc = Anti-Armor drone infantry on wheels.
+
+    Good vs: Vehicles, Aircraft
+
+    Special:
+     - Can attack Air
+     - Can shoot while moving
+     - Does not go prone after taking fire
+     - Can shoot over walls
+     - Crush class: crushable only by Epics
+
 medic-name = Medic
 medic-desc = Support infantry capable of healing other infantry.
 

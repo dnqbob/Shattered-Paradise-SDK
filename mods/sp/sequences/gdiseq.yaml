@@ -932,6 +932,24 @@ hvr:
 	icon:
 		Filename: hovricon.shp
 
+pitbull:
+	Inherits@1: ^InfantryDeathAnims
+	Inherits@2: ^MissileMuzzle
+	Defaults:
+		Filename: pitbull.shp
+	run:
+		Facings: -32
+		ShadowStart: 32
+	stand:
+		Facings: -32
+		ShadowStart: 32
+	turret:
+		Filename: pitbulltur.shp
+		Start: 0
+		Facings: -32
+	icon:
+		Filename: pitbullicon.shp
+
 jug:
 	Inherits: ^EmpOverlay
 	Defaults:

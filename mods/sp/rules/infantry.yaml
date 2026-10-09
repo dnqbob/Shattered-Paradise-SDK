@@ -158,6 +158,72 @@ GRENADIER:
 		Health: 18750
 		RequiresCondition: nanofibers
 
+PITBULL:
+	Inherits: ^DroneSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.GDI
+		BuildPaletteOrder: 2
+		Prerequisites: ~gapile, ~techlevel.1
+		Description: pitbull-desc
+		BuildDuration: 250
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: pitbull-name
+	Health:
+		HP: 15000
+	Mobile:
+		AlwaysTurnInPlace: false
+		TurnSpeed: 32
+		TurnsWhileMoving: false
+	Voiced:
+		VoiceSet: Limpet
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithInfantryBody:
+	Turreted:
+		TurnSpeed: 32
+		Offset: -110,0,490
+	AttackTurreted:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	WithSpriteTurret:
+		Recoils: false
+		RequiresCondition: !inside-tunnel && !WebDisable
+	Armament@1:
+		Weapon: GrenadierBazooka
+		LocalOffset: 200,0,200
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || empdisable || reload-air
+		Name: OnFoot
+	Armament@2:
+		Weapon: GrenadierBazookaAA
+		LocalOffset: 200,0,200
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || empdisable || reload-ground
+		Name: OnFoot
+	Armament@Garrison1:
+		Weapon: GGrenadierBazooka
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || empdisable || reload-air
+	Armament@Garrison2:
+		Weapon: GGrenadierBazookaAA
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || empdisable || reload-ground
+	Selectable:
+		Bounds: 500, 1100, 0, -132
+	-SpawnCorpseOnDeath@nanomachinereanimate:
+	ExplodesAlsoTransported:
+		Weapon: SimpleDroneExplode
+		RequiresCondition: !ascargo
+	ActorStatValues:
+		Damage: 30
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+
 MEDIC:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetHeal
