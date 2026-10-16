@@ -986,7 +986,8 @@ ORCAI: #Orca Interceptor
 		TakeoffSounds: orcaup1.aud
 		LandingSounds: orcadwn1.aud
 	AutoTarget:
-		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+		## bug: set ScanRadius for ammo based weapon will cause aircraft stuck in mid air when Attackmove
+		#ScanRadius: 7 #PREF: save trait looks up and scan armaments
 		InitialStance: ReturnFire
 		InitialStanceAI: AttackAnything
 	Health:
@@ -1038,6 +1039,8 @@ ORCAI: #Orca Interceptor
 	WithMuzzleOverlay:
 	AttackAircraft:
 		FacingTolerance: 40
+		## bug: set PersistentTargeting for ammo based weapon will cause aircraft stuck in mid air when Attackmove
+		PersistentTargeting: False
 	AmmoPool:
 		Ammo: 4
 		ReloadCount: 2
@@ -1124,7 +1127,8 @@ ZOMCA: ## Orca Fighter
 		LandingSounds: orcadwn1.aud
 		#CanSlide: false
 	AutoTarget:
-		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+		## bug: set ScanRadius for ammo based weapon will cause aircraft stuck in mid air when Attackmove
+		#ScanRadius: 7 #PREF: save trait looks up and scan armaments
 		InitialStance: ReturnFire
 		InitialStanceAI: AttackAnything
 	Health:
@@ -1138,6 +1142,8 @@ ZOMCA: ## Orca Fighter
 	WithMuzzleOverlay:
 	AttackAircraft:
 		AttackType: Hover
+		## bug: set PersistentTargeting for ammo based weapon will cause aircraft stuck in mid air when Attackmove
+		PersistentTargeting: False
 		FacingTolerance: 40
 	AmmoPool:
 		Ammo: 8
