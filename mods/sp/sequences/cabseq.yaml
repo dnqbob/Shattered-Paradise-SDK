@@ -540,6 +540,52 @@ cyc2:
 	icon:
 		Filename: cyborgcomandoicon.shp
 
+cabhumrobot:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: cabhumrobot.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 164
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 172
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 220
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 235
+	die1:
+		Start: 86
+		Length: 15
+		ShadowStart: 250
+		Tick: 65
+	die2:
+		Start: 101
+		Length: 15
+		ShadowStart: 265
+		Tick: 65
+	die-crushed:
+		Start: 96
+		Length: 1
+		ShadowStart: 260
+		ZOffset: -511
+		Tick: 80
+	shoot:
+		Start: 116
+		Length: 6
+		Facings: 8
+		ShadowStart: 280
+		IgnoreWorldTint: true
+		Tick: 50
+	icon:
+		Filename: cabhumroboticon.shp
 
 centurion:
 	Inherits: ^EmpOverlay

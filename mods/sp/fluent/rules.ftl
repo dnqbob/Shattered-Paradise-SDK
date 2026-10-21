@@ -2840,6 +2840,17 @@ cyborg-desc = Durable cyborg construct.
      - Cybernetic Leg Enhancements
      - Regenerative Materials
 
+cabhumrobot-name = Robot Infantry
+cabhumrobot-desc = Robot construct.
+
+    Good vs: Infantry
+
+    Special:
+     - Can be deactivated with E.M.P.
+     - Does not receive damage from tiberium fields
+     - Does not go prone after taking fire
+     - Crush class: crushable only by Epics
+
 cborg-name = Missile Cyborg
 cborg-desc = Anti-Armor cyborg.
 
