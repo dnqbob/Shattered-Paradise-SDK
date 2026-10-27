@@ -158,6 +158,55 @@ GRENADIER:
 		Health: 18750
 		RequiresCondition: nanofibers
 
+SSMECH:
+	Inherits: ^DroneSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.GDI
+		BuildPaletteOrder: 1
+		Description: ssmech-desc
+		Prerequisites: ~gapile, ~techlevel.1
+		BuildDuration: 110
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 110
+	Tooltip:
+		Name: ssmech-name
+	Health:
+		HP: 12000
+	Selectable:
+		Bounds: 514,1809,0,-603
+	Voiced:
+		VoiceSet: Limpet
+	BodyOrientation:
+		QuantizedFacings: 8
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	Selectable:
+		Bounds: 514,1309,0,-503
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	Armament:
+		Weapon: MarineRifle
+		PauseOnCondition: WebDisable
+		LocalOffset: 200,0,450
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: GMarineRifle
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+	-SpawnCorpseOnDeath@nanomachinereanimate:
+	ExplodesAlsoTransported:
+		Weapon: SimpleDroneExplode
+		RequiresCondition: !ascargo
+	ActorStatValues:
+		Damage: 25
+
 PITBULL:
 	Inherits: ^DroneSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable

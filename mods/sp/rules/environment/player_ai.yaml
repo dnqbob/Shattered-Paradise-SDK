@@ -316,6 +316,7 @@ Player:
 			harv.nod: 100
 			harv.mut: 100
 			gdie1: 1
+			ssmech: 1
 			altnode1: 1
 			pdrone: 5
 			shark: 1
@@ -1039,7 +1040,7 @@ Player:
 			mujeep: IdleUnit
 			scrtrans: IdleUnit
 			n1tnk: IdleUnit
-		PassengerTypes: gdie1, altnode1, jumpjet, crusader, e3, emortar, marauder, cyborg, cborg, legio, grenadier, e2, templar, mutfiend, colossi, seer, eagleguard, bhs, psyker, glad, cyc2, bug, nconf, ghost, umagon, mastermind, apucmdo, zonedefr, zoneraider, cyc3, cabhumrobot
+		PassengerTypes: gdie1, altnode1, jumpjet, crusader, e3, emortar, marauder, cyborg, cborg, legio, grenadier, e2, templar, mutfiend, colossi, seer, eagleguard, bhs, psyker, glad, cyc2, bug, nconf, ghost, umagon, mastermind, apucmdo, zonedefr, zoneraider, cyc3, cabhumrobot, pitbull, ssmech
 		ValidTransportOwner: AlliedBot
 
 	SendUnitToAttackBotModule@Backlines:

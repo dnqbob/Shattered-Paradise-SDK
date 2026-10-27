@@ -932,6 +932,33 @@ hvr:
 	icon:
 		Filename: hovricon.shp
 
+ssmech:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: ssmech.shp
+	stand:
+		Start: 96
+		Facings: -8
+		ShadowStart: 232
+	run:
+		Facings: -8
+		Length: 12
+		ShadowStart: 136
+		Tick: 30
+	shoot:
+		Start: 104
+		Length: 4
+		Facings: -8
+		ShadowStart: 240
+		Tick: 80
+		IgnoreWorldTint: true
+	webguy:
+		Filename: droneweb.shp
+		Length: 1
+		ShadowStart: 1
+	icon:
+		Filename: ssmchicon.shp
+
 pitbull:
 	Inherits@1: ^InfantryDeathAnims
 	Inherits@2: ^MissileMuzzle

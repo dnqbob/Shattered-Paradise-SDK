@@ -2465,6 +2465,16 @@ gdie1-desc = Basic combat infantry.
      - AP Ammunition
      - Nanofiber Vests
 
+ssmech-name = Wolverine Drone
+ssmech-desc = Anti-Infantry drone walker.
+
+    Good vs: Infantry
+
+    Special:
+     - Crush class: crushable only by Epics
+     - Does not go prone after taking fire
+     - Does not receive damage from tiberium fields
+
 grenadier-name = Phalanx
 grenadier-desc = Basic anti armor infantry.
 
