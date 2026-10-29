@@ -209,6 +209,8 @@ Arselona:
    > His template
  Green Uprising:
    > Refaced Cyborg Commando
+ GreatSword:
+   > Cabal RPG robot dog
  Holland:
    > Tiberian Fona
    > Lepus (Warg)

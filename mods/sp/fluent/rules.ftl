@@ -2878,6 +2878,19 @@ cborg-desc = Anti-Armor cyborg.
      - Cybernetic Leg Enhancements
      - Regenerative Materials
 
+robodog-name = Robot Dog
+robodog-desc = Anti-Armor robot construct.
+
+    Good vs: Vehicles, Aircraft
+
+    Special:
+     - Can be deactivated with E.M.P.
+     - Can attack Air
+     - Does not receive damage from tiberium fields
+     - Can shoot over walls
+     - Crush class: crushable only by Epics
+
+
 swarmling-name = Swarmling
 swarmling-desc = Support infantry.
 

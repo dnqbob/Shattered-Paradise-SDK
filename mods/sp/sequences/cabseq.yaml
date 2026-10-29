@@ -587,6 +587,53 @@ cabhumrobot:
 	icon:
 		Filename: cabhumroboticon.shp
 
+robodog:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: robodog.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 221
+	run:
+		Start: 8
+		Length: 13
+		Facings: 8
+		Tick: 40
+		ShadowStart: 229
+	idle1:
+		Start: 112
+		Length: 26
+		ShadowStart: 333
+	idle2:
+		Start: 138
+		Length: 21
+		ShadowStart: 359
+	die1:
+		Start: 159
+		Length: 14
+		ShadowStart: 380
+		Tick: 65
+	die-crushed:
+		Start: 171
+		Length: 1
+		ShadowStart: 392
+		ZOffset: -511
+		Tick: 80
+	shoot:
+		Start: 173
+		Length: 6
+		Facings: 8
+		ShadowStart: 394
+		IgnoreWorldTint: true
+		Tick: 50
+	webguy:
+		Filename: droneweb.shp
+		Length: 1
+		ShadowStart: 1
+	icon:
+		Filename: robodogicon.shp
+
 centurion:
 	Inherits: ^EmpOverlay
 	Inherits@2: ^BuggyMuzzle

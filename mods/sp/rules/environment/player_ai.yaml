@@ -328,6 +328,7 @@ Player:
 			cyborg: 15
 			cabhumrobot: 1
 			cborg: 15
+			robodog: 15
 			legio: 20
 			grenadier: 20
 			pitbull: 20
@@ -1040,7 +1041,7 @@ Player:
 			mujeep: IdleUnit
 			scrtrans: IdleUnit
 			n1tnk: IdleUnit
-		PassengerTypes: gdie1, altnode1, jumpjet, crusader, e3, emortar, marauder, cyborg, cborg, legio, grenadier, e2, templar, mutfiend, colossi, seer, eagleguard, bhs, psyker, glad, cyc2, bug, nconf, ghost, umagon, mastermind, apucmdo, zonedefr, zoneraider, cyc3, cabhumrobot, pitbull, ssmech
+		PassengerTypes: gdie1, altnode1, jumpjet, crusader, e3, emortar, marauder, cyborg, cborg, legio, grenadier, e2, templar, mutfiend, colossi, seer, eagleguard, bhs, psyker, glad, cyc2, bug, nconf, ghost, umagon, mastermind, apucmdo, zonedefr, zoneraider, cyc3, cabhumrobot, pitbull, ssmech, robodog
 		ValidTransportOwner: AlliedBot
 
 	SendUnitToAttackBotModule@Backlines:

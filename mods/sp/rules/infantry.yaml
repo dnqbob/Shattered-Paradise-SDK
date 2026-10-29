@@ -2267,6 +2267,77 @@ CABHUMROBOT:
 	ActorStatValues:
 		Damage: 25
 
+ROBODOG:
+	Inherits: ^DroneSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.CABAL
+		BuildPaletteOrder: 8
+		Description: robodog-desc
+		Prerequisites: ~cabclaw, ~techlevel.1
+		BuildDuration: 250
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: robodog-name
+	Health:
+		HP: 15000
+	Mobile:
+		Speed: 80
+	Voiced:
+		VoiceSet: Limpet
+	BodyOrientation:
+		QuantizedFacings: 8
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1, idle2
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	Selectable:
+		Bounds: 600, 1200, 0, -350
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	Armament@1:
+		Weapon: CyborgRocket
+		LocalOffset: 424,0,536
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || empdisable || reload-air
+		Name: OnFoot
+	Armament@2:
+		Weapon: CyborgRocketAA
+		LocalOffset: 424,0,536
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || empdisable || reload-ground
+		Name: OnFoot
+	Armament@Garrison1:
+		Weapon: GCyborgRocket
+		ReloadingCondition: reload-ground
+		PauseOnCondition: WebDisable || empdisable || reload-air
+	Armament@Garrison2:
+		Weapon: GCyborgRocketAA
+		ReloadingCondition: reload-air
+		PauseOnCondition: WebDisable || empdisable || reload-ground
+	-SpawnCorpseOnDeath@nanomachinereanimate:
+	ExplodesAlsoTransported:
+		Weapon: SimpleDroneExplode
+		RequiresCondition: !ascargo
+	WithDeathAnimation@normal:
+		DeathTypes:
+			BulletDeath: 1
+			CabalDeath: 1
+			CabalDeathUpg: 1
+			TiberiumDeath: 1
+			ExplosionDeath: 1
+			EnergyDeath:  1
+		DeathSequencePalette: player
+	ActorStatValues:
+		Damage: 30
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+
 CBORG: #Missile Cyborg
 	Inherits: ^CyborgSoldier
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
